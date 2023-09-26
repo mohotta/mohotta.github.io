@@ -28,21 +28,25 @@ export default function Hero() {
           fontWeight={600}
           fontSize={{ base: '2xl', sm: '3xl', md: '5xl' }}
           lineHeight={'110%'}>
-          <Text as={'span'} color={useColorModeValue('gray.600', 'gray.300')}>
+          <Text 
+            as={'span'} 
+            color={useColorModeValue('black', 'white')} 
+            fontWeight={700}
+            >
             Kumudu
           </Text>
           {' '}
           <Show above='sm'>
-          <Text as={'span'} color={useColorModeValue('gray.600', 'gray.200')}>
+          <Text as={'span'} color={useColorModeValue('black', 'white')} fontWeight={700}>
             Laksitha
           </Text>
           {' '}
           </Show>
-          <Text as={'span'} color={useColorModeValue('gray.700', 'gray.400')}>
+          <Text as={'span'} color={useColorModeValue('black', 'white')} fontWeight={700}>
             Mohottala
           </Text>
         </Heading>
-        <Text color={useColorModeValue('black', 'white')} maxW={'2xl'} fontWeight={500}>
+        <Text fontStyle={'italic'} color={useColorModeValue('black', 'white')} maxW={'2xl'} fontWeight={500}>
           I am a Data Science and Engineering Undergraduate from Department of Computer
           Science and Engineering, University of Moratuwa, Sri Lanka. My Interests are
           Data Science, Machine Learning, Web Development  and Open Source Software.

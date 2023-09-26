@@ -1,6 +1,6 @@
 import { Grid, GridItem, VStack } from '@chakra-ui/react'
 import NavBar from './navbar/NavBar'
-import Intro from './main_area/Intro'
+import Intro from './intro/Intro'
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
         </GridItem>
         <GridItem area={"main"}>
           <VStack>
-            <Intro />
+            <Intro/>
           </VStack>
         </GridItem>
       </Grid>
