@@ -1,12 +1,14 @@
-import { Grid, GridItem } from '@chakra-ui/react'
+import { Grid, GridItem, VStack } from '@chakra-ui/react'
 import NavBar from './navbar/NavBar'
+import Intro from './main_area/Intro'
+
 
 function App() {
 
   return (
     <>
       <Grid templateAreas={{
-        base: ` "nav" "main" `,
+        base: ` "nav " "main" `,
         lg: ` "nav" "main"`
       }}
       templateColumns={{
@@ -18,6 +20,9 @@ function App() {
           <NavBar />
         </GridItem>
         <GridItem area={"main"}>
+          <VStack>
+            <Intro />
+          </VStack>
         </GridItem>
       </Grid>
     </>)
