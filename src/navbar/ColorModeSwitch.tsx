@@ -9,7 +9,7 @@ export default function ColorModeSwitch() {
     return (
         <HStack padding='5px' paddingX='15px'>
             <MdOutlineLightMode />
-            <Switch colorScheme="gray" isChecked={colorMode=='dark'} onChange={toggleColorMode} />
+            <Switch colorScheme="blue" isChecked={colorMode=='dark'} onChange={toggleColorMode} />
             <MdOutlineDarkMode />
         </HStack>
     )

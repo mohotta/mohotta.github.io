@@ -5,16 +5,22 @@ import {
   Heading,
   Stack,
   Text,
-  Button, 
   Show,
-  useColorModeValue
+  useColorModeValue,
+  useClipboard,
+  IconButton,
+  Tooltip
 } from '@chakra-ui/react'
-import { TfiGithub, TfiLinkedin, TfiTwitterAlt } from 'react-icons/tfi'
+import { TfiGithub, TfiLinkedin } from 'react-icons/tfi'
 import { HiDocumentText } from 'react-icons/hi'
+import { MdEmail } from 'react-icons/md'
+import { BsGithub } from 'react-icons/bs'
 import imgUrl from '../assets/image.jpeg'
 
 
 export default function Hero() {
+
+  const { hasCopied, onCopy } = useClipboard('kumudu.20@cse.mrt.ac.lk')
 
   return (
     <Container maxW={'5xl'} background={imgUrl}>
@@ -51,35 +57,19 @@ export default function Hero() {
           Science and Engineering, University of Moratuwa, Sri Lanka. My Interests are
           Data Science, Machine Learning, Web Development  and Open Source Software.
         </Text>
-        <Stack spacing={6} direction={{base:'column', md:'row'}}>
-          <Stack spacing={6} direction={{base:'column', sm:'row'}} padding={0}>
-            <Button
-              leftIcon = {<HiDocumentText/>}
-              px={6}
-              colorScheme={'gray'}>
-              <a href="https://bit.ly/klm-cv">Resume</a>
-            </Button>
-            <Button
-              leftIcon = {<TfiLinkedin/>}
-              px={6}
-              colorScheme={'gray'}>
-              <a href="https://www.linkedin.com/in/mohotta/">LinkedIn</a>
-            </Button>
-          </Stack>
-          <Stack spacing={6} direction={{base:'column', sm:'row'}} padding={0}>
-            <Button
-              leftIcon = {<TfiGithub/>}
-              px={6}
-              colorScheme={'gray'}>
-              <a href="https://github.com/mohotta">Github</a>
-            </Button>
-            <Button
-              leftIcon = {<TfiTwitterAlt/>}
-              px={6}
-              colorScheme={'gray'}>
-              <a href="https://twitter.com/_mohotta_">Twitter</a>
-            </Button>
-          </Stack>
+        <Stack spacing={6} direction='row'>
+            <Tooltip label={hasCopied? 'Email Copied!' : 'Copy Email'} closeOnClick={false}> 
+              <IconButton aria-label='Email' icon={<MdEmail/>} onClick={onCopy}/>
+            </Tooltip>
+            <Tooltip label='Resume'>
+              <IconButton as={'a'} href='https://drive.google.com/file/d/16_L6zsuIQUpB8RIwIlwjPiJg7XGa1QlD/view?usp=sharing' aria-label='Resume' icon={<HiDocumentText/>} onClick={onCopy}/>
+            </Tooltip>
+            <Tooltip label='Resume'>
+              <IconButton as={'a'} href='https://www.linkedin.com/in/mohotta' aria-label='LinkedIn' icon={<TfiLinkedin/>} onClick={onCopy}/>
+            </Tooltip>
+            <Tooltip label='Resume'>
+              <IconButton as={'a'} href='https://www.github.com/mohotta' aria-label='Github' icon={<BsGithub/>} onClick={onCopy}/>
+            </Tooltip>
         </Stack>
       </Stack>
     </Container>

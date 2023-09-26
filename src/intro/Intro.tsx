@@ -5,7 +5,7 @@ import Hero from "./Hero";
 export default function Intro() {
 
     return (
-        <VStack id="intro">
+        <VStack id="home">
             <ProfilePic/>
             <Hero />
         </VStack>
