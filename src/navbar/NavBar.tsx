@@ -5,7 +5,6 @@ import {
   Flex,
   HStack,
   IconButton,
-  Button,
   useDisclosure,
   useColorModeValue,
   Stack,
