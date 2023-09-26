@@ -11,7 +11,7 @@ import {
   IconButton,
   Tooltip
 } from '@chakra-ui/react'
-import { TfiGithub, TfiLinkedin } from 'react-icons/tfi'
+import { TfiLinkedin } from 'react-icons/tfi'
 import { HiDocumentText } from 'react-icons/hi'
 import { MdEmail } from 'react-icons/md'
 import { BsGithub } from 'react-icons/bs'
