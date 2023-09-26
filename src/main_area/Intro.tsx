@@ -1,4 +1,4 @@
-import { VStack, Flex, Image, Heading, Text } from "@chakra-ui/react";
+import { VStack } from "@chakra-ui/react";
 import ProfilePic from "./ProfilePic";
 import Hero from "./Hero";
 
