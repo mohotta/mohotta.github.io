@@ -25,7 +25,7 @@ function App() {
           <VStack>
             <Intro/>
             <About/>
-            <ProjectList/>
+            
           </VStack>
         </GridItem>
       </Grid>
