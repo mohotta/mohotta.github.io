@@ -69,7 +69,7 @@ export default function Hero() {
             <Tooltip label='Resume'>
               <IconButton 
                 as={'a'} 
-                href='https://drive.google.com/file/d/16_L6zsuIQUpB8RIwIlwjPiJg7XGa1QlD/view?usp=sharing' 
+                href='https://drive.google.com/file/d/1Y7KrKSqKWfucHPWc68c0CzelYrW2iMS6/view?usp=sharing' 
                 target="_blank"
                 rel='noopener'
                 aria-label='Resume' 
