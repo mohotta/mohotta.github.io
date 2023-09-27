@@ -14,7 +14,7 @@ import {
 import { TfiLinkedin } from 'react-icons/tfi'
 import { HiDocumentText } from 'react-icons/hi'
 import { MdEmail } from 'react-icons/md'
-import { BsGithub } from 'react-icons/bs'
+import { BsGithub, BsMedium } from 'react-icons/bs'
 import { FaSquareXTwitter } from 'react-icons/fa6'
 import imgUrl from '../assets/image.jpeg'
 
@@ -93,6 +93,16 @@ export default function Hero() {
                 rel='noopener'
                 aria-label='Github' 
                 icon={<BsGithub/>} 
+                onClick={onCopy}/>
+            </Tooltip>
+            <Tooltip label='Medium'>
+              <IconButton 
+                as={'a'} 
+                href='https://mohotta.medium.com/' 
+                target="_blank"
+                rel='noopener'
+                aria-label='Github' 
+                icon={<BsMedium/>} 
                 onClick={onCopy}/>
             </Tooltip>
             <Tooltip label='Twitter'>

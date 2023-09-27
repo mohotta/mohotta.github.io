@@ -29,9 +29,9 @@ const Card = ({ heading, description, icon }: CardProps) => {
     <Box
       maxW={{ base: 'full', md: '275px' }}
       w={'full'}
-      borderWidth="1px"
       borderRadius="lg"
       overflow="hidden"
+      bgColor={useColorModeValue('gray.100', '#2c313d')}
       p={5}>
       <Stack align={'start'} spacing={2}>
         <Flex
@@ -74,26 +74,26 @@ export default function About() {
             icon={<Icon as={FcGraduationCap} w={10} h={10} />}
             description={'Currently studying as a Computer Science and Engineering (Data Science) undergraduate in University of Moratuwa, Sri Lanka.'}
           />
-        <Card
-            heading={'Data Scientist'}
-            icon={<Icon as={FcDataSheet} w={10} h={10} />}
-            description={'Learning to become an Data Scientist. Current Tech Stack : python, numpy, pandas, scikit-learn, matplotlib, seaborn.'}
-        />
-        <Card
-            heading={'Software Engineer'}
-            icon={<Icon as={FcMultipleDevices} w={10} h={10} />}
-            description={'Like to do software engineering work as well. Current tech stack : java, c++, javascript, REACT.'}
-        />
-        <Card
-        heading={'Teamwork and Collaboration'}
-        icon={<Icon as={FcCollaboration} w={10} h={10} />}
-        description={"Have worked as a team leader/member in many professional projects and have a good skill in teamwork and collaborating with others."}
-        />
-        <Card
-            heading={'Open Source Enthusiast'}
-            icon={<Icon as={FcLinux} w={10} h={10} />}
-            description={'Like to contribute to open source community. Support the concept of "Freedom in Software Use". Big fan of Linux operating system.'}
-        />
+          <Card
+              heading={'Data Scientist'}
+              icon={<Icon as={FcDataSheet} w={10} h={10} />}
+              description={'Learning to become an Data Scientist. Current Tech Stack : python, numpy, pandas, scikit-learn, matplotlib, seaborn.'}
+          />
+          <Card
+              heading={'Software Engineer'}
+              icon={<Icon as={FcMultipleDevices} w={10} h={10} />}
+              description={'Like to do software engineering work as well. Current tech stack : java, c++, javascript, REACT.'}
+          />
+          <Card
+            heading={'Teamwork and Collaboration'}
+            icon={<Icon as={FcCollaboration} w={10} h={10} />}
+            description={"Have worked as a team leader/member in many professional projects and have a good skill in teamwork and collaborating with others."}
+          />
+          <Card
+              heading={'Open Source Enthusiast'}
+              icon={<Icon as={FcLinux} w={10} h={10} />}
+              description={'Like to contribute to open source community. Support the concept of "Freedom in Software Use". Big fan of Linux operating system.'}
+          />
         </Flex>
       </Container>
     </Box>
