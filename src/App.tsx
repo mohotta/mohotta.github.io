@@ -2,6 +2,7 @@ import { Grid, GridItem, VStack } from '@chakra-ui/react'
 import NavBar from './navbar/NavBar'
 import Intro from './intro/Intro'
 import About from './about/About'
+import ProjectList from './projects/ProjectList'
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <VStack>
             <Intro/>
             <About/>
+            <ProjectList/>
           </VStack>
         </GridItem>
       </Grid>
