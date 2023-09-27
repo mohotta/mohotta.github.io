@@ -4,7 +4,15 @@ import ProjectCard from "./ProjectCard";
 
 export default function ProjectList() {
 
-    const projets = [
+    type Project = {
+      title: string,
+      techStack : string[],
+      description: string,
+      image: string,
+      link: string
+    }
+
+    let projets: Project[] = [
       {
         title: 'EasyMail Client',
         techStack: ['java', 'OOP'],
