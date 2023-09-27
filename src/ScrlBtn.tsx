@@ -57,8 +57,8 @@ const ScrlBtn = () => {
             variant={'outline'}
             onClick={handleClick}
             position="fixed"
-            bottom="4rem"
-            right="4rem"
+            bottom={{base:"2rem", md:"4rem"}}
+            right={{base:"2rem", md:"4rem"}}
             zIndex="-1"
             opacity="100"
             />
