@@ -54,6 +54,7 @@ const ScrlBtn = () => {
             size="lg"
             colorScheme="blue"
             ref={scrollButton}
+            variant={'outline'}
             onClick={handleClick}
             position="fixed"
             bottom="4rem"
