@@ -3,6 +3,7 @@ import NavBar from './navbar/NavBar'
 import Intro from './intro/Intro'
 import About from './about/About'
 import ProjectList from './projects/ProjectList'
+import PostList from './posts/PostList'
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Intro/>
             <About/>
             <ProjectList/>
+            <PostList/>
           </VStack>
         </GridItem>
       </Grid>

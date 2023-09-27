@@ -83,6 +83,9 @@ export default function ProjectCard({ title, techStack, description, image, link
             </Button>
           </Flex>
           <Flex
+            _hover={{
+              bgcolor: '#e2e8f0'
+            }}
             p={4}
             alignItems="center"
             justifyContent={'space-between'}
