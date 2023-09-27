@@ -7,23 +7,23 @@ export default function ProjectList() {
     const projets = [
       {
         title: 'Email Client',
-        techStack: ['java'],
+        techStack: ['java', 'OOP'],
         description: 'Email cliet for recieving emails using java. Used skills : java, object oriented programming, design patterns',
-        image: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+        image: 'https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZW1haWx8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60',
         link: 'https://github.com/mohotta/easymail'
       },
       {
         title: 'Airline Ticket Reservation System',
         techStack: ['mySQL', 'php'],
         description: 'Airline ticket reservation system. Used skills: mySQL, php, HTML/CSS, Software Security',
-        image: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+        image: 'https://images.unsplash.com/photo-1505164294036-5fad98506d20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGFpciUyMHRpY2tldHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
         link: 'https://github.com/mohotta/DBMS-MiniProject'
       },
       {
         title: 'Personal Portfolio',
-        techStack: ['Typescript', 'REACT', 'ChakraUI'],
+        techStack: ['typescript', 'REACT', 'ChakraUI'],
         description: 'My personal portfolio website. Used skills: HTML/CSS, typescript, REACT, ChakraUI',
-        image: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+        image: 'https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG9ydGZvbGlvfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
         link: 'https://github.com/mohotta/mohotta.github.io'
       }
     ]

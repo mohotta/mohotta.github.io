@@ -35,7 +35,7 @@ export default function ProjectCard({ title, techStack, description, image, link
       overflow="hidden"
       bgColor={useColorModeValue('gray.100', '#2c313d')}
       p={5}>
-        <Box h={'200px'} borderBottom={'1px'} borderColor="black">
+        <Box h={'200px'}>
           <Img
             src={image}
             roundedTop={'sm'}
