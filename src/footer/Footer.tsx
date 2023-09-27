@@ -13,7 +13,7 @@ export default function Footer() {
     const copyright = String.fromCodePoint(0x00A9)
 
     return (
-        <Box width={'100%'}>
+        <Box width={'100%'} marginTop={'80px'}>
         <Container
             as={Stack}
             w={'100%'}
