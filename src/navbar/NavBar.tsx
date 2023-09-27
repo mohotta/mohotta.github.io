@@ -1,4 +1,3 @@
-'use client'
 
 import {
   Box,
@@ -17,7 +16,7 @@ interface Props {
   children: React.ReactNode
 }
 
-const Links = ['home', 'projects', 'posts']
+const Links = ['home', 'about me', 'projects', 'posts']
 
 const NavLink = (props: Props) => {
   const { children } = props
