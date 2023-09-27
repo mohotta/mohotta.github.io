@@ -29,7 +29,7 @@ export default function ProjectCard({ title, techStack, description, image, link
 
   return (
       <Box
-      maxW={{ base: 'full', md: '300px' }}
+      maxW={{ base: 'full', md: '310px' }}
       w={'full'}
       borderRadius="lg"
       overflow="hidden"
@@ -56,7 +56,7 @@ export default function ProjectCard({ title, techStack, description, image, link
             ))
           } 
           </HStack>
-          <Heading fontSize={'xl'} fontWeight={800}>
+          <Heading fontSize={'xl'} fontWeight={700} color={useColorModeValue('blue.900', 'blue.100')}>
             {title}
           </Heading>
           <Text fontStyle={'italic'}>

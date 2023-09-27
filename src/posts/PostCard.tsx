@@ -1,7 +1,6 @@
 
 import {
   Box,
-  Center,
   Heading,
   Text,
   Stack,
@@ -25,13 +24,12 @@ interface props {
 
 export default function PostCard({ title, medium, description, date, time, image, link } : props) {
   return (
-    <Center py={6}>
       <Box
         as='a'
         href={link}
         target='_blank'
         rel='noopener'
-        maxW={{ base: 'full', md: '300px' }}
+        maxW={{ base: 'full', md: '310px' }}
         w={'full'}
         borderRadius="lg"
         overflow="hidden"
@@ -59,8 +57,9 @@ export default function PostCard({ title, medium, description, date, time, image
           <Heading
             // eslint-disable-next-line react-hooks/rules-of-hooks
             fontSize={'xl'}
-            fontWeight={800}
-            fontFamily={'body'}>
+            fontWeight={700}
+            fontFamily={'body'}
+            color={useColorModeValue('blue.900', 'blue.100')}>
             {title}
           </Heading>
           <Text fontStyle={'italic'} noOfLines={6}>
@@ -75,6 +74,5 @@ export default function PostCard({ title, medium, description, date, time, image
           </Stack>
         </Stack>
       </Box>
-    </Center>
   )
 }

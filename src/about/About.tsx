@@ -37,6 +37,7 @@ const Card = ({ heading, description, icon }: CardProps) => {
         <Flex
           w={16}
           h={16}
+          fontWeight={700}
           align={'center'}
           justify={'center'}
           color={'white'}
@@ -45,7 +46,7 @@ const Card = ({ heading, description, icon }: CardProps) => {
           {icon}
         </Flex>
         <Box mt={2}>
-          <Heading size="md">{heading}</Heading>
+          <Heading size="md" color={useColorModeValue('blue.900', 'blue.100')}>{heading}</Heading>
           <Text mt={1} fontSize={'sm'} fontStyle={'italic'}>
             {description}
           </Text>

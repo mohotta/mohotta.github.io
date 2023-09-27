@@ -5,7 +5,6 @@ import {
   Heading,
   Stack,
   Text,
-  Show,
   useColorModeValue
 } from '@chakra-ui/react'
 import imgUrl from '../assets/image.jpeg'
@@ -25,26 +24,11 @@ export default function Hero() {
         spacing={{ base: 6, md: 8 }}
         py={{ base: 20, md: 28 }}>
         <Heading
-          fontWeight={600}
+          fontWeight={700}
           fontSize={{ base: '2xl', sm: '3xl', md: '5xl' }}
-          lineHeight={'110%'}>
-          <Text 
-            as={'span'} 
-            color={useColorModeValue('black', 'white')} 
-            fontWeight={700}
-            >
-            Kumudu
-          </Text>
-          {' '}
-          <Show above='sm'>
-          <Text as={'span'} color={useColorModeValue('black', 'white')} fontWeight={700}>
-            Laksitha
-          </Text>
-          {' '}
-          </Show>
-          <Text as={'span'} color={useColorModeValue('black', 'white')} fontWeight={700}>
-            Mohottala
-          </Text>
+          lineHeight={'110%'}
+          color={useColorModeValue('blue.900', 'blue.100')}>
+          Kumudu Laksitha Mohottala
         </Heading>
         <Text fontStyle={'italic'} color={useColorModeValue('black', 'white')} maxW={'2xl'} fontWeight={500}>
           I am a Data Science and Engineering Undergraduate from Department of Computer

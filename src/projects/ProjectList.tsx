@@ -55,7 +55,7 @@ export default function ProjectList() {
           </Stack>
     
           <Container maxW={'5xl'} mt={12}>
-            <Flex flexWrap="wrap" gridGap={6} justify="center">
+            <Flex flexWrap='wrap' gridGap={6} justify="center">
               {projets.map((project) => (
                 <ProjectCard 
                   title={project.title}
