@@ -87,12 +87,12 @@ export default function About() {
         <Card
         heading={'Teamwork and Collaboration'}
         icon={<Icon as={FcCollaboration} w={10} h={10} />}
-        description={"Have worked as a team member in many professional projects and have a good skill in teamwork and collaborating with others"}
+        description={"Have worked as a team leader/member in many professional projects and have a good skill in teamwork and collaborating with others"}
         />
         <Card
             heading={'Open Source Enthusiast'}
             icon={<Icon as={FcLinux} w={10} h={10} />}
-            description={'Like to contribute to open source community. Support the concept of "Freedom in Software Use"'}
+            description={'Like to contribute to open source community. Support the concept of "Freedom in Software Use". Big fan of Linux operating system'}
         />
         </Flex>
       </Container>
