@@ -6,7 +6,7 @@ import { gsap } from 'gsap';
 const ScrlBtn = () => {
 
     const [isVisible, setIsVisible] = React.useState(false);
-    const scrollButton = useRef<gsap.TweenTarget>(null);
+    const scrollButton = useRef(null);
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
