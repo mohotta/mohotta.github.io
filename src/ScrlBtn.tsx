@@ -52,7 +52,7 @@ const ScrlBtn = () => {
             aria-label="scroll to top"
             icon={<ArrowUpIcon />}
             size="lg"
-            colorScheme="gray"
+            colorScheme="blue"
             ref={scrollButton}
             onClick={handleClick}
             position="fixed"
