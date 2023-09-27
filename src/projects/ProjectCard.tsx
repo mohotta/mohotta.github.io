@@ -48,7 +48,7 @@ export default function ProjectCard({ title, techStack, description, image, link
         <Box p={4}>
           <HStack> {
             techStack.map((item) => (
-              <Box bg="black" display={'inline-block'} px={2} py={1} color="white" mb={2} borderRadius={'lg'}>
+              <Box bg="gray.800" display={'inline-block'} px={2} py={1} color="white" mb={2} borderRadius={'md'}>
                 <Text fontSize={'xs'} fontWeight="medium">
                   {item}
                 </Text>
@@ -56,7 +56,7 @@ export default function ProjectCard({ title, techStack, description, image, link
             ))
           } 
           </HStack>
-          <Heading fontSize={'xl'}>
+          <Heading fontSize={'xl'} fontWeight={800}>
             {title}
           </Heading>
           <Text fontStyle={'italic'}>
