@@ -6,22 +6,15 @@ import {
   Stack,
   Text,
   Show,
-  useColorModeValue,
-  useClipboard,
-  IconButton,
-  Tooltip
+  useColorModeValue
 } from '@chakra-ui/react'
-import { TfiLinkedin } from 'react-icons/tfi'
-import { HiDocumentText } from 'react-icons/hi'
-import { MdEmail } from 'react-icons/md'
-import { BsGithub, BsMedium } from 'react-icons/bs'
-import { FaSquareXTwitter } from 'react-icons/fa6'
 import imgUrl from '../assets/image.jpeg'
+import SocialButtons from './SocialButtons'
 
 
 export default function Hero() {
 
-  const { hasCopied, onCopy } = useClipboard('kumudu.20@cse.mrt.ac.lk')
+  
 
   return (
     <Container maxW={'5xl'} background={imgUrl}>
@@ -59,63 +52,9 @@ export default function Hero() {
           the world of work. My Interests are
           Data Science, Machine Learning, Web Development  and Open Source Software.
         </Text>
-        <Stack spacing={6} direction='row'>
-            <Tooltip label={hasCopied? 'Email Copied!' : 'Copy Email'} closeOnClick={false}> 
-              <IconButton 
-                aria-label='Email' 
-                icon={<MdEmail/>} 
-                onClick={onCopy}/>
-            </Tooltip>
-            <Tooltip label='Resume'>
-              <IconButton 
-                as={'a'} 
-                href='https://drive.google.com/file/d/1Y7KrKSqKWfucHPWc68c0CzelYrW2iMS6/view?usp=sharing' 
-                target="_blank"
-                rel='noopener'
-                aria-label='Resume' 
-                icon={<HiDocumentText/>} 
-                onClick={onCopy}/>
-            </Tooltip>
-            <Tooltip label='LinkedIn'>
-              <IconButton 
-                as={'a'} 
-                href='https://www.linkedin.com/in/mohotta' 
-                target="_blank"
-                rel='noopener'
-                aria-label='LinkedIn' icon={<TfiLinkedin/>} 
-                onClick={onCopy}/>
-            </Tooltip>
-            <Tooltip label='Github'>
-              <IconButton 
-                as={'a'} 
-                href='https://www.github.com/mohotta' 
-                target="_blank"
-                rel='noopener'
-                aria-label='Github' 
-                icon={<BsGithub/>} 
-                onClick={onCopy}/>
-            </Tooltip>
-            <Tooltip label='Medium'>
-              <IconButton 
-                as={'a'} 
-                href='https://mohotta.medium.com/' 
-                target="_blank"
-                rel='noopener'
-                aria-label='Github' 
-                icon={<BsMedium/>} 
-                onClick={onCopy}/>
-            </Tooltip>
-            <Tooltip label='Twitter'>
-              <IconButton 
-                as={'a'} 
-                href='https://www.twitter.com/_mohotta_' 
-                target="_blank"
-                rel='noopener'
-                aria-label='Github' 
-                icon={<FaSquareXTwitter/>} 
-                onClick={onCopy}/>
-            </Tooltip>
-        </Stack>
+
+        <SocialButtons />
+        
       </Stack>
     </Container>
   )

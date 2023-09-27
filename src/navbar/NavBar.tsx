@@ -10,6 +10,7 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import ColorModeSwitch from './ColorModeSwitch'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 
 interface Props {
@@ -24,7 +25,7 @@ const NavLink = (props: Props) => {
     <Button
       variant={'ghost'}
     >
-      <a href={ '#' + children }> {children} </a>
+      <AnchorLink href={'#' + children}> {children} </AnchorLink>
     </Button>
   )
 }
