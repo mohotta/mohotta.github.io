@@ -5,7 +5,6 @@ import About from './about/About'
 import ProjectList from './projects/ProjectList'
 import PostList from './posts/PostList'
 import Footer from './footer/Footer'
-import './app.css'
 import ScrlBtn from './ScrlBtn'
 
 
