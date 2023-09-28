@@ -7,7 +7,7 @@ export default function PostList() {
         {
             title: 'Getting Started with Linux: Introduction',
             medium: 'medium.com',
-            description: 'Linux is a free and open source operating system kernel ( Kernel is the backbone of an operating system which enables an operating system to manage all the underlying hardware including input-output and memory ) developed by Linus Torvalds. Linux kernel-based operating systems ( i.e. Linux operating systems) are the best operating systems out there because of many reasons like customizability, availability of different flavors and desktop environments, and also the best reason, you are the boss here, OS does not restrict anything for you, you just need to know how to do it.',
+            description: 'Linux is a free and open source operating system kernel (Kernel is the backbone of an operating system which enables an operating system to manage all the underlying hardware including input-output and memory) developed by Linus Torvalds. Linux kernel-based operating systems ( i.e. Linux operating systems) are the best operating systems out there because of many reasons like customizability, availability of different flavors and desktop environments, and also the best reason, you are the boss here, OS does not restrict anything for you, you just need to know how to do it.',
             date: 'Feb 04, 2023',
             time: 4,
             image: 'https://images.unsplash.com/photo-1640552435388-a54879e72b28?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bGludXh8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60',
