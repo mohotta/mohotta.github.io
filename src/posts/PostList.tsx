@@ -15,7 +15,7 @@ export default function PostList() {
 
     let posts : Post[] = [
         {
-            title: 'Start with the Linux Operating System',
+            title: 'Getting Started with Linux : Introduction',
             medium: 'medium.com',
             description: 'Linux is a free and open source operating system kernel ( Kernel is the backbone of an operating system which enables an operating system to manage all the underlying hardware including input-output and memory ) developed by Linus Torvalds. Linux kernel-based operating systems ( i.e. Linux operating systems) are the best operating systems out there because of many reasons like customizability, availability of different flavors and desktop environments, and also the best reason, you are the boss here, OS does not restrict anything for you, you just need to know how to do it.',
             date: 'Feb 04, 2023',
