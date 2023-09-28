@@ -4,14 +4,11 @@ import { useState } from 'react'
 import {
   Box,
   Heading,
-  Button,
   Text,
   Img,
-  Flex,
   HStack,
   useColorModeValue
 } from '@chakra-ui/react'
-import { BsArrowUpRight, BsHeartFill, BsHeart } from 'react-icons/bs'
 
 
 interface props {
@@ -25,16 +22,23 @@ interface props {
 
 export default function ProjectCard({ title, techStack, description, image, link} : props) {
 
-  const [liked, setLiked] = useState(false)
 
   return (
       <Box
+      as='a'
+      href={link}
+      target='_blank'
+      rel='noopener'
       maxW={{ base: 'full', md: '310px' }}
       w={'full'}
       borderRadius="lg"
       overflow="hidden"
       bgColor={useColorModeValue('gray.100', '#2c313d')}
-      p={5}>
+      p={5}
+      _hover={{
+        backgroundColor: useColorModeValue('gray.200', '#3f444e')
+      }}
+      >
         <Box h={'200px'}>
           <Img
             src={image}
@@ -63,43 +67,7 @@ export default function ProjectCard({ title, techStack, description, image, link
             {description}
           </Text>
         </Box>
-        <HStack borderTop={'1px'}>
-          <Flex
-            p={4}
-            alignItems="center"
-            justifyContent={'space-between'}
-            roundedBottom={'sm'}
-            cursor={'pointer'}
-            w="full">
-            <Button 
-              rightIcon={<BsArrowUpRight />}
-              as={"a"} 
-              target='_blank' 
-              rel='noopener' 
-              href={link} 
-              fontSize={'md'} 
-              fontWeight={'semibold'}>
-              View more
-            </Button>
-          </Flex>
-          <Flex
-            _hover={{
-              bgcolor: '#e2e8f0'
-            }}
-            p={4}
-            alignItems="center"
-            justifyContent={'space-between'}
-            roundedBottom={'sm'}
-            borderLeft={'1px'}
-            cursor="pointer"
-            onClick={() => setLiked(!liked)}>
-            {liked ? (
-              <BsHeartFill fill="red" fontSize={'24px'} />
-            ) : (
-              <BsHeart fontSize={'24px'} />
-            )}
-          </Flex>
-        </HStack>
+        
       </Box>
   )
 }

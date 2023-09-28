@@ -34,7 +34,11 @@ export default function PostCard({ title, medium, description, date, time, image
         borderRadius="lg"
         overflow="hidden"
         bgColor={useColorModeValue('gray.100', '#2c313d')}
-        p={5}>
+        p={5}
+        _hover={{
+          backgroundColor: useColorModeValue('gray.200', '#3f444e')
+        }}
+      >
         <Box h={'200px'} marginBottom={'10px'}>
             <Img
                 src={image}
@@ -62,7 +66,7 @@ export default function PostCard({ title, medium, description, date, time, image
             color={useColorModeValue('blue.900', 'blue.100')}>
             {title}
           </Heading>
-          <Text fontStyle={'italic'} noOfLines={6}>
+          <Text fontStyle={'italic'} noOfLines={4}>
             {description}
           </Text>
         </Stack>
