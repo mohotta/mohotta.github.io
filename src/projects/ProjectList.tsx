@@ -4,15 +4,7 @@ import ProjectCard from "./ProjectCard";
 
 export default function ProjectList() {
 
-    type Project = {
-      title: string,
-      techStack : string[],
-      description: string,
-      image: string,
-      link: string
-    }
-
-    let projets: Project[] = [
+    const projets = [
       {
         title: 'EasyMail Client',
         techStack: ['java', 'OOP'],
@@ -40,6 +32,13 @@ export default function ProjectList() {
         description: 'My personal portfolio website. Used skills: HTML/CSS, typescript, REACT, ChakraUI',
         image: 'https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG9ydGZvbGlvfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60',
         link: 'https://github.com/mohotta/mohotta.github.io'
+      },
+      {
+        title: 'Credit Card Fraud Detection',
+        techStack: ['tensorflow', 'python', 'NNs'],
+        description: 'Credit card fraud detecting neural network model using a kaggle dataset and tensorflow framework.',
+        image: 'https://plus.unsplash.com/premium_photo-1675276939507-97d222bb488d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y3JlZGl0JTIwY2FyZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60',
+        link: 'https://github.com/mohotta/credit-card-fraud-detect.git'
       }
     ]
 

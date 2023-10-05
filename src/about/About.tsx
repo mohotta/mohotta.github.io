@@ -76,12 +76,12 @@ export default function About() {
             description={'Currently studying as a Computer Science and Engineering (Data Science) undergraduate in University of Moratuwa, Sri Lanka.'}
           />
           <Card
-              heading={'Data Scientist'}
+              heading={'Data Science'}
               icon={<Icon as={FcDataSheet} w={10} h={10} />}
               description={'Learning to become an Data Scientist. Current Tech Stack : python, numpy, pandas, scikit-learn, matplotlib, seaborn.'}
           />
           <Card
-              heading={'Software Engineer'}
+              heading={'Software Engineering'}
               icon={<Icon as={FcMultipleDevices} w={10} h={10} />}
               description={'Like to do software engineering work as well. Current tech stack : java, c++, javascript, REACT.'}
           />

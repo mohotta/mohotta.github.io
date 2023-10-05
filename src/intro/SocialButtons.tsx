@@ -7,7 +7,7 @@ import { TfiLinkedin } from "react-icons/tfi";
 
 
 interface Props {
-    backgroundVisible?: Boolean
+    backgroundVisible?: boolean
 }
 
 
@@ -29,7 +29,7 @@ export default function SocialButtons({ backgroundVisible = true }: Props) {
               <IconButton 
                 variant={backgroundVisible ? 'solid' : 'ghost'}
                 as={'a'} 
-                href='https://drive.google.com/file/d/1Y7KrKSqKWfucHPWc68c0CzelYrW2iMS6/view?usp=sharing' 
+                href='https://drive.google.com/file/d/1WyQbTtsyb-t2OWaxfTxMUgJB0PsbBsPX/view?usp=sharing' 
                 target="_blank"
                 rel='noopener'
                 aria-label='Resume' 
