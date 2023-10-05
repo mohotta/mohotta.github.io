@@ -25,11 +25,11 @@ export default function SocialButtons({ backgroundVisible = true }: Props) {
                 icon={<MdEmail/>} 
                 onClick={onCopy}/>
             </Tooltip>
-            <Tooltip label='Resume'>
+            <Tooltip label='MyCV'>
               <IconButton 
                 variant={backgroundVisible ? 'solid' : 'ghost'}
                 as={'a'} 
-                href='https://drive.google.com/file/d/1WyQbTtsyb-t2OWaxfTxMUgJB0PsbBsPX/view?usp=sharing' 
+                href='https://drive.google.com/file/d/1yaW7p0Z9tuKFVJt8X4k8xA8aWvwxxwD0/view?usp=sharing' 
                 target="_blank"
                 rel='noopener'
                 aria-label='Resume' 
