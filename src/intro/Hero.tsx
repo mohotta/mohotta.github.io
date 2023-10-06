@@ -34,7 +34,7 @@ export default function Hero() {
           I am a Data Science and Engineering Undergraduate from Department of Computer
           Science and Engineering, University of Moratuwa, Sri Lanka. I am looking for an internship opportunity to step into
           the world of work. My Interests are
-          Data Science, Machine Learning, Web Development  and Open Source Software.
+          Data Science, Machine Learning, Web Development, and Open Source Software.
         </Text>
 
         <SocialButtons />

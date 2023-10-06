@@ -76,14 +76,14 @@ export default function About() {
             description={'Currently studying as a Computer Science and Engineering (Data Science) undergraduate in University of Moratuwa, Sri Lanka.'}
           />
           <Card
-              heading={'Data Science'}
+              heading={'DS & ML'}
               icon={<Icon as={FcDataSheet} w={10} h={10} />}
-              description={'Learning to become an Data Scientist. Current Tech Stack : python, numpy, pandas, scikit-learn, matplotlib, seaborn.'}
+              description={'Working to become an Data Scientist and Machine Learning Engineer. Current Tech Stack : python, numpy, pandas, scikit-learn, matplotlib, seaborn.'}
           />
           <Card
-              heading={'Software Engineering'}
+              heading={'WebDev & SE'}
               icon={<Icon as={FcMultipleDevices} w={10} h={10} />}
-              description={'Like to do software engineering work as well. Current tech stack : java, c++, javascript, REACT.'}
+              description={'Like to do software engineering work as well. Interested in working on software engineering projects with DS & ML components. Current tech stack : java, c++, typescript, REACT.'}
           />
           <Card
             heading={'Teamwork and Collaboration'}
@@ -93,7 +93,7 @@ export default function About() {
           <Card
               heading={'Open Source Enthusiast'}
               icon={<Icon as={FcLinux} w={10} h={10} />}
-              description={'Like to contribute to open source community. Support the concept of "Freedom in Software Use". Big fan of Linux operating system.'}
+              description={'Like to contribute to open source community. Support the concept of "Freedom in Software Use". Big fan and have years of expierience in Linux operating system.'}
           />
         </Flex>
       </Container>
