@@ -58,10 +58,10 @@ const Card = ({ heading, description, icon }: CardProps) => {
 
 export default function About() {
   return (
-    <Box p={4} id='about me'>
+    <Box p={4} id='about'>
       <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
-        <Heading fontSize={{ base: '2xl', sm: '4xl' }} fontWeight={'bold'}>
-          About Me
+        <Heading fontSize={{ base: '2xl', sm: '4xl' }} fontWeight={'bold'} marginTop={'70px'}>
+          ABOUT ME
         </Heading>
         <Text color={'gray.600'} fontSize={{ base: 'sm', sm: 'lg' }}>
           
@@ -78,22 +78,22 @@ export default function About() {
           <Card
               heading={'DS & ML'}
               icon={<Icon as={FcDataSheet} w={10} h={10} />}
-              description={'Working to become an Data Scientist and Machine Learning Engineer. Current Tech Stack : python, numpy, pandas, scikit-learn, matplotlib, seaborn.'}
+              description={'Interested on becoming an Data Scientist and Machine Learning Engineer.'}
           />
           <Card
               heading={'WebDev & SE'}
               icon={<Icon as={FcMultipleDevices} w={10} h={10} />}
-              description={'Like to do software engineering work as well. Interested in working on software engineering projects with DS & ML components. Current tech stack : java, c++, typescript, REACT.'}
+              description={'Interested in working on software engineering projects with DS & ML components.'}
           />
           <Card
             heading={'Teamwork and Collaboration'}
             icon={<Icon as={FcCollaboration} w={10} h={10} />}
-            description={"Have worked as a team leader/member in many professional projects and have a good skill in teamwork and collaborating with others."}
+            description={"Expierience in working as a team in professional bodies sri lanka"}
           />
           <Card
               heading={'Open Source Enthusiast'}
               icon={<Icon as={FcLinux} w={10} h={10} />}
-              description={'Like to contribute to open source community. Support the concept of "Freedom in Software Use". Big fan and have years of expierience in Linux operating system.'}
+              description={'Supporter the concept of "Freedom in Software Use". Big fan and have years of expierience in Linux operating system.'}
           />
         </Flex>
       </Container>

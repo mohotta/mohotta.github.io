@@ -7,6 +7,7 @@ import {
   useDisclosure,
   Stack,
   Button,
+  useColorModeValue,
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import ColorModeSwitch from './ColorModeSwitch'
@@ -14,18 +15,38 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 
 interface Props {
-  children: React.ReactNode
+  link: React.ReactNode
+  children: string
 }
 
-const Links = ['about me', 'projects', 'posts']
+const Links = [
+  {
+    title: 'ABOUT ME', 
+    link:'about'
+  },
+  {
+    title: 'MY SKILLS', 
+    link:'skills'
+  },  
+  {
+    title: 'MY PROJECTS', 
+    link:'projects'
+  }, 
+  {
+    title: 'BLOG POSTS', 
+    link:'posts'
+  }]
 
 const NavLink = (props: Props) => {
-  const { children } = props
+  const { link, children } = props
   return (
     <Button
       variant={'ghost'}
+      _hover={{
+        color: useColorModeValue('blue.500', 'blue.200')
+      }}
     >
-      <AnchorLink href={'#' + children}> {children} </AnchorLink>
+      <AnchorLink href={'#' + link}> {children} </AnchorLink>
     </Button>
   )
 }
@@ -48,7 +69,7 @@ export default function NavBar() {
           <HStack spacing={4} alignItems={'center'}>
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={link.link} link={link.link}>{link.title}</NavLink>
               ))}
             </HStack>
           </HStack>
@@ -61,7 +82,7 @@ export default function NavBar() {
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={link.link} link={link.link}>{link.title}</NavLink>
               ))}
             </Stack>
           </Box>

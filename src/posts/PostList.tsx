@@ -28,7 +28,7 @@ export default function PostList() {
         <Box p={4} id='posts'>
           <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
             <Heading fontSize={{ base: '2xl', sm: '4xl' }} fontWeight={'bold'} marginTop={'70px'}>
-              Posts
+              BLOG POSTS
             </Heading>
             <Text color={'gray.600'} fontSize={{ base: 'sm', sm: 'lg' }}>
               

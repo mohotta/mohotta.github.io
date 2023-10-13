@@ -27,14 +27,15 @@ export default function Hero() {
           fontWeight={700}
           fontSize={{ base: '2xl', sm: '3xl', md: '5xl' }}
           lineHeight={'110%'}
-          color={useColorModeValue('blue.900', 'blue.100')}>
-          Kumudu Laksitha Mohottala
+          color={useColorModeValue('blue.900', 'blue.500')}>
+          KUMUDU LAKSITHA MOHOTTALA
         </Heading>
         <Text fontStyle={'italic'} color={useColorModeValue('black', 'white')} maxW={'2xl'} fontWeight={500}>
-          I am a Data Science and Engineering Undergraduate from Department of Computer
-          Science and Engineering, University of Moratuwa, Sri Lanka. I am looking for an internship opportunity to step into
-          the world of work. My Interests are
-          Data Science, Machine Learning, Web Development, and Open Source Software.
+          A dedicated professional and technology enthusiast with strong
+          teamwork and collaboration skills. Passionate about leveraging
+          technology for growth, I aim to contribute significantly to a
+          company’s success, always striving for excellence and continuous learning. My Interests are
+          Data Science, Machine Learning, and Web Development.
         </Text>
 
         <SocialButtons />
