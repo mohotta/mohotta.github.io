@@ -3,6 +3,7 @@
 import {
   Container,
   Heading,
+  Highlight,
   Stack,
   Text,
   useColorModeValue
@@ -28,14 +29,23 @@ export default function Hero() {
           fontSize={{ base: '2xl', sm: '3xl', md: '5xl' }}
           lineHeight={'110%'}
           color={useColorModeValue('blue.900', 'blue.500')}>
-          KUMUDU LAKSITHA MOHOTTALA
+          Kumudu Laksitha Mohottala
         </Heading>
-        <Text fontStyle={'italic'} color={useColorModeValue('black', 'white')} maxW={'2xl'} fontWeight={500}>
+        <Text 
+          fontStyle={'italic'} 
+          color={useColorModeValue('black', 'white')} 
+          maxW={'2xl'} 
+          fontWeight={500}>
+          <Highlight
+            query={['Data Science', 'Machine Learning', 'Software Engineering']}
+            styles={{ color:useColorModeValue('blue.600', 'blue.300'), fontWeight:'700' }}
+          >
           A dedicated professional and technology enthusiast with strong
           teamwork and collaboration skills. Passionate about leveraging
           technology for growth, I aim to contribute significantly to a
           company’s success, always striving for excellence and continuous learning. My Interests are
-          Data Science, Machine Learning, and Web Development.
+          Data Science, Machine Learning, and Software Engineering.
+          </Highlight>
         </Text>
 
         <SocialButtons />

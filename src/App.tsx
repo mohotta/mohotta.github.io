@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem } from '@chakra-ui/react'
+import { Box, Divider, Grid, GridItem } from '@chakra-ui/react'
 import NavBar from './navbar/NavBar'
 import Intro from './intro/Intro'
 import About from './about/About'
@@ -6,6 +6,7 @@ import ProjectList from './projects/ProjectList'
 import PostList from './posts/PostList'
 import Footer from './footer/Footer'
 import ScrlBtn from './ScrlBtn'
+import SkillList from './skills/SkillList'
 
 
 function App() {
@@ -22,8 +23,13 @@ function App() {
         <GridItem area={"main"}>
           <Box>
             <Intro/>
+            <Divider orientation='horizontal'/>
             <About/>
+            <Divider orientation='horizontal' marginTop='70px' />
+            <SkillList/>
+            <Divider orientation='horizontal' marginTop='70px' />
             <ProjectList/>
+            <Divider orientation='horizontal' marginTop='70px' />
             <PostList/>
             <Footer />
           </Box>
