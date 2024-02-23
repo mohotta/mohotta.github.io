@@ -22,37 +22,37 @@ export default function NavHeader() {
                 showMenu ? 
                     <div className="nav-side">
                         <div className="link-stack-head">
-                            <a href="#home">
+                            <a href="#home" onClick={() => setShowMenu(!showMenu)}>
                                 <div className={`link-btn-head ${active=='home'? 'active-head': 'inactive-head'}`}>
                                     <FiHome className="link-btn-icon-head"/>
                                     <div className="link-btn-text-head"> Home </div>
                                 </div>
                             </a>
-                            <a href="#about">
+                            <a href="#about" onClick={() => setShowMenu(!showMenu)}>
                             <div className={`link-btn-head ${active=='about'? 'active-head': 'inactive-head'}`}>
                                     <FiUser className="link-btn-icon-head"/>
                                     <div className="link-btn-text-head"> About </div>
                                 </div>
                             </a>
-                            <a href="#resume">
+                            <a href="#resume" onClick={() => setShowMenu(!showMenu)}>
                             <div className={`link-btn-head ${active=='resume'? 'active-head': 'inactive-head'}`}>
                                     <FiFileText className="link-btn-icon-head"/>
                                     <div className="link-btn-text-head"> Resume </div>
                                 </div>
                             </a>
-                            <a href="#portfolio">
+                            <a href="#portfolio" onClick={() => setShowMenu(!showMenu)}>
                             <div className={`link-btn-head ${active=='portfolio'? 'active-head': 'inactive-head'}`}>
                                     <FiSave className="link-btn-icon-head"/>
                                     <div className="link-btn-text-head"> Portfolio </div>
                                 </div>
                             </a>
-                            <a href="#services">
+                            <a href="#services" onClick={() => setShowMenu(!showMenu)}>
                             <div className={`link-btn-head ${active=='services'? 'active-head': 'inactive-head'}`}>
                                     <FiServer className="link-btn-icon-head"/>
                                     <div className="link-btn-text-head"> Services </div>
                                 </div>
                             </a>
-                            <a href="#contact">
+                            <a href="#contact" onClick={() => setShowMenu(!showMenu)}>
                             <div className={`link-btn-head ${active=='contact'? 'active-head': 'inactive-head'}`}>
                                     <FiMail className="link-btn-icon-head"/>
                                     <div className="link-btn-text-head"> Contact </div>
