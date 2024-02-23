@@ -1,6 +1,6 @@
 import { FiMenu, FiX } from "react-icons/fi";
 import './NavHeader.css'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FiHome, FiUser, FiMail, FiFileText, FiEdit, FiSave } from "react-icons/fi";
 
 
@@ -8,7 +8,34 @@ export default function NavHeader() {
 
     const [showMenu, setShowMenu] = useState(false)
 
-    const active = "home"
+    const [active, setActive] = useState("home")
+
+    const handleScroll = () => {
+        const sections = document.querySelectorAll(".section")
+
+        for (let i = 0; i < sections.length; i++) {
+            const pos = window.scrollY
+
+            if (i == sections.length-1) {
+                if (sections[i].offsetTop <= pos) {
+                    setActive(sections[i].id)
+                }
+            }
+            else {
+                if (sections[i].offsetTop <= pos && sections[i+1].offsetTop > pos) {
+                    setActive(sections[i].id)
+                }
+            }
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll)
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    })
+    
 
     return (
         <div className="nav-header">

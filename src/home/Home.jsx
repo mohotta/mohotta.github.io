@@ -4,8 +4,8 @@ import './Home.css'
 export default function Home() {
 
     return (
-        <div className="home" id="home">
-
+        <div className="home section" id="home">
+            
         </div>
     )
 
