@@ -1,6 +1,6 @@
 import './NavSidebar.css'
 import { useState } from 'react' 
-import { FiHome, FiUser, FiMail, FiFileText, FiServer, FiSave } from "react-icons/fi";
+import { FiHome, FiUser, FiMail, FiFileText, FiEdit, FiSave } from "react-icons/fi";
 
 export default function NavSidebar() {
 
@@ -8,7 +8,7 @@ export default function NavSidebar() {
     const [showLabelAbout, setShowLabelAbout] = useState(false)
     const [showLabelResume, setShowLabelResume] = useState(false)
     const [showLabelPortfolio, setShowLabelPortfolio] = useState(false)
-    const [showLabelServices, setShowLabelServices] = useState(false)
+    const [showLabelArticles, setShowLabelArticles] = useState(false)
     const [showLabelContact, setShowLabelContact] = useState(false)
 
     const active = "home"
@@ -16,7 +16,14 @@ export default function NavSidebar() {
     return (
         <>
             <div className="link-stack">
-                <a href="#home">
+                <div onClick={() => {
+                    const element = document.getElementById("home")
+                    element?.scrollIntoView({
+                        behavior: 'smooth'
+                    })
+                }}
+                    className='click-btn'
+                >
                     <div onMouseOver={() => setShowLabelHome(true)} onMouseLeave={() => setShowLabelHome(false)}>
                     {
                         showLabelHome?
@@ -30,8 +37,15 @@ export default function NavSidebar() {
                         </div>
                     }
                     </div>
-                </a>
-                <a href="#about">
+                </div>
+                <div onClick={() => {
+                    const element = document.getElementById("about")
+                    element?.scrollIntoView({
+                        behavior: 'smooth'
+                    })
+                }}
+                    className='click-btn'
+                >
                     <div onMouseOver={() => setShowLabelAbout(true)} onMouseLeave={() => setShowLabelAbout(false)}>
                     {
                         showLabelAbout?
@@ -45,8 +59,15 @@ export default function NavSidebar() {
                         </div>
                     }
                     </div>
-                </a>
-                <a href="#resume">
+                </div>
+                <div onClick={() => {
+                    const element = document.getElementById("resume")
+                    element?.scrollIntoView({
+                        behavior: 'smooth'
+                    })
+                }}
+                    className='click-btn'
+                >
                     <div onMouseOver={() => setShowLabelResume(true)} onMouseLeave={() => setShowLabelResume(false)}>
                     {
                         showLabelResume?
@@ -60,8 +81,15 @@ export default function NavSidebar() {
                         </div>
                     }
                     </div>
-                </a>
-                <a href="#portfolio">
+                </div>
+                <div onClick={() => {
+                    const element = document.getElementById("portfolio")
+                    element?.scrollIntoView({
+                        behavior: 'smooth'
+                    })
+                }}
+                    className='click-btn'
+                >
                     <div onMouseOver={() => setShowLabelPortfolio(true)} onMouseLeave={() => setShowLabelPortfolio(false)}>
                     {
                         showLabelPortfolio?
@@ -75,23 +103,37 @@ export default function NavSidebar() {
                         </div>
                     }
                     </div>
-                </a>
-                <a href="#services">
-                    <div onMouseOver={() => setShowLabelServices(true)} onMouseLeave={() => setShowLabelServices(false)}>
+                </div>
+                <div onClick={() => {
+                    const element = document.getElementById("articles")
+                    element?.scrollIntoView({
+                        behavior: 'smooth'
+                    })
+                }}
+                    className='click-btn'
+                >
+                    <div onMouseOver={() => setShowLabelArticles(true)} onMouseLeave={() => setShowLabelArticles(false)}>
                     {
-                        showLabelServices?
+                        showLabelArticles?
                         <div className="link-btn">
-                            <FiServer className="link-btn-icon"/>
-                            <div className="link-btn-text"> Services </div>
+                            <FiEdit className="link-btn-icon"/>
+                            <div className="link-btn-text"> Articles </div>
                         </div>
                         :
-                        <div className={`link-btn-only ${active=='services'? 'active': 'inactive'}`}>
-                            <FiServer className="link-btn-icon-only"/>
+                        <div className={`link-btn-only ${active=='articles'? 'active': 'inactive'}`}>
+                            <FiEdit className="link-btn-icon-only"/>
                         </div>
                     }
                     </div>
-                </a>
-                <a href="#contact">
+                </div>
+                <div onClick={() => {
+                    const element = document.getElementById("contact")
+                    element?.scrollIntoView({
+                        behavior: 'smooth'
+                    })
+                }}
+                    className='click-btn'
+                >
                     <div onMouseOver={() => setShowLabelContact(true)} onMouseLeave={() => setShowLabelContact(false)}>
                     {
                         showLabelContact?
@@ -105,7 +147,7 @@ export default function NavSidebar() {
                         </div>
                     }
                     </div>
-                </a>
+                </div>
             </div>
         </>
     )

@@ -1,0 +1,33 @@
+
+.scrl-btn-wrap {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    margin: 15px 18px;
+    padding: 15px;
+    border-radius: 150px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 5;
+    background-color: #4a55689f;
+}
+
+.scrl-btn-wrap:hover {
+    cursor: pointer;
+}
+
+.hide-scrl-btn {
+    opacity: 0;
+}
+
+.scrl-btn {
+    width: 20px;
+    height: 20px;
+    margin: 2px;
+}
