@@ -1,6 +1,6 @@
 import './App.css'
-import NavHeader from './navigation/NavHeader'
-import NavSidebar from './navigation/NavSidebar'
+import NavHeader from './navigation/header/NavHeader'
+import NavSidebar from './navigation/side/NavSidebar'
 
 function App() {
 

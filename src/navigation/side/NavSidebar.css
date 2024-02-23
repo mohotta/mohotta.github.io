@@ -13,7 +13,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #38B2AC;
+    background-color: #38b2accb;
     height: 25px;
     margin: 15px;
     padding: 15px;
@@ -33,11 +33,11 @@
 }
 
 .active {
-    background-color: #38B2AC;
+    background-color: #38b2accb;
 }
 
 .inactive {
-    background-color: #4A5568;
+    background-color: #4a55689f;
 }
 
 .link-btn-icon {
