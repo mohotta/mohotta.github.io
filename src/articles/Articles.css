@@ -1,6 +1,5 @@
 
 .articles {
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
-    background-color: rgba(0, 0, 255, 0.315);
 }
