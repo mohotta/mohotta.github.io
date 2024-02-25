@@ -29,7 +29,7 @@ export default function Home() {
     useEffect(() => {
         window.addEventListener('load', () => {
             setTimeout(() => {
-                document.querySelector(".copy-noti-hide").style.right = "15px"
+                document.querySelector(".copy-noti-hide").style.bottom = "12px"
             }, 1000)
         })
     })
