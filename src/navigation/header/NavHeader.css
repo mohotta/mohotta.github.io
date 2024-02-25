@@ -30,6 +30,7 @@
 }
 
 .link-stack-head-hide {
+    opacity: 0;
     position: fixed;
     background-color: #4a556846;
     border-radius: 10px;

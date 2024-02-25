@@ -59,3 +59,9 @@
 .click-btn:hover {
     cursor: pointer;
 }
+
+@media (max-width: 62rem) {
+    .link-stack {
+        display: none;
+    }
+}

@@ -35,6 +35,14 @@ export default function NavHeader() {
             window.removeEventListener('scroll', handleScroll)
         }
     })
+
+    useEffect(() => {
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.querySelector(".link-stack-head-hide").style.opacity = "1"
+            }, 100)
+        })
+    })
     
 
     return (

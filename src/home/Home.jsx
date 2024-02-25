@@ -26,6 +26,14 @@ export default function Home() {
 
     }, []);
 
+    useEffect(() => {
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.querySelector(".copy-noti-hide").style.right = "15px"
+            }, 1000)
+        })
+    })
+
     const [emailCopied, setEmailCopied] = useState(false)
 
     const copyEmail = () => {
@@ -38,7 +46,7 @@ export default function Home() {
         setTimeout(() => {
             setEmailCopied(false)
             console.log('hide')
-        }, 2000)
+        }, 1500)
 
     }
 
