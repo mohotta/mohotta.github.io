@@ -249,6 +249,7 @@ h1 {
         left: 0;
         right: 0;
         margin: 0 auto;
+        height: 20px;
         border-radius: 3px;
     }
 }
