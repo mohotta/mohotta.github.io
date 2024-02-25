@@ -40,7 +40,7 @@ export default function NavHeader() {
         window.addEventListener('load', () => {
             setTimeout(() => {
                 document.querySelector(".link-stack-head-hide").style.opacity = "1"
-            }, 100)
+            }, 1000)
         })
     })
     
