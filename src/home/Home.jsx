@@ -1,13 +1,30 @@
 import './Home.css'
 import { FiFileText, FiGithub, FiLinkedin, FiMail, FiTwitter, FiCheckCircle } from 'react-icons/fi'
-import { SiUpwork } from "react-icons/si";
-import { TbBrandFiverr } from "react-icons/tb";
+// import { SiUpwork } from "react-icons/si";
+// import { TbBrandFiverr } from "react-icons/tb";
 import image from './image.png'
+import smallImage from './small-res-image.png'
 import { useEffect, useState } from 'react'
 import Typed from "typed.js";
 
 
 export default function Home() {
+
+    const [currentImage, setCurrentImage] = useState(smallImage);
+    const [imageLoading, setImageLoading] = useState(true);
+
+    const fetchLargeImage = (image) => {
+        const loadingImage = new Image();
+        loadingImage.src = image;
+        loadingImage.onload = () => {
+            setCurrentImage(loadingImage.src);
+            setImageLoading(false);
+        }
+    }
+
+    useEffect(() => {
+        fetchLargeImage(image)
+    }, [])
 
     useEffect(() => {
 
@@ -59,28 +76,22 @@ export default function Home() {
                 </div>
                 <div className="chnging-text"> <span id='dyn-text'></span> </div>
                 <div className="socials-list">
-                    <div className="social-btn-home-wrap" onClick={copyEmail}> <FiMail className='social-btn-home'/> </div>
-                    <a href="https://bit.ly/moh-cv" target='_blank'>
-                        <div className="social-btn-home-wrap"> <FiFileText className='social-btn-home'/> </div>
+                    <div className="social-btn-home-wrap" onClick={copyEmail} aria-label='copy emial address'> <FiMail className='social-btn-home'/> </div>
+                    <a href="https://bit.ly/moh-cv" target='_blank' aria-label='cv'>
+                        <div className="social-btn-home-wrap"> <FiFileText className='social-btn-home'/></div>
                     </a>
-                    <a href="https://bit.ly/klm-gh" target='_blank'>
+                    <a href="https://bit.ly/klm-gh" target='_blank' aria-label='github profile link'>
                         <div className="social-btn-home-wrap"> <FiGithub className='social-btn-home'/> </div>
                     </a>
-                    <a href="https://bit.ly/moh-upwork" target='_blank'>
-                        <div className="social-btn-home-wrap"> <SiUpwork className='social-btn-home'/> </div>
-                    </a>
-                    <a href="https://bit.ly/moh-fiverr" target='_blank'>
-                        <div className="social-btn-home-wrap"> <TbBrandFiverr className='social-btn-home'/> </div>
-                    </a>
-                    <a href="https://bit.ly/klm-in" target='_blank'>
+                    <a href="https://bit.ly/klm-in" target='_blank' aria-label='linkedin profile link'>
                         <div className="social-btn-home-wrap"> <FiLinkedin className='social-btn-home'/> </div>
                     </a>
-                    <a href="https://bit.ly/klm-x" target='_blank'>
+                    <a href="https://bit.ly/klm-x" target='_blank' aria-label='twitter (x) profile link'>
                         <div className="social-btn-home-wrap"> <FiTwitter className='social-btn-home'/> </div>
                     </a>
                 </div>
                 <div className="profile-image">
-                    <img src={image}/>
+                    <img src={currentImage} alt='profile photo' className='profile-image-img'/>
                 </div>
                 <div className="placeholder-empty-div-2"></div>
             </div>
