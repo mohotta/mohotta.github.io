@@ -1,5 +1,6 @@
 import './Home.css'
 import { FiFileText, FiGithub, FiLinkedin, FiMail, FiTwitter, FiCheckCircle } from 'react-icons/fi'
+import { RiMastodonLine } from "react-icons/ri";
 // import { SiUpwork } from "react-icons/si";
 // import { TbBrandFiverr } from "react-icons/tb";
 import image from './image.png'
@@ -58,11 +59,9 @@ export default function Home() {
         navigator.clipboard.writeText("kumudu.20@cse.mrt.ac.lk");
         
         setEmailCopied(true)
-        console.log('copied')
 
         setTimeout(() => {
             setEmailCopied(false)
-            console.log('hide')
         }, 1500)
 
     }
@@ -76,18 +75,39 @@ export default function Home() {
                 </div>
                 <div className="chnging-text"> <span id='dyn-text'></span> </div>
                 <div className="socials-list">
-                    <div className="social-btn-home-wrap" onClick={copyEmail} aria-label='copy emial address'> <FiMail className='social-btn-home'/> </div>
+                    <div className="social-btn-home-wrap tooltip" onClick={copyEmail} aria-label='copy emial address'> 
+                        <FiMail className='social-btn-home'/> 
+                        <span className="tooltiptext"> Copy Email </span>
+                    </div>
                     <a href="https://bit.ly/moh-cv" target='_blank' aria-label='cv'>
-                        <div className="social-btn-home-wrap"> <FiFileText className='social-btn-home'/></div>
+                        <div className="social-btn-home-wrap tooltip"> 
+                            <FiFileText className='social-btn-home'/>
+                            <span className="tooltiptext"> Download CV </span>
+                        </div>
                     </a>
                     <a href="https://bit.ly/klm-gh" target='_blank' aria-label='github profile link'>
-                        <div className="social-btn-home-wrap"> <FiGithub className='social-btn-home'/> </div>
+                        <div className="social-btn-home-wrap tooltip"> 
+                            <FiGithub className='social-btn-home'/>
+                            <span className="tooltiptext"> Github </span> 
+                        </div>
                     </a>
                     <a href="https://bit.ly/klm-in" target='_blank' aria-label='linkedin profile link'>
-                        <div className="social-btn-home-wrap"> <FiLinkedin className='social-btn-home'/> </div>
+                        <div className="social-btn-home-wrap tooltip"> 
+                            <FiLinkedin className='social-btn-home'/> 
+                            <span className="tooltiptext"> Linkedin </span>
+                        </div>
                     </a>
                     <a href="https://bit.ly/klm-x" target='_blank' aria-label='twitter (x) profile link'>
-                        <div className="social-btn-home-wrap"> <FiTwitter className='social-btn-home'/> </div>
+                        <div className="social-btn-home-wrap tooltip"> 
+                            <FiTwitter className='social-btn-home'/> 
+                            <span className="tooltiptext"> X (Twitter) </span>
+                        </div>
+                    </a>
+                    <a href="https://mastodon.social/@mohotta" target='_blank' aria-label='mastodon profile link'>
+                        <div className="social-btn-home-wrap tooltip"> 
+                            <RiMastodonLine className='social-btn-home'/> 
+                            <span className="tooltiptext"> Mastodon </span>
+                        </div>
                     </a>
                 </div>
                 <div className="profile-image">
@@ -108,4 +128,3 @@ export default function Home() {
     )
 
 }
-

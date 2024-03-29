@@ -20,12 +20,12 @@ export default function NavSidebar() {
             const pos = window.scrollY
 
             if (i == sections.length-1) {
-                if (sections[i].offsetTop <= pos) {
+                if (sections[i].offsetTop <= pos+1) {
                     setActive(sections[i].id)
                 }
             }
             else {
-                if (sections[i].offsetTop <= pos && sections[i+1].offsetTop > pos) {
+                if (sections[i].offsetTop <= pos+1 && sections[i+1].offsetTop > pos+1) {
                     setActive(sections[i].id)
                 }
             }

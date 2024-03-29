@@ -48,7 +48,7 @@
 
 @keyframes slide-in {
     0% {
-        left: -60vw;
+        left: -200vw;
     }
     100% {
         left: 0;
@@ -60,7 +60,7 @@
         left: 0;
     }
     100% {
-        left: -60vw;
+        left: -200vw;
     }
 }
 

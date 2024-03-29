@@ -14,15 +14,15 @@ function App() {
 
   useEffect(() => {
 
-    const cards = document.querySelectorAll(".section")
+    const cards = document.querySelectorAll(".section-wrap")
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("show-section")
+          entry.target.classList.add("show-section-wrap")
         }
         else {
-          entry.target.classList.remove("show-section")
+          entry.target.classList.remove("show-section-wrap")
         }
       })
     }, {
@@ -45,12 +45,12 @@ function App() {
           <NavSidebar />
         </div>
         <div className="main" id='main'>
-          <div className="section"><Home/></div>
-          <div className="section"><About/></div>
-          <div className="section"><Resume/></div>
-          <div className="section"><Portfolio/></div>
-          <div className="section"><Articles/></div>
-          <div className="section"><Contact/></div>
+          <div className="home-wrap section-wrap"><Home/></div>
+          <div className="about-wrap section-wrap"><About/></div>
+          <div className="resume-wrap section-wrap"><Resume/></div>
+          <div className="portfolio-wrap section-wrap"><Portfolio/></div>
+          <div className="articles-wrap section-wrap"><Articles/></div>
+          <div className="contact-wrap section-wrap"><Contact/></div>
         </div>
         <div className="footer">
         </div>

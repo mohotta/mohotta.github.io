@@ -39,12 +39,12 @@
     z-index: 2;
 }
 
-.section {
+.section-wrap {
     opacity: 0;
     transition: opacity 2.5s ease-in-out;
 }
 
-.section.show-section {
+.section-wrap.show-section-wrap {
     opacity: 1;
 }
 
