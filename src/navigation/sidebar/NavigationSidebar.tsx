@@ -1,3 +1,4 @@
+import { Flex, Button, ButtonGroup, IconButton } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import { FiEdit, FiFileText, FiHome, FiMail, FiSave, FiUser } from "react-icons/fi"
 
@@ -13,10 +14,12 @@ export default function NavigationSidebar() {
     const [active, setActive] = useState("home")
 
     const handleScroll = () => {
-        const sections = document.querySelectorAll(".section")
+        const sections = document.querySelectorAll<HTMLElement>(".section")
 
         for (let i = 0; i < sections.length; i++) {
             const pos = window.scrollY
+
+            console.log(i, pos, sections[i].offsetTop)
 
             if (i == sections.length-1) {
                 if (sections[i].offsetTop <= pos) {
@@ -40,140 +43,109 @@ export default function NavigationSidebar() {
 
     return (
         <>
-            <div className="link-stack">
-                <div onClick={() => {
+           <Flex
+            display={{base: 'none', lg:'flex'}}
+            position={'fixed'}
+            height={'100vh'}
+            flexDirection={'column'}
+            justifyContent={'center'}
+            alignItems={'left'}
+           >
+            <ButtonGroup 
+                onClick={() => {
                     const element = document.getElementById("home")
                     element?.scrollIntoView({
                         behavior: 'smooth'
                     })
                 }}
-                    className='click-btn'
-                >
-                    <div onMouseOver={() => setShowLabelHome(true)} onMouseLeave={() => setShowLabelHome(false)}>
-                    {
-                        showLabelHome?
-                        <div className="link-btn">
-                            <FiHome className="link-btn-icon"/>
-                            <div className="link-btn-text"> Home </div>
-                        </div>
-                        :
-                        <div className={`link-btn-only ${active=='home'? 'active': 'inactive'}`}>
-                            <FiHome className="link-btn-icon-only"/>
-                        </div>
-                    }
-                    </div>
-                </div>
-                <div onClick={() => {
+                onMouseOver={() => setShowLabelHome(true)} 
+                onMouseLeave={() => setShowLabelHome(false)}
+                margin={'10px'}
+                isAttached
+            >
+                <IconButton aria-label="icon" icon={<FiHome/>} size={'lg'} rounded={'3xl'} colorScheme={active == 'home'? "cyan": "gray"} _hover={active == 'home'? { bgColor:'cyan.400' } : { bgColor:'gray.100' }}/>
+                { 
+                    showLabelHome ? 
+                    <Button size={'lg'} rounded={'3xl'} paddingLeft={'0.5rem'} colorScheme={active == 'home'? "cyan": "gray"} _hover={active == 'home'? { bgColor:'cyan.400' } : { bgColor:'gray.100' }} width={"100px"}> Home </Button> 
+                    : <></> 
+                }
+            </ButtonGroup>
+            <ButtonGroup 
+                onClick={() => {
                     const element = document.getElementById("about")
                     element?.scrollIntoView({
                         behavior: 'smooth'
                     })
                 }}
-                    className='click-btn'
-                >
-                    <div onMouseOver={() => setShowLabelAbout(true)} onMouseLeave={() => setShowLabelAbout(false)}>
-                    {
-                        showLabelAbout?
-                        <div className="link-btn">
-                            <FiUser className="link-btn-icon"/>
-                            <div className="link-btn-text"> About </div>
-                        </div>
-                        :
-                        <div className={`link-btn-only ${active=='about'? 'active': 'inactive'}`}>
-                            <FiUser className="link-btn-icon-only"/>
-                        </div>
-                    }
-                    </div>
-                </div>
-                <div onClick={() => {
+                onMouseOver={() => setShowLabelAbout(true)} 
+                onMouseLeave={() => setShowLabelAbout(false)}
+                margin={'10px'}
+                isAttached
+            >
+                <IconButton aria-label="icon" icon={<FiUser/>} size={'lg'} rounded={'3xl'} colorScheme={active == 'about'? "cyan": "gray"} _hover={active == 'about'? { bgColor:'cyan.400' } : { bgColor:'gray.100' }}/>
+                { showLabelAbout ? <Button size={'lg'} rounded={'3xl'} paddingLeft={'0.5rem'} colorScheme={active == 'about'? "cyan": "gray"} _hover={active == 'about'? { bgColor:'cyan.400' } : { bgColor:'gray.100' }} width={"100px"}> About </Button> : <></> }
+            </ButtonGroup>
+            <ButtonGroup 
+                onClick={() => {
                     const element = document.getElementById("resume")
                     element?.scrollIntoView({
                         behavior: 'smooth'
                     })
                 }}
-                    className='click-btn'
-                >
-                    <div onMouseOver={() => setShowLabelResume(true)} onMouseLeave={() => setShowLabelResume(false)}>
-                    {
-                        showLabelResume?
-                        <div className="link-btn">
-                            <FiFileText className="link-btn-icon"/>
-                            <div className="link-btn-text"> Resume </div>
-                        </div>
-                        :
-                        <div className={`link-btn-only ${active=='resume'? 'active': 'inactive'}`}>
-                            <FiFileText className="link-btn-icon-only"/>
-                        </div>
-                    }
-                    </div>
-                </div>
-                <div onClick={() => {
+                onMouseOver={() => setShowLabelResume(true)} 
+                onMouseLeave={() => setShowLabelResume(false)}
+                margin={'10px'}
+                isAttached
+            >
+                <IconButton aria-label="icon" icon={<FiFileText/>} size={'lg'} rounded={'3xl'} colorScheme={active == 'resume'? "cyan": "gray"} _hover={active == 'resume'? { bgColor:'cyan.400' } : { bgColor:'gray.100' }}/>
+                { showLabelResume ? <Button size={'lg'} rounded={'3xl'} paddingLeft={'0.5rem'} colorScheme={active == 'resume'? "cyan": "gray"} _hover={active == 'resume'? { bgColor:'cyan.400' } : { bgColor:'gray.100' }} width={"100px"}> Resume </Button> : <></> }
+            </ButtonGroup>
+            <ButtonGroup 
+                onClick={() => {
                     const element = document.getElementById("portfolio")
                     element?.scrollIntoView({
                         behavior: 'smooth'
                     })
                 }}
-                    className='click-btn'
-                >
-                    <div onMouseOver={() => setShowLabelPortfolio(true)} onMouseLeave={() => setShowLabelPortfolio(false)}>
-                    {
-                        showLabelPortfolio?
-                        <div className="link-btn">
-                            <FiSave className="link-btn-icon"/>
-                            <div className="link-btn-text"> Portfolio </div>
-                        </div>
-                        :
-                        <div className={`link-btn-only ${active=='portfolio'? 'active': 'inactive'}`}>
-                            <FiSave className="link-btn-icon-only"/>
-                        </div>
-                    }
-                    </div>
-                </div>
-                <div onClick={() => {
+                onMouseOver={() => setShowLabelPortfolio(true)} 
+                onMouseLeave={() => setShowLabelPortfolio(false)}
+                margin={'10px'}
+                isAttached
+            >
+                <IconButton aria-label="icon" icon={<FiSave/>} size={'lg'} rounded={'3xl'} colorScheme={active == 'portfolio'? "cyan": "gray"} _hover={active == 'portfolio'? { bgColor:'cyan.400' } : { bgColor:'gray.100' }}/>
+                { showLabelPortfolio ? <Button size={'lg'} rounded={'3xl'} paddingLeft={'0.5rem'} colorScheme={active == 'portfolio'? "cyan": "gray"} _hover={active == 'portfolio'? { bgColor:'cyan.400' } : { bgColor:'gray.100' }} width={"100px"}> Portfolio </Button> : <></> }
+            </ButtonGroup>
+            <ButtonGroup 
+                onClick={() => {
                     const element = document.getElementById("articles")
                     element?.scrollIntoView({
                         behavior: 'smooth'
                     })
                 }}
-                    className='click-btn'
-                >
-                    <div onMouseOver={() => setShowLabelArticles(true)} onMouseLeave={() => setShowLabelArticles(false)}>
-                    {
-                        showLabelArticles?
-                        <div className="link-btn">
-                            <FiEdit className="link-btn-icon"/>
-                            <div className="link-btn-text"> Articles </div>
-                        </div>
-                        :
-                        <div className={`link-btn-only ${active=='articles'? 'active': 'inactive'}`}>
-                            <FiEdit className="link-btn-icon-only"/>
-                        </div>
-                    }
-                    </div>
-                </div>
-                <div onClick={() => {
+                onMouseOver={() => setShowLabelArticles(true)} 
+                onMouseLeave={() => setShowLabelArticles(false)}
+                margin={'10px'}
+                isAttached
+            >
+                <IconButton aria-label="icon" icon={<FiEdit/>} size={'lg'} rounded={'3xl'} colorScheme={active == 'articles'? "cyan": "gray"} _hover={active == 'articles'? { bgColor:'cyan.400' } : { bgColor:'gray.100' }}/>
+                { showLabelArticles ? <Button size={'lg'} rounded={'3xl'} paddingLeft={'0.5rem'} colorScheme={active == 'articles'? "cyan": "gray"} _hover={active == 'articles'? { bgColor:'cyan.400' } : { bgColor:'gray.100' }} width={"100px"}> Articles </Button> : <></> }
+            </ButtonGroup>
+            <ButtonGroup 
+                onClick={() => {
                     const element = document.getElementById("contact")
                     element?.scrollIntoView({
                         behavior: 'smooth'
                     })
                 }}
-                    className='click-btn'
-                >
-                    <div onMouseOver={() => setShowLabelContact(true)} onMouseLeave={() => setShowLabelContact(false)}>
-                    {
-                        showLabelContact?
-                        <div className="link-btn">
-                            <FiMail className="link-btn-icon"/>
-                            <div className="link-btn-text"> Contact </div>
-                        </div>
-                        :
-                        <div className={`link-btn-only ${active=='contact'? 'active': 'inactive'}`}>
-                            <FiMail className="link-btn-icon-only"/>
-                        </div>
-                    }
-                    </div>
-                </div>
-            </div>
+                onMouseOver={() => setShowLabelContact(true)} 
+                onMouseLeave={() => setShowLabelContact(false)}
+                margin={'10px'}
+                isAttached
+            >
+                <IconButton aria-label="icon" icon={<FiMail/>} size={'lg'} rounded={'3xl'} colorScheme={active == 'contact'? "cyan": "gray"} _hover={active == 'contact'? { bgColor:'cyan.400' } : { bgColor:'gray.100' }}/>
+                { showLabelContact ? <Button size={'lg'} rounded={'3xl'} paddingLeft={'0.5rem'} colorScheme={active == 'contact'? "cyan": "gray"} _hover={active == 'contact'? { bgColor:'cyan.400' } : { bgColor:'gray.100' }} width={"100px"}> Contact </Button> : <></> }
+            </ButtonGroup>
+           </Flex>
         </>
     )
 
