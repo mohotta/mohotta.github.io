@@ -1,12 +1,15 @@
 import { Box, Button, Flex, Heading, Icon, IconButton, Image, Stack, Text, Tooltip, createIcon, useColorModeValue, useToast } from "@chakra-ui/react";
-import image from './image.svg'
+import software from './software.svg'
+import data from './data.svg'
+import tech from './tech.svg'
 import { useState } from "react";
 import { FaFileInvoice, FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 
 export default function Home() {
 
-    const roles = ["DATA SCIENTIST", "SOFT. ENGINEER"]
+    const roles = ["DATA SCIENTIST", "SOFT. ENGINEER", "TECH ENTHUSIAST"]
+    const roleImages = [data, software, tech]
     const [roleIndex, setRoleIndex] = useState(0)
 
     const toast = useToast()
@@ -177,7 +180,7 @@ export default function Home() {
                 alignItems={'center'}
                 margin={'100px'}
             >
-                <Image src={image}/>
+                <Image src={roleImages[roleIndex]}/>
             </Flex>
         </Flex>
     )
