@@ -10,19 +10,42 @@ export default function Home() {
     const roles = ["DATA SCIENTIST", "SOFT. ENGINEER", "TECH ENTHUSIAST"]
     const [roleIndex, setRoleIndex] = useState(0)
 
+    const email = "kumudulaksitha@gmail.com"
     const toast = useToast()
 
     const copyEmail = () => {
 
-        navigator.clipboard.writeText("kumudulaksitha@gmail.com");
+        navigator.clipboard.writeText(email);
         
         toast({
-            title: 'Email Copied!',
-            description: "Email is copied to your clipboard",
-            status: 'info',
             duration: 3000,
-            isClosable: true,
-            variant: 'subtle'
+            render: () => (
+                <Flex
+                    flexDirection={'column'}
+                    justifyContent={'left'}
+                    alignItems={'center'}
+                    bgColor={'gray.800'}
+                    color={'gray.50'}
+                    padding={'5px'}
+                    width={'250px'}
+                    borderRadius={'10px'}
+                >
+                    <Text
+                        fontFamily={`"Poetsen One", sans-serif`}
+                        fontWeight={'500'}
+                        fontSize={'1rem'}
+                    >
+                        email copied!
+                    </Text>
+                    <Text
+                        fontFamily={`"Poetsen One", sans-serif`}
+                        fontWeight={'500'}
+                        fontSize={'0.8rem'}
+                    >
+                        {email}
+                    </Text>
+                </Flex>
+            )
         })
 
     }
