@@ -110,7 +110,7 @@ export default function Portfolio() {
                     portfolio
                 </Heading>
             </Flex>
-            <SimpleGrid minChildWidth={'300px'} spacing={'10px'} width={'90%'} paddingY={'20px'}>
+            <SimpleGrid minChildWidth={'300px'} spacing={'20px'} width={'90%'} paddingY={'20px'}>
             {
                     projects.map((item) => (
                         <Card maxW='300px' bgColor={'gray.100'}>

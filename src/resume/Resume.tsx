@@ -128,7 +128,7 @@ export default function Resume() {
             },
             {
                 id: 4,
-                name: 'typescrript',
+                name: 'typescript',
                 icon: <SiTypescript/>,
                 confidence: 'intermediate'
             },
