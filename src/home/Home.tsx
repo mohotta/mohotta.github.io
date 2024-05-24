@@ -14,7 +14,7 @@ export default function Home() {
 
     const copyEmail = () => {
 
-        navigator.clipboard.writeText("kumudu.20@cse.mrt.ac.lk");
+        navigator.clipboard.writeText("kumudulaksitha@gmail.com");
         
         toast({
             title: 'Email Copied!',
