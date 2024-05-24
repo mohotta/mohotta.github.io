@@ -113,7 +113,7 @@ export default function Portfolio() {
             <SimpleGrid minChildWidth={'300px'} spacing={'20px'} width={'90%'} paddingY={'20px'}>
             {
                     projects.map((item) => (
-                        <Card maxW='300px' bgColor={'gray.100'}>
+                        <Card maxW='300px' bgColor={'gray.100'} id={item.id.toString()}>
                             <CardBody>
                                 <Image
                                     src={item.image}
@@ -122,6 +122,7 @@ export default function Portfolio() {
                                     width={'98%'}
                                     height={'150px'}
                                     overflow={'hidden'}
+                                    loading='lazy'
                                 />
                                 <Stack mt='6' spacing='3'>
                                 <Heading size='md' fontFamily={`"Poetsen One", sans-serif`}> {item.name} </Heading>

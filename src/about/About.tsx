@@ -18,72 +18,84 @@ export default function About() {
 
     const facts = [
         {
+            id: 1,
             icon: schoolLogo,
             firstLine: 'Gankanda Central',
             secondLine: 'College Pelmadulla',
             attrLink: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRctHUaq0V6g9lx2kUv0bZRspyEr9yx-SUxRtZXj7MKA&s'
         },
         {
+            id: 2,
             icon: exam,
             firstLine: 'GCE A/L 2019',
             secondLine: 'DR - 3 IR - 21',
             attrLink: 'https://www.flaticon.com/free-icons/exam'
         },
         {
+            id: 3,
             icon: uniLogo,
             firstLine: 'BSc. in Engineering UG',
             secondLine: 'CSE (Data Science) UoM',
             attrLink: 'https://upload.wikimedia.org/wikipedia/en/6/60/University_of_Moratuwa_logo.png'
         },
         {
+            id: 4,
             icon: gpa,
             firstLine: 'Current GPA',
             secondLine: '3.82 / 4.0',
             attrLink: 'https://www.flaticon.com/free-icons/exam'
         },
         {
+            id: 5,
             icon: ml,
             firstLine: 'Machine learning: ',
             secondLine: '0.5 yr experience',
             attrLink: 'https://www.flaticon.com/free-icons/machine-learning'
         },
         {
+            id: 6,
             icon: data,
             firstLine: 'Data Science: ',
             secondLine: '0.5 yr experience',
             attrLink: 'https://www.flaticon.com/free-icons/epidemiology'
         },
         {
+            id: 7,
             icon: webdev,
             firstLine: 'Web Development: ',
             secondLine: '0.5 yr experience',
             attrLink: 'https://www.flaticon.com/free-icons/web-development'
         },
         {
+            id: 8,
             icon: linux,
             firstLine: 'In love with: ',
             secondLine: 'Linux & FOSS',
             attrLink: 'https://www.flaticon.com/free-icons/linux'
         },
         {
+            id: 9,
             icon: tech,
             firstLine: 'In love with: ',
             secondLine: 'New Techs',
             attrLink: 'https://www.flaticon.com/free-icons/innovation'
         },
         {
+            id: 10,
             icon: program,
             firstLine: 'In love with: ',
             secondLine: 'Programming',
             attrLink: 'https://www.flaticon.com/free-icons/code'
         },
         {
+            id: 11,
             icon: photo,
             firstLine: 'In love with: ',
             secondLine: 'Photography',
             attrLink: 'https://www.flaticon.com/free-icons/photography'
         },
         {
+            id: 12,
             icon: hometown,
             firstLine: 'Hometown: ',
             secondLine: 'Godakalwela, LK',
@@ -106,9 +118,9 @@ export default function About() {
         >
             {/* title */}
             <Flex
-            flexDirection={'column'}
-            justifyContent={'center'}
-            alignItems={'center'}
+                flexDirection={'column'}
+                justifyContent={'center'}
+                alignItems={'center'}
             >
                 <Text
                     fontFamily={`"Poetsen One", sans-serif`}
@@ -136,6 +148,7 @@ export default function About() {
                 <Image
                     src={aboutImage}
                     width={{base:'70%', lg:'30%'}}
+                    loading='lazy'
                 />
 
                 <Flex
@@ -156,8 +169,9 @@ export default function About() {
                                     paddingLeft={5}
                                     alignItems={'center'}
                                     borderLeft={'3px dotted'}
+                                    id={fact.id.toString()}
                                 >
-                                    <Image src={fact.icon} width={'70px'}/>
+                                    <Image src={fact.icon} width={'70px'} loading='lazy'/>
                                     <Text
                                         fontFamily={`"Poetsen One", sans-serif`}
                                         fontWeight={'500'}

@@ -70,6 +70,7 @@ export default function Home() {
                 rounded={'full'}
                 border={'2px'}
                 borderStyle={'dashed'}
+                loading='lazy'
             />
             <Flex
                 flexDirection={'column'}

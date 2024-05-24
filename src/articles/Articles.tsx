@@ -1,11 +1,10 @@
-import { Button, Image, Card, CardBody, CardFooter, Flex, Heading, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, SimpleGrid, Stack, Text } from "@chakra-ui/react";
-import { useState } from "react";
+import { Button, Image, Card, CardBody, CardFooter, Flex, Heading, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 
 export default function Articles() {
 
-    const [modalOpen, setModelOpen] = useState(0)
+    // const [modalOpen, setModelOpen] = useState(0)
 
-    const projects = [
+    const articles = [
         {
             id: 1,
             name: 'Getting Started with Linux: Introduction',
@@ -60,8 +59,8 @@ export default function Articles() {
             </Flex>
             <SimpleGrid minChildWidth={'300px'} spacing={'10px'} width={'90%'} paddingY={'20px'}>
             {
-                    projects.map((item) => (
-                        <Card maxW='300px' bgColor={'gray.100'}>
+                    articles.map((item) => (
+                        <Card maxW='300px' bgColor={'gray.100'} id={item.id.toString()}>
                             <CardBody>
                                 <Image
                                     src={item.image}
@@ -70,6 +69,7 @@ export default function Articles() {
                                     width={'98%'}
                                     height={'150px'}
                                     overflow={'hidden'}
+                                    loading='lazy'
                                 />
                                 <Stack mt='6' spacing='3'>
                                 <Heading size='md' fontFamily={`"Poetsen One", sans-serif`}> {item.name} </Heading>
@@ -89,7 +89,7 @@ export default function Articles() {
                                         variant='link' 
                                         colorScheme='gray' 
                                         fontFamily={`"Poetsen One", sans-serif`}
-                                        onClick={() => setModelOpen(0)} // change to item.id when ready
+                                        // onClick={() => setModelOpen(0)} // change to item.id when ready
                                         isDisabled={true} // make false or remove when ready
                                     >
                                         read here
@@ -111,7 +111,7 @@ export default function Articles() {
                     ))
                 }
             </SimpleGrid>
-            <Modal 
+            {/* <Modal 
                 isOpen={modalOpen!=0} 
                 onClose={() => setModelOpen(0)} 
                 isCentered 
@@ -124,7 +124,7 @@ export default function Articles() {
                         textAlign={'center'}
                     > 
                         {
-                            modalOpen != 0 ? projects[modalOpen-1].name : ""
+                            modalOpen != 0 ? articles[modalOpen-1].name : ""
                         } 
                     </ModalHeader>
                     <ModalCloseButton />
@@ -133,7 +133,7 @@ export default function Articles() {
                             flexDirection={'column'}
                         >
                             <Text fontFamily={`"Poetsen One", sans-serif`}>
-                                {modalOpen != 0 ? projects[modalOpen-1].description : ""}
+                                {modalOpen != 0 ? articles[modalOpen-1].description : ""}
                             </Text>
                         </Flex>
                     </ModalBody>
@@ -142,16 +142,16 @@ export default function Articles() {
                             variant='link' 
                             colorScheme='gray' 
                             fontFamily={`"Poetsen One", sans-serif`}
-                            isDisabled={modalOpen != 0 ? projects[modalOpen-1].url == '' : true}
+                            isDisabled={modalOpen != 0 ? articles[modalOpen-1].url == '' : true}
                             as={'a'}
-                            href={modalOpen != 0 ? projects[modalOpen-1].url : ""}
+                            href={modalOpen != 0 ? articles[modalOpen-1].url : ""}
                             target="_blank"
                         >
                             github url
                         </Button>
                     </ModalFooter>
                 </ModalContent>
-            </Modal>
+            </Modal> */}
         </Flex>
     )
 }

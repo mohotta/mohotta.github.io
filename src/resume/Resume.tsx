@@ -1,21 +1,53 @@
 import { Flex, Heading, Text, Image, SimpleGrid, Tooltip, IconButton, Button } from "@chakra-ui/react";
 import cml from './images/cml.png'
 import { FiInfo } from "react-icons/fi";
-import { FaCss3Alt, FaFileInvoice, FaGolang, FaHtml5, FaJava, FaLanguage, FaLinux, FaPython } from "react-icons/fa6";
-import { ReactElement } from "react";
-import { SiChakraui, SiDocker, SiFlask, SiGooglecloud, SiJavascript, SiKubernetes, SiMusicbrainz, SiNodedotjs, SiNumpy, SiPandas, SiPhp, SiPostgresql, SiPytorch, SiScikitlearn, SiTekton, SiTensorflow, SiTypescript, SiVite, SiWindows } from "react-icons/si";
-import { VscGraphLine, VscGraphScatter } from "react-icons/vsc";
-import { MdCleaningServices, MdEmojiObjects, MdGppGood } from "react-icons/md";
-import { RiRobotFill, RiTeamFill } from "react-icons/ri";
-import { TbBrandCpp, TbFileTypeSql, TbKarate } from "react-icons/tb";
-import { GiGearStickPattern, GiThink } from "react-icons/gi";
+import python from './images/python.png'
+import torch from './images/torch.png'
+import tf from './images/tf.png'
+import php from './images/php.png'
+import cpp from './images/cpp.png'
+import linux from './images/linux.png'
+import clean from './images/clean.png'
+import css from './images/css.png'
+import docker from './images/docker.png'
+import ethics from './images/ethics.png'
+import html from './images/html.png'
+import java from './images/java.png'
+import js from './images/js.png'
+import lang from './images/lang.png'
+import node from './images/node.png'
+import object from './images/object.png'
+import pandas from './images/pandas.png'
+import pattern from './images/pattern.png'
+import postgre from './images/postgre.png'
+import prob from './images/prob.png'
+import sim from './images/sim.png'
+import sql from './images/sql.png'
+import team from './images/team.png'
+import ts from './images/ts.png'
+import vis from './images/vis.png'
+import vision from './images/vision.png'
+import windows from './images/windows.png'
+import eng from './images/eng.png'
+import problem from './images/problem.png'
+import chakra from './images/chakra.png'
+import vite from './images/vite.png'
+import numpy from './images/numpy.png'
+import flask from './images/flask.png'
+import kube from './images/kube.png'
+import gcloud from './images/gcloud.png'
+import go from './images/go.png'
+import karate from './images/karate.png'
+import sklearn from './images/skl.png'
+import tekton from './images/tekton.png'
+import { FaFileInvoice } from "react-icons/fa6";
 
 export default function Resume() {
 
     interface typeNot {
         id: number;
         name: string;
-        icon: ReactElement;
+        icon: string;
         confidence: string;
       }
       
@@ -34,25 +66,25 @@ export default function Resume() {
             {
                 id: 1,
                 name: 'data visualization',
-                icon: <VscGraphLine/>,
+                icon: vis,
                 confidence: 'intermediate'
             },
             {
                 id: 2,
                 name: 'data manipulation',
-                icon: <SiMusicbrainz/>,
+                icon: sim,
                 confidence: 'intermediate'
             },
             {
                 id: 3,
                 name: 'data cleaning',
-                icon: <MdCleaningServices/>,
+                icon: clean,
                 confidence: 'intemediate'
             },
             {
                 id: 4,
                 name: 'prbability & statistics',
-                icon: <VscGraphScatter/>,
+                icon: prob,
                 confidence: 'experienced'
             },
 
@@ -61,49 +93,49 @@ export default function Resume() {
             {
                 id: 1,
                 name: 'python',
-                icon: <FaPython/>,
+                icon: python,
                 confidence: 'experienced'
             },
             {
                 id: 2,
                 name: 'numpy',
-                icon: <SiNumpy/>,
+                icon: numpy,
                 confidence: 'experienced'
             },
             {
                 id: 3,
                 name: 'pandas',
-                icon: <SiPandas/>,
+                icon: pandas,
                 confidence: 'experienced'
             },
             {
                 id: 4,
                 name: 'scikit learn',
-                icon: <SiScikitlearn/>,
+                icon: sklearn,
                 confidence: 'experienced'
             },
             {
                 id: 5,
                 name: 'pytorch',
-                icon: <SiPytorch/>,
+                icon: torch,
                 confidence: 'intemediate'
             },
             {
                 id: 6,
                 name: 'tensorflow',
-                icon: <SiTensorflow/>,
+                icon: tf,
                 confidence: 'intemediate'
             },
             {
                 id: 7,
                 name: 'nlp & llms',
-                icon: <FaLanguage/>,
+                icon: lang,
                 confidence: 'intemediate'
             },
             {
                 id: 8,
                 name: 'computer vision',
-                icon: <RiRobotFill/>,
+                icon: vision,
                 confidence: 'basic'
             },
         ],
@@ -111,43 +143,43 @@ export default function Resume() {
             {
                 id: 1,
                 name: 'html',
-                icon: <FaHtml5/>,
+                icon: html,
                 confidence: 'experienced'
             },
             {
                 id: 2,
                 name: 'css',
-                icon: <FaCss3Alt/>,
+                icon: css,
                 confidence: 'intermediate'
             },
             {
                 id: 3,
                 name: 'javascript',
-                icon: <SiJavascript/>,
+                icon: js,
                 confidence: 'intermediate'
             },
             {
                 id: 4,
                 name: 'typescript',
-                icon: <SiTypescript/>,
+                icon: ts,
                 confidence: 'intermediate'
             },
             {
                 id: 5,
                 name: 'vite',
-                icon: <SiVite/>,
+                icon: vite,
                 confidence: 'intermediate'
             },
             {
                 id: 6,
                 name: 'chakra ui',
-                icon: <SiChakraui/>,
+                icon: chakra,
                 confidence: 'intermediate'
             },
             {
                 id: 7,
                 name: 'php',
-                icon: <SiPhp/>,
+                icon: php,
                 confidence: 'basic'
             },
         ],
@@ -155,49 +187,49 @@ export default function Resume() {
             {
                 id: 1,
                 name: 'python',
-                icon: <FaPython/>,
+                icon: python,
                 confidence: 'experienced'
             },
             {
                 id: 2,
                 name: 'flask',
-                icon: <SiFlask/>,
+                icon: flask,
                 confidence: 'intermediate'
             },
             {
                 id: 3,
-                name: 'node',
-                icon: <SiNodedotjs/>,
+                name: 'nodejs',
+                icon: node,
                 confidence: 'basic'
             },
             {
                 id: 4,
                 name: 'go',
-                icon: <FaGolang/>,
+                icon: go,
                 confidence: 'intermediate'
             },
             {
                 id: 5,
                 name: 'sql databases',
-                icon: <TbFileTypeSql/>,
+                icon: sql,
                 confidence: 'intermediate'
             },
             {
                 id: 6,
                 name: 'postgresql',
-                icon: <SiPostgresql/>,
+                icon: postgre,
                 confidence: 'intermediate'
             },
             {
                 id: 7,
                 name: 'java',
-                icon: <FaJava/>,
+                icon: java,
                 confidence: 'intermediate'
             },
             {
                 id: 8,
                 name: 'php',
-                icon: <SiPhp/>,
+                icon: php,
                 confidence: 'basic'
             },
         ],
@@ -205,61 +237,61 @@ export default function Resume() {
             {
                 id: 1,
                 name: 'c++',
-                icon: <TbBrandCpp/>,
+                icon: cpp,
                 confidence: 'intermediate'
             },
             {
                 id: 2,
                 name: 'java',
-                icon: <FaJava/>,
+                icon: java,
                 confidence: 'intermediate'
             },
             {
                 id: 3,
                 name: 'problem solving',
-                icon: <GiThink/>,
+                icon: problem,
                 confidence: 'intermediate'
             },
             {
                 id: 4,
                 name: 'oop',
-                icon: <MdEmojiObjects/>,
+                icon: object,
                 confidence: 'expierienced'
             },
             {
                 id: 5,
                 name: 'design patterns',
-                icon: <GiGearStickPattern/>,
+                icon: pattern,
                 confidence: 'intermediate'
             },
             {
                 id: 6,
                 name: 'docker',
-                icon: <SiDocker/>,
+                icon: docker,
                 confidence: 'intermediate'
             },
             {
                 id: 7,
                 name: 'tekton CI/CD',
-                icon: <SiTekton/>,
+                icon: tekton,
                 confidence: 'basic'
             },
             {
                 id: 8,
                 name: 'kubernetes',
-                icon: <SiKubernetes/>,
+                icon: kube,
                 confidence: 'basic'
             },
             {
                 id: 9,
                 name: 'gcloud',
-                icon: <SiGooglecloud/>,
+                icon: gcloud,
                 confidence: 'basic'
             },
             {
                 id: 10,
                 name: 'karate testing',
-                icon: <TbKarate/>,
+                icon: karate,
                 confidence: 'experienced'
             },
         ],
@@ -267,37 +299,37 @@ export default function Resume() {
             {
                 id: 1,
                 name: 'linux os',
-                icon: <FaLinux/>,
+                icon: linux,
                 confidence: 'experienced'
             },
             {
                 id: 2,
                 name: 'windows os',
-                icon: <SiWindows/>,
+                icon: windows,
                 confidence: 'experienced'
             },
             {
                 id: 3,
                 name: 'teamwork',
-                icon: <RiTeamFill/>,
+                icon: team,
                 confidence: 'very good'
             },
             {
                 id: 4,
                 name: 'english laguage',
-                icon: <FaLanguage/>,
+                icon: eng,
                 confidence: 'intermediate'
             },
             {
                 id: 5,
                 name: 'sinhala language',
-                icon: <FaLanguage/>,
+                icon: lang,
                 confidence: 'native'
             },
             {
                 id: 6,
                 name: 'work ethics',
-                icon: <MdGppGood/>,
+                icon: ethics,
                 confidence: 'best'
             },
         ]
@@ -393,6 +425,7 @@ export default function Resume() {
                             border={'1px solid'}
                             borderRadius={'20px'}
                             padding={'20px'}
+                            id={domain}
                         >
                             <Heading
                                 fontFamily={`"Poetsen One", sans-serif`}
@@ -402,7 +435,7 @@ export default function Resume() {
                             >
                                 {domainNames[domain]}
                             </Heading>
-                            <SimpleGrid minChildWidth='150px' spacing='10px' paddingY={'40px'} width={'100%'}>
+                            <SimpleGrid minChildWidth='160px' spacing='10px' paddingY={'40px'} width={'100%'}>
                                 {
                                     skills[domain].map((skill) => 
                                         <Flex
@@ -413,8 +446,9 @@ export default function Resume() {
                                             gap={5}
                                             paddingLeft={5}
                                             alignItems={'center'}
+                                            id={skill.id.toString()}
                                         >
-                                            {skill.icon}
+                                            <Image src={skill.icon} alt="product icon" width={'20px'}/>
                                             <Flex
                                                 flexDirection={'column'}
                                                 justifyContent={'left'}
