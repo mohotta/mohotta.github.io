@@ -1,4 +1,4 @@
-import { Button, Flex, IconButton } from "@chakra-ui/react"
+import { Button, Flex, IconButton, Slide } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import { FiEdit, FiFileText, FiHome, FiMail, FiMenu, FiSave, FiUser, FiX } from "react-icons/fi";
 
@@ -16,12 +16,12 @@ export default function NavigationHeader() {
             const pos = window.scrollY
 
             if (i == sections.length-1) {
-                if (sections[i].offsetTop <= pos) {
+                if (sections[i].offsetTop+10 <= pos) {
                     setActive(sections[i].id)
                 }
             }
             else {
-                if (sections[i].offsetTop <= pos && sections[i+1].offsetTop > pos) {
+                if (sections[i].offsetTop+10 <= pos && sections[i+1].offsetTop+10 > pos) {
                     setActive(sections[i].id)
                 }
             }
@@ -60,18 +60,23 @@ export default function NavigationHeader() {
                 <IconButton
                     icon={showMenu ? <FiX /> : <FiMenu />}
                     aria-label={"menu-icon"}
-                    onClick={() => setShowMenu(!showMenu)}
+                    onClick={() => {
+                        setShowMenu(!showMenu)
+                    }}
                     left={'10px'}
                     top={'10px'}
                     width={'1rem'}
                     rounded={'3xl'}
                     size={'lg'}
                     position={'fixed'}
+                    zIndex={10}
                 />
             </Flex>
             {
                 showMenu ?
-                    <NavMenu active={active} onClick={onClick}/>
+                    <Slide in={showMenu} direction={'left'}>
+                        <NavMenu active={active} onClick={onClick}/>
+                    </Slide>
                 :
                     <></>
             }
@@ -88,102 +93,81 @@ interface navProps {
 
 function NavMenu( { active, onClick }: navProps ) {
 
+    const items = [
+        {
+            name: 'home',
+            icon: <FiHome/>,
+            title: 'Home'
+        },
+        {
+            name: 'about',
+            icon: <FiUser/>,
+            title: 'About'
+        },
+        {
+            name: 'resume',
+            icon: <FiFileText/>,
+            title: 'Resume'
+        },
+        {
+            name: 'portfolio',
+            icon: <FiSave/>,
+            title: 'Portfolio'
+        },
+        {
+            name: 'articles',
+            icon: <FiEdit/>,
+            title: 'Articles'
+        },
+        {
+            name: 'contact',
+            icon: <FiMail/>,
+            title: 'Contact'
+        },
+    ]
+
     return (
         <Flex
             position={'fixed'}
             flexDirection={'column'}
             justifyContent={'center'}
-            alignItems={'center'}
-            height={'80vh'}
-            width={'45vw'}
+            alignItems={'left'}
+            height={'60vh'}
+            width={'100vw'}
             top={'100px'}
         >
             <Flex
                 flexDirection={'column'}
                 justifyContent={'center'}
                 alignItems={'center'}
-                width={'100%'}
-                height={'80%'}
+                width={'250px'}
+                height={'100%'}
+                padding={'30px'}
                 gap={5}
-                bgColor={'rgba(203, 213, 224, 0.9)'}
-                borderRadius={'2vw'}
-                marginLeft={'4vw'}
+                bgColor={'rgba(203, 213, 224, 0.6)'}
+                borderRadius={'30px'}
+                marginLeft={'10px'}
                 zIndex={4}
             >
-
-                <Button 
-                    leftIcon={<FiHome/>} 
-                    width={'80%'} 
-                    rounded={'3xl'}
-                    onClick={() => onClick('home')}
-                    colorScheme={active == 'home'? "cyan": "gray"}
-                    size={{base:'md', md:'lg'}} 
-                    justifyContent={'left'}
-                    zIndex={4}
-                > 
-                    Home 
-                </Button>
-                <Button 
-                    leftIcon={<FiUser/>} 
-                    width={'80%'} 
-                    rounded={'3xl'}
-                    onClick={() => onClick('about')}
-                    colorScheme={active == 'about'? "cyan": "gray"}
-                    size={{base:'md', md:'lg'}} 
-                    justifyContent={'left'}
-                    zIndex={4}
-                > 
-                    About  
-                </Button>
-                <Button 
-                    leftIcon={<FiFileText/>} 
-                    width={'80%'} 
-                    rounded={'3xl'}
-                    onClick={() => onClick('resume')}
-                    colorScheme={active == 'resume'? "cyan": "gray"}
-                    size={{base:'md', md:'lg'}} 
-                    justifyContent={'left'}
-                    zIndex={4}
-                > 
-                    Resume 
-                </Button>
-                <Button 
-                    leftIcon={<FiSave/>} 
-                    width={'80%'} 
-                    rounded={'3xl'}
-                    onClick={() => onClick('portfolio')}
-                    colorScheme={active == 'portfolio'? "cyan": "gray"}
-                    size={{base:'md', md:'lg'}} 
-                    justifyContent={'left'}
-                    zIndex={4}
-                > 
-                    Portfolio 
-                </Button>
-                <Button 
-                    leftIcon={<FiEdit/>} 
-                    width={'80%'} 
-                    rounded={'3xl'}
-                    onClick={() => onClick('articles')}
-                    colorScheme={active == 'articles'? "cyan": "gray"}
-                    size={{base:'md', md:'lg'}} 
-                    justifyContent={'left'}
-                    zIndex={4}
-                > 
-                    Articles 
-                </Button>
-                <Button 
-                    leftIcon={<FiMail/>} 
-                    width={'80%'} 
-                    rounded={'3xl'}
-                    onClick={() => onClick('contact')}
-                    colorScheme={active == 'contact'? "cyan": "gray"}
-                    size={{base:'md', md:'lg'}} 
-                    justifyContent={'left'}
-                    zIndex={4}
-                > 
-                    Contact 
-                </Button>
-
+                {
+                    items.map((item) => 
+                        <Button 
+                            leftIcon={item.icon} 
+                            width={'80%'} 
+                            rounded={'3xl'}
+                            onClick={() => onClick(item.name)}
+                            bgColor={active == item.name? "gray.900": "gray.100"}
+                            color={active == item.name? "gray.50": "gray.900"}
+                            _hover={active == item.name? { bgColor:'gray.900' } : { bgColor:'gray.100' }}
+                            size={'md'} 
+                            justifyContent={'left'}
+                            zIndex={4}
+                            fontFamily={`"Poetsen One", sans-serif`}
+                        > 
+                            {item.title} 
+                        </Button>
+                    )
+                }
             </Flex>
         </Flex>
     )

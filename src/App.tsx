@@ -7,6 +7,7 @@ import NavigationHeader from './navigation/header/NavigationHeader'
 import NavigationSidebar from './navigation/sidebar/NavigationSidebar'
 import Portfolio from './portfolio/Portfolio'
 import Resume from './resume/Resume'
+import ScrlBtn from './scroll/ScrlBtn'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       <Portfolio/>
       <Articles/>
       <Contact/>
+      <ScrlBtn/>
     </>
   )
 }
