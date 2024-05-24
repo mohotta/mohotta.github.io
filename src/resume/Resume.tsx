@@ -402,7 +402,7 @@ export default function Resume() {
                             >
                                 {domainNames[domain]}
                             </Heading>
-                            <SimpleGrid minChildWidth='200px' spacing='10px' paddingY={'40px'} width={'100%'}>
+                            <SimpleGrid minChildWidth='150px' spacing='10px' paddingY={'40px'} width={'100%'}>
                                 {
                                     skills[domain].map((skill) => 
                                         <Flex
@@ -413,9 +413,8 @@ export default function Resume() {
                                             gap={5}
                                             paddingLeft={5}
                                             alignItems={'center'}
-                                            // bgColor={'red'}
                                         >
-                                            <IconButton aria-label="not a btn" icon={skill.icon} variant={'ghost'} size={'lg'} color={'gray.900'}/>
+                                            {skill.icon}
                                             <Flex
                                                 flexDirection={'column'}
                                                 justifyContent={'left'}
@@ -467,7 +466,7 @@ export default function Resume() {
                     >
                         professional experience
                     </Heading>
-                    <SimpleGrid minChildWidth='400px' spacing='40px' paddingY={'40px'} width={'100%'}>
+                    <SimpleGrid minChildWidth='300px' spacing='40px' paddingY={'40px'} width={'100%'}>
                         {
                             exps.map((exp) => 
                                 <Flex

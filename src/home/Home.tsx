@@ -62,8 +62,6 @@ export default function Home() {
             marginLeft={{base: "0px", lg:"70px"}}
             position={'relative'}
             width={{base: '98vw', lg: 'auto'}}
-            // marginTop={{base:'100px', lg: 'auto'}}
-            // bgColor={'rgba(255, 0, 0, 0.1)'}
         >
             <Image 
                 src={image} 
