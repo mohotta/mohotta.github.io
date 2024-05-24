@@ -57,7 +57,7 @@ export default function Articles() {
                     articles
                 </Heading>
             </Flex>
-            <SimpleGrid minChildWidth={'300px'} spacing={'10px'} width={'90%'} paddingY={'20px'}>
+            <SimpleGrid minChildWidth={'300px'} spacing={'20px'} width={'90%'} paddingY={'20px'}>
             {
                     articles.map((item) => (
                         <Card maxW='300px' bgColor={'gray.100'} id={item.id.toString()}>
