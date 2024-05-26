@@ -40,6 +40,7 @@ import go from './images/go.png'
 import karate from './images/karate.png'
 import sklearn from './images/skl.png'
 import tekton from './images/tekton.png'
+import scipy from './images/scipy.png'
 import { FaFileInvoice } from "react-icons/fa6";
 
 export default function Resume() {
@@ -87,7 +88,12 @@ export default function Resume() {
                 icon: prob,
                 confidence: 'experienced'
             },
-
+            {
+                id: 5,
+                name: 'scipy',
+                icon: scipy,
+                confidence: 'basic'
+            },
         ],
         ml: [
             {
@@ -435,7 +441,7 @@ export default function Resume() {
                             >
                                 {domainNames[domain]}
                             </Heading>
-                            <SimpleGrid minChildWidth='160px' spacing='10px' paddingY={'40px'} width={'100%'}>
+                            <SimpleGrid minChildWidth='180px' spacing='10px' paddingY={'40px'} width={'100%'}>
                                 {
                                     skills[domain].map((skill) => 
                                         <Flex
