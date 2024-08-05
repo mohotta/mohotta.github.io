@@ -94,10 +94,10 @@ const Articles = () => {
                   {project.description}
                 </p>
                 <div className='flex flex-row justify-evenly items-center justify-self-end w-[90%]'>
-                  <Button variant={'secondary'} className='rounded-full'>
+                  <Button disabled variant={'secondary'} className='rounded-full'>
                   <a href={project.url}> read here </a>
                   </Button>
-                  <Button disabled variant={'secondary'} className='rounded-full'>
+                  <Button variant={'secondary'} className='rounded-full'>
                     <a href={project.url}> external </a>
                   </Button>
                 </div>

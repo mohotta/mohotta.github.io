@@ -6,7 +6,7 @@ import { FiX } from 'react-icons/fi'
 
 const projects = [
   {
-    id: 1,
+    id: 0,
     name: 'freebook social',
     tldr: 'Full stack instagram like social media application for a concept of open source social media platform.',
     description: 'We worked on this as semester 5 project in third year. We tried to predict speaker age, gender, emotions, pitch etc from the recorded audio. User can upload pre-recorded audio or record live directly from the dashboard. We used multiple speech datasets and state of the art models for the task. If there are no good models, we tried to buiold our own models (for example: emotion detection).',
