@@ -10,7 +10,26 @@ export default function NavigationHeader() {
 
     const [showMenu, setShowMenu] = useState(false)
 
-    const [active, setActive] = useState("home")
+    const getSection = () => {
+        const sections = document.querySelectorAll<HTMLElement>(".section")
+
+        for (let i = 0; i < sections.length; i++) {
+            const pos = window.scrollY
+
+            if (i == sections.length-1) {
+                if (sections[i].offsetTop-10 <= pos) {
+                    return sections[i].id
+                }
+            }
+            else {
+                if (sections[i].offsetTop-10 <= pos && sections[i+1].offsetTop-10 > pos) {
+                    return sections[i].id
+                }
+            }
+        }
+    }
+
+    const [active, setActive] = useState(getSection() || 'home')
 
     const handleScroll = () => {
         const sections = document.querySelectorAll<HTMLElement>(".section")
@@ -19,12 +38,12 @@ export default function NavigationHeader() {
             const pos = window.scrollY
 
             if (i == sections.length-1) {
-                if (sections[i].offsetTop+10 <= pos) {
+                if (sections[i].offsetTop-10 <= pos) {
                     setActive(sections[i].id)
                 }
             }
             else {
-                if (sections[i].offsetTop+10 <= pos && sections[i+1].offsetTop+10 > pos) {
+                if (sections[i].offsetTop-10 <= pos && sections[i+1].offsetTop+10 > pos) {
                     setActive(sections[i].id)
                 }
             }

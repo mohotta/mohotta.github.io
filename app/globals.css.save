@@ -1,8 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
+OOOOOBB@tailwind base;
+@tailwiBOOOOBnd components;
+@tailwind utOOOOOOOOBBBBOBOBBBOilities;
+O
+@OBOBlayer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;

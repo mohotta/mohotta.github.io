@@ -16,6 +16,8 @@ const BottomRightPanel = () => {
 
     const [openChat, setOpenChat] = useState(false)
 
+    // TODO: implement chat
+
   return (
     <div className='relative z-10'>
         <div className="fixed flex flex-col justify-center items-end bottom-4 right-4 space-y-2">
@@ -23,6 +25,7 @@ const BottomRightPanel = () => {
                 <Tooltip>
                     <TooltipTrigger asChild>
                         <Button
+                            disabled
                             variant={'secondary'}
                             aria-label='scroll-up'
                             size={'icon'}

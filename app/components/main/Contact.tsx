@@ -1,7 +1,6 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import { useToast } from '@/components/ui/use-toast'
 import React from 'react'
 import { BiCopyAlt } from 'react-icons/bi'
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
@@ -46,8 +45,6 @@ const socials = [
 ]
 
 const Contact = () => {
-
-    const { toast } = useToast()
 
     return (
       <div id='contact' className='flex flex-col justify-center items-center min-h-screen relative z-0 py-[10vh] space-y-4 section'>

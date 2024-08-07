@@ -19,7 +19,8 @@ const config = {
     },
     extend: {
       backgroundImage:{
-        abstractPattern: "url('/bg-image.png')"
+        abstractPattern: "url('/parabolic-pentagon.svg')",
+        abstractPatternDark: "url('/parabolic-pentagon-dark.svg')",
       },
       colors: {
         border: "hsl(var(--border))",

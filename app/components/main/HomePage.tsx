@@ -1,18 +1,27 @@
 'use client'
 
-import React, { useState } from 'react'
-import { Chat } from '../chat'
-import { Button } from '@/components/ui/button'
+import { TypeAnimation } from 'react-type-animation';
+
 
 const HomePage = () => {
 
-  const [open, setOpen] = useState(false)
-
   return (
-    <div id='home' className='min-h-screen flex w-full justify-center items-center section bg-abstractPattern bg-cover bg-fixed relative z-0'>
-      <div className='h-screen w-full bg-step1/50 backdrop-blur-sm'>
-        home
-      </div>
+    <div id='home' className='min-h-screen flex flex-col w-full justify-center items-center section relative z-0'>
+      <h1 className='text-center text-7xl font-bold'> Kumudu Mohottala </h1>
+      <TypeAnimation
+        sequence={[
+          'data scientist',
+          3000,
+          'software engineer', 
+          3000, 
+          'tech enthusiast',
+          1000,
+        ]}
+        wrapper="span"
+        cursor={true}
+        repeat={Infinity}
+        className={`text-3xl font-semibold tracking-widest w-full text-center`}
+      />
     </div>
   )
 }

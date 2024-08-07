@@ -1,4 +1,3 @@
-import aboutImage from './images/Detailed-examination.svg'
 import schoolLogo from './images/ganaknada-logo.png'
 import uniLogo from './images/University_of_Moratuwa_logo.png'
 import exam from './images/exam.png'
@@ -116,13 +115,18 @@ const About = () => {
                 </h1>
             </div>
             <div className='flex flex-col justify-center items-center max-w-[90%] space-y-4'>
-                <p className='w-[90%] font-medium italic text-step2-foreground text-center'>
-                    “A dedicated professional and technology enthusiast with strong teamwork
-                    and collaboration skills. I thrive in diverse environments and am
-                    committed to driving team success. Passionate about leveraging
-                    technology for growth, I aim to contribute significantly to a company’s
-                    success, always striving for excellence and continuous learning.”
-                </p>
+                <div className='flex flex-col justify-center items-center md:flex-row w-full md:w-[80%] gap-4'>
+                    <div className='relative w-[200px] h-[200px] aspect-square opacity-90'>
+                        <Image alt='profile' src={'/profile.png'} layout='fill' placeholder='blur' blurDataURL='/profile-blur.ong' className='rounded-full'/>
+                    </div>
+                    <p className='font-medium italic text-step2-foreground text-center md:w-[60%] w-[90%]'>
+                        “A dedicated professional and technology enthusiast with strong teamwork
+                        and collaboration skills. I thrive in diverse environments and am
+                        committed to driving team success. Passionate about leveraging
+                        technology for growth, I aim to contribute significantly to a company’s
+                        success, always striving for excellence and continuous learning.”
+                    </p>
+                </div>
                 <div className='flex flex-row flex-wrap justify-evenly items-center content-start bg-secondary/60 p-8 rounded-lg gap-8'>
                     {
                     facts.map((fact) => (

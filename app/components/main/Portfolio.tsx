@@ -11,7 +11,7 @@ const projects = [
     tldr: 'Full stack instagram like social media application for a concept of open source social media platform.',
     description: 'We worked on this as semester 5 project in third year. We tried to predict speaker age, gender, emotions, pitch etc from the recorded audio. User can upload pre-recorded audio or record live directly from the dashboard. We used multiple speech datasets and state of the art models for the task. If there are no good models, we tried to buiold our own models (for example: emotion detection).',
     category: 'se',
-    technologies: ['typescript', 'react', 'tailwind css', 'spring boot', 'java', 'mongodb'],
+    technologies: ['html/css', 'typescript', 'react', 'git/github', 'tailwind-css', 'spring-boot', 'java', 'mongodb'],
     url: 'https://github.com/sp-vis'
   },
   {
@@ -20,7 +20,7 @@ const projects = [
       tldr: 'Dashboard showing the features of live recorded or uploaded audio files using machine learning models built using the wav2vec 2.0 model developed by Facebook.',
       description: 'We worked on this as semester 5 project in third year. We tried to predict speaker age, gender, emotions, pitch etc from the recorded audio. User can upload pre-recorded audio or record live directly from the dashboard. We used multiple speech datasets and state of the art models for the task. If there are no good models, we tried to buiold our own models (for example: emotion detection).',
       category: 'ds',
-      technologies: ['python', 'git/github', 'deep learning', 'hugging face', 'pytorch', 'tensorflow', 'audio processing'],
+      technologies: ['python', 'git/github', 'hugging-face', 'pytorch', 'tensorflow', 'audio'],
       url: 'https://github.com/sp-vis'
   },
   {
@@ -29,46 +29,42 @@ const projects = [
       tldr: 'Portfolio site create using chakra ui and vite for myself. Hosted on github pages.',
       description: 'Portfolio site create using chakra ui and vite for myself. I started working on frontend development with this project. Learned technologies needed parellelly woth the development. First version was purely created on chakra ui templates. second version (current version) is created using chakra ui but  without usin any templates and used my imagination for ui/ux.',
       category: 'se',
-      technologies: ['typescript', 'react', 'vite', 'chakra ui', 'git/gihub', 'github pages', 'frontend development'],
+      technologies: ['typescript', 'nextjs', 'react', 'vite', 'chakra ui', 'git/github', 'github pages', 'ui/ux'],
       url: 'https://github.com/mohotta/mohotta.github.io'
   },
   {
       id: 3,
-      name: 'gaze tracking system',
-      tldr: 'Gaze tracking program  to see if a person is paying attention to the screen using meadiapipe libraries.',
-      description: 'Gaze tracking system to track the attention of the user to the screen using facial landmarks obtained using googles mediapipe libraires. I created the training data by myself and trained a random forest model to give results.',
-      category: 'ds',
-      technologies: ['python', 'mediapipe', 'opencv', 'git/github', 'machine learning'],
-      url: 'https://github.com/mohotta/gaze-tracker-python'
-  },
-  {
-      id: 4,
       name: 'airline reservation system',
       tldr: 'airline ticker reservation system using php, mySQL & HTML.',
       description: 'airline reservation system created as a database management project in the university. We created a system with user management, ticket price discounts with user tier, seat booking system etc.',
       category: 'se',
-      technologies: ['html/css', 'bootstrap', 'php', 'mysql', 'git/github', 'database management'],
+      technologies: ['html/css', 'bootstrap', 'php', 'mysql', 'git/github'],
       url: 'https://github.com/mohotta/DBMS-MiniProject.git'
   },
-  {
-      id: 5,
-      name: 'micro-mouse project',
-      tldr: 'Programmed a maze solving algorithm for a micro-mouse robot.',
-      description: 'Programmed a maze solving algorithm for a micro-mouse project ot present in a competition. Used c++ to use in a micro controller board. I used flood fill algorimth for the project',
-      category: 'se',
-      technologies: ['c++', 'arduino', 'flood-fill algorithm'],
-      url: ''
-  },
-  {
-      id: 6,
-      name: 'rpal intepreter',
-      tldr: 'Intepreter program for rpal programming laguage.',
-      description: 'Intepreter program for rpal programming laguage.',
-      category: 'se',
-      technologies: ['c++', 'programming laguages'],
-      url: ''
-  },
 ]
+
+const color_dict = {
+  'typescript': 'bg-sky-500',
+  'javascript': 'bg-amber-500',
+  'react': 'bg-blue-500',
+  'tailwind-css': 'bg-cyan-500',
+  'spring-boot': 'bg-lime-500',
+  'java': 'bg-red-500',
+  'mongodb': 'bg-emerald-500',
+  'git/github': 'bg-red-500',
+  'python': 'bg-cyan-500',
+  'pytorch': 'bg-red-500',
+  'tensorflow': 'bg-sky-500',
+  'html/css': 'bg-orange-500',
+  'bootstrap': 'bg-violet-500',
+  'php': 'bg-purple-500',
+  'mysql': 'bg-rose-500',
+  'c++': 'bg-sky-400',
+  'arduino': 'bg-cyan-500',
+  'hugging-face': 'bg-yellow-500',
+  'vite': 'bg-pink-500',
+  'nextjs': 'bg-slate-500'
+}
 
 const Portfolio = () => {
 
@@ -116,7 +112,7 @@ const Portfolio = () => {
       <div className='flex flex-col justify-center items-center min-h-screen relative z-0 py-[10vh] space-y-8 section' id='portfolio'>
         <div className='flex flex-col justify-center items-center'>
           <p>
-          recent projects & works
+          top projects & works
           </p>
           <h1 className='text-6xl font-bold'>
           portfolio
@@ -130,17 +126,19 @@ const Portfolio = () => {
                 <p className='w-4/5'>
                   {project.tldr}
                 </p>
-                <div className='flex flex-row justify-evenly flex-wrap space-1'>
+                <div className='flex flex-row justify-evenly flex-wrap space-x-1 w-9/12'>
                   {
                     project.technologies.map(tech => (
-                      <p key={tech} className='rounded-full bg-step9/20 p-1 px-2 mb-1 text-xs'>
-                        {tech}
-                      </p>
+                      <div key={tech} className='flex flex-row justify-start items-center space-x-0.5'>
+                        <div className={`w-[12px] h-[12px] rounded-full ${color_dict[tech] !== undefined? color_dict[tech]: 'bg-teal-500'}`}>
+                        </div>
+                        <p className='text-step2-foreground text-sm'>{tech}</p>
+                      </div>
                     ))
                   }
                 </div>
                 <div className='flex flex-row justify-evenly items-center justify-self-end w-[90%]'>
-                  <Button variant={'secondary'} className='rounded-full' onClick={() => setInforDialog(project.id)}>
+                  <Button disabled variant={'secondary'} className='rounded-full' onClick={() => setInforDialog(project.id)}>
                     more info
                   </Button>
                   <Button disabled={project.url===""} variant={'secondary'} className='rounded-full'>
