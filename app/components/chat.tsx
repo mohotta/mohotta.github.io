@@ -20,7 +20,7 @@ export default function Chat({ open, setOpen }: chatProps) {
 
     const messages: {message: string, side: 0 | 1 }[] = [
         {
-            message: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, doloremque.",
+            message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero consequuntur dolorum commodi pariatur?",
             side: 0
         },
         {
@@ -28,7 +28,7 @@ export default function Chat({ open, setOpen }: chatProps) {
             side: 1
         },
         {
-            message: "Lorem ipsum dolor",
+            message: "Lorem ipsum dolor sit.",
             side: 0
         },
         {
@@ -36,7 +36,7 @@ export default function Chat({ open, setOpen }: chatProps) {
             side: 1
         },
         {
-            message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus blanditiis placeat eius tempora!",
+            message: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam reiciendis earum itaque, dolorem nesciunt odio.",
             side: 0
         },
         {
@@ -44,28 +44,16 @@ export default function Chat({ open, setOpen }: chatProps) {
             side: 1
         },
         {
-            message: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, doloremque.",
+            message: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
             side: 0
         },
         {
-            message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus blanditiis placeat eius tempora!",
+            message: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio, laborum.",
             side: 1
         },
         {
-            message: "Lorem ipsum dolor",
+            message: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos corporis non cum neque dolorem odit itaque vel autem aperiam porro.",
             side: 0
-        },
-        {
-            message: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, doloremque.",
-            side: 1
-        },
-        {
-            message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus blanditiis placeat eius tempora!",
-            side: 0
-        },
-        {
-            message: "Lorem ipsum dolor",
-            side: 1
         },
     ]
 

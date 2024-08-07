@@ -123,7 +123,7 @@ const items = [
       ]
   },
   {
-    id: 2,
+    id: 3,
     name: 'soft skills & other skills',
     techs: [
       {
@@ -169,7 +169,7 @@ const pros = [
     ]
   },
   {
-    id: 1,
+    id: 2,
     name: 'IESL Student Chapter - UoM',
     addr: 'Moratuwa, LK',
     pos: [
@@ -186,7 +186,7 @@ const pros = [
     ]
   },
   {
-    id: 1,
+    id: 3,
     name: 'ACM Student Chapter - UOM',
     addr: 'Moratuwa, LK',
     pos: [
@@ -198,7 +198,7 @@ const pros = [
     ]
   },
   {
-    id: 1,
+    id: 4,
     name: 'Department of CSE - UOM',
     addr: 'Moratuwa, LK',
     pos: [
