@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
-import { Avatar, AvatarImage } from '@/components/ui/avatar'
 import { audio, css, flask, go, html, js, lang, linux, mongodb, nextjs, numpy, pandas, postgre, python, react, sklearn, spboot, sql, team, torch, ts, vision, windows } from '@/public/icons'
 import Image from 'next/image'
 

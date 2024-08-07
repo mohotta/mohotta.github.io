@@ -1,8 +1,4 @@
-'use client'
-
-import React, { useEffect, useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
-import { FiX } from 'react-icons/fi'
 import Image from 'next/image'
 
 const articles = [
