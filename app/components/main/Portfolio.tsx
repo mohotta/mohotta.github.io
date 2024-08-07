@@ -4,6 +4,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { FiX } from 'react-icons/fi'
 
+type Technology = 'typescript' | 'javascript' | 'react' | 'tailwind-css' | 'spring-boot' | 'java' | 'mongodb' | 'git/github' | 'python' | 'pytorch' | 'tensorflow' | 'html/css' | 'bootstrap' | 'php' | 'mysql' | 'c++' | 'arduino' | 'hugging-face' | 'vite' | 'nextjs';
+
 const projects = [
   {
     id: 0,
@@ -43,7 +45,7 @@ const projects = [
   },
 ]
 
-const color_dict = {
+const color_dict: Record<Technology, string> = {
   'typescript': 'bg-sky-500',
   'javascript': 'bg-amber-500',
   'react': 'bg-blue-500',
@@ -75,8 +77,7 @@ const Portfolio = () => {
   const [ opacity, setOpacity ] = useState("opacity-0 hidden")
   const [ pop, setPop ] = useState("scale-0")
 
-  const dialogRef = useRef<HTMLDivElement>()
-
+  const dialogRef = useRef<HTMLDivElement | null>(null)
   const onClickOutside = (e: Event) => {
       if (infoDialog !== -1 && !dialogRef.current?.contains(e.target as Node)) {
           setInforDialog(-1)
@@ -130,7 +131,7 @@ const Portfolio = () => {
                   {
                     project.technologies.map(tech => (
                       <div key={tech} className='flex flex-row justify-start items-center space-x-0.5'>
-                        <div className={`w-[12px] h-[12px] rounded-full ${color_dict[tech] !== undefined? color_dict[tech]: 'bg-teal-500'}`}>
+                        <div className={`w-[12px] h-[12px] rounded-full ${color_dict[tech as Technology] !== undefined? color_dict[tech as Technology]: 'bg-teal-500' }`}>
                         </div>
                         <p className='text-step2-foreground text-sm'>{tech}</p>
                       </div>

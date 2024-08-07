@@ -69,7 +69,7 @@ export default function Chat({ open, setOpen }: chatProps) {
         },
     ]
 
-    const chatRef = useRef<HTMLDivElement>()
+    const chatRef = useRef<HTMLDivElement | null>(null)
 
     const [ animation1, setAnimation1 ] = useState("animate-opacity-up")
     const [ animation2, setAnimation2 ] = useState("animate-chat-slide-left")
