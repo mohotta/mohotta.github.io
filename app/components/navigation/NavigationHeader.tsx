@@ -106,7 +106,7 @@ interface navProps {
 
 function NavMenu( { active, showing, setShowing, onClick }: navProps ) {
 
-    const menuRef = useRef<HTMLDivElement>()
+    const menuRef = useRef<HTMLDivElement | null>(null)
 
     const [ animation1, setAnimation1 ] = useState("animate-opacity-up")
     const [ animation2, setAnimation2 ] = useState("animate-nav-slide-right")
