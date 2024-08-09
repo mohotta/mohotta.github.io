@@ -158,7 +158,7 @@ const items = [
 const pros = [
   {
     id: 1,
-    name: 'Department of CSE - UOM',
+    name: 'Department of CSE - UoM',
     addr: 'Moratuwa, LK',
     pos: [
       {
@@ -187,7 +187,7 @@ const pros = [
   },
   {
     id: 3,
-    name: 'ACM Student Chapter - UOM',
+    name: 'ACM Student Chapter - UoM',
     addr: 'Moratuwa, LK',
     pos: [
       {
