@@ -162,9 +162,9 @@ const pros = [
     addr: 'Austin, TX, USA',
     pos: [
       {
-        name: 'machine learning engineering intern',
+        name: 'Machine Learning Engineering Intern',
         from: 'Nov 2023',
-        to: 'may 2024'
+        to: 'May 2024'
       },
     ]
   },
@@ -175,13 +175,13 @@ const pros = [
     pos: [
       {
         name: 'Member of PR Pillar',
-        from: 'jun 2022',
-        to: 'oct 2023'
+        from: 'Jun 2022',
+        to: 'Oct 2023'
       },
       {
         name: 'Head of PR Pillar',
-        from: 'oct 2023',
-        to: 'present'
+        from: 'Oct 2023',
+        to: 'Present'
       }
     ]
   },
@@ -191,9 +191,9 @@ const pros = [
     addr: 'Moratuwa, LK',
     pos: [
       {
-        name: 'graphics designer',
-        from: 'aug 2023',
-        to: 'present'
+        name: 'Graphics Designer',
+        from: 'Aug 2023',
+        to: 'Present'
       },
     ]
   },
@@ -203,9 +203,9 @@ const pros = [
     addr: 'Moratuwa, LK',
     pos: [
       {
-        name: 'part-time instructor (TA) - CS1033',
-        from: 'jun 2024',
-        to: 'present'
+        name: 'Part-time Instructor (TA) - CS1033',
+        from: 'Jun 2024',
+        to: 'Present'
       },
     ]
   },
@@ -252,7 +252,7 @@ const Resume = () => {
           <h1 className='text-bold text-center text-xl text-step2-foreground'> professional affiliations </h1>
           <div className='flex flex-row flex-wrap justify-evenly items-stretch gap-4'>
             {
-              pros.map(pro => (
+              pros.reverse().map(pro => (
                 <div key={pro.id} className='flex flex-col justify-start items-start p-4 bg-secondary/60 rounded-lg w-[280px]'>
                   <h1 className='w-full text-bold text-center text-lg text-step3-foreground mb-2'> {pro.name} </h1>
                   <p className='w-full text-sm text-step4-foreground/50 text-right'> {pro.addr} </p>
@@ -260,7 +260,7 @@ const Resume = () => {
                     pro.pos.map(position => (
                       <div key={position.name} className='w-full'>
                         <hr className='my-1'/>
-                        <p className='text-md'> {position.name} </p>
+                        <p className='text-md font-semibold text-step2-foreground/90'> {position.name} </p>
                         <p className='text-sm text-step4-foreground/50'> {position.from} - {position.to} </p>
                       </div>
                     ))

@@ -6,7 +6,7 @@ const articles = [
       id: 1,
       name: 'Getting Started with Linux: Introduction',
       description: 'Linux is a free and open source operating system kernel (Kernel is the backbone of an operating system which enables an operating system to manage all the underlying hardware including input-output and memory) developed by Linus Torvalds. Linux kernel-based operating systems (i.e. Linux operating systems) are the best operating systems out there because of many reasons like customizability, availability of different flavors and desktop environments, and also the best reason, you are the boss here, OS does not restrict anything for you, you just need to know how to do it.',
-      image: 'https://miro.medium.com/v2/resize:fit:720/format:webp/0*u9zsQ2ewcXy1-UMK',
+      image: 'https://miro.medium.com/v2/resize:fit:480/format:webp/0*u9zsQ2ewcXy1-UMK',
       blurImage: 'https://miro.medium.com/v2/resize:fit:50/format:webp/0*u9zsQ2ewcXy1-UMK',
       url: 'https://medium.com/@mohotta/start-with-the-linux-operating-system-c6276642d1c5'
   },
@@ -14,7 +14,7 @@ const articles = [
       id: 2,
       name: 'Getting Started with Linux: Downloading and Preparing',
       description: 'Linux Mint is an operating system created based on Ubuntu which is by far the most popular Linux-based operating system in the world. But Linux Mint comes first regarding beginner friendliness especially if you are a Windows operating system user. Linux Mint is now offering a separate version of itself based on Debian Linux (ubuntu is created using this too) called Linux Mint LMDE. But I am using the Ubuntu-based Linux Mint version to give you the best first Linux experience as much as possible.',
-      image: 'https://miro.medium.com/v2/resize:fit:720/format:webp/0*dH3OA5QXhmrP4YKB',
+      image: 'https://miro.medium.com/v2/resize:fit:480/format:webp/0*dH3OA5QXhmrP4YKB',
       blurImage: 'https://miro.medium.com/v2/resize:fit:50/format:webp/0*dH3OA5QXhmrP4YKB',
       url: 'https://medium.com/@mohotta/getting-started-with-linux-downloading-and-preparing-c283a33710a3'
   },
