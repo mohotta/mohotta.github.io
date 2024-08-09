@@ -117,7 +117,7 @@ const About = () => {
             <div className='flex flex-col justify-center items-center max-w-[90%] space-y-4'>
                 <div className='flex flex-col justify-center items-center md:flex-row w-full md:w-[80%] gap-4'>
                     <div className='relative w-[200px] h-[200px] aspect-square opacity-90'>
-                        <Image alt='profile' src={'/profile.png'} layout='fill' placeholder='blur' blurDataURL='/profile-blur.png' className='rounded-full'/>
+                        <Image alt='profile' src={'/profile.png'} layout='fill' placeholder='blur' blurDataURL='/profile-blur.png' className='rounded-full border-8 border-double border-step3-foreground/50'/>
                     </div>
                     <p className='font-medium italic text-step2-foreground text-center md:w-[60%] w-[90%]'>
                         “A dedicated professional and technology enthusiast with strong teamwork
