@@ -257,7 +257,7 @@ const Resume = () => {
                   <h1 className='w-full text-bold text-center text-lg text-step3-foreground mb-2'> {pro.name} </h1>
                   <p className='w-full text-sm text-step4-foreground/50 text-right'> {pro.addr} </p>
                   {
-                    pro.pos.map(position => (
+                    pro.pos.reverse().map(position => (
                       <div key={position.name} className='w-full'>
                         <hr className='my-1'/>
                         <p className='text-md font-semibold text-step2-foreground/90'> {position.name} </p>
