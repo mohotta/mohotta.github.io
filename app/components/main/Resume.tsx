@@ -1,7 +1,11 @@
+'use client'
+
 import React, { useEffect, useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { audio, css, flask, go, html, js, lang, linux, mongodb, nextjs, numpy, pandas, postgre, python, react, sklearn, spboot, sql, team, torch, ts, vision, windows } from '@/public/icons'
 import Image from 'next/image'
+import { Fade, Slide } from "react-awesome-reveal";
+
 
 const items = [
   {
@@ -220,59 +224,65 @@ const Resume = () => {
 
   return (
       <div className='flex flex-col justify-center items-center min-h-screen relative z-0 py-[10vh] space-y-8 section' id='resume'>
-        <div className='flex flex-col justify-center items-center'>
-          <p>
-          skills & experience
-          </p>
-          <h1 className='text-6xl font-bold'>
-          resume
-          </h1>
-        </div>
-        <div className='flex flex-row justify-evenly items-stretch content-start flex-wrap space-x-0 md:space-x-4'>
-          {
-            items.map(item => (
-              <div key={item.id} className='flex flex-col justify-evenly items-center w-[280px] min-h-max bg-secondary/60 space-y-4 p-4 mb-4 rounded-lg'>
-                <h1 className='text-bold text-center text-xl text-step2-foreground w-3/5'>{item.name}</h1>
-                <div className='grid grid-cols-4 gap-2'>
-                  {
-                    item.techs.map(tech => (
-                      <div key={tech.name} className='flex flex-col justify-start items-center'>
-                          <div className='relative h-[40px] w-[40px]'>
-                            <Image src={tech.icon.src} blurDataURL={tech.icon.blurDataURL} alt={tech.name} layout='fill' objectFit='cover' className='rounded-full'/>
-                          </div>
-                        <p className='text-center text-step1-foreground/50 text-sm leading-4'>
-                          {tech.name}
-                        </p>
-                      </div>
-                    ))
-                  }
-                </div>
-              </div>
-            ))
-          }
-        </div>
-        <div className='flex flex-col justify-center items-center space-y-4 p-4 rounded-lg '>
-          <h1 className='text-bold text-center text-xl text-step2-foreground'> professional affiliations </h1>
-          <div className='flex flex-row flex-wrap justify-evenly items-stretch gap-4'>
+        <Slide duration={1000} direction='right'>
+          <div className='flex flex-col justify-center items-center'>
+            <p>
+            skills & experience
+            </p>
+            <h1 className='text-6xl font-bold'>
+            resume
+            </h1>
+          </div>
+        </Slide>
+        <Fade className='flex w-full justify-center items-center' duration={1000}>
+          <div className='flex flex-row justify-evenly items-stretch content-start flex-wrap gap-4'>
             {
-              pros.map(pro => (
-                <div key={pro.id} className='flex flex-col justify-start items-start p-4 bg-secondary/60 rounded-lg w-[280px]'>
-                  <h1 className='w-full text-bold text-center text-lg text-step3-foreground mb-2'> {pro.name} </h1>
-                  <p className='w-full text-sm text-step4-foreground/50 text-right'> {pro.addr} </p>
-                  {
-                    pro.pos.map(position => (
-                      <div key={position.name} className='w-full'>
-                        <hr className='my-1'/>
-                        <p className='text-md font-semibold text-step2-foreground/90'> {position.name} </p>
-                        <p className='text-sm text-step4-foreground/50'> {position.from} - {position.to} </p>
-                      </div>
-                    ))
-                  }
+              items.map(item => (
+                <div key={item.id} className='flex flex-col justify-evenly items-center w-[280px] min-h-max bg-secondary/60 space-y-4 p-4 mb-4 rounded-lg'>
+                  <h1 className='text-bold text-center text-xl text-step2-foreground w-3/5'>{item.name}</h1>
+                  <div className='grid grid-cols-4 gap-2'>
+                    {
+                      item.techs.map(tech => (
+                        <div key={tech.name} className='flex flex-col justify-start items-center'>
+                            <div className='relative h-[40px] w-[40px]'>
+                              <Image src={tech.icon.src} blurDataURL={tech.icon.blurDataURL} alt={tech.name} layout='fill' objectFit='cover' className='rounded-full'/>
+                            </div>
+                          <p className='text-center text-step1-foreground/50 text-sm leading-4'>
+                            {tech.name}
+                          </p>
+                        </div>
+                      ))
+                    }
+                  </div>
                 </div>
               ))
             }
           </div>
-        </div>
+        </Fade>
+        <Fade className='flex w-full justify-center items-center'>
+          <div className='flex flex-col justify-center items-center space-y-4 p-4 rounded-lg '>
+            <h1 className='text-bold text-center text-xl text-step2-foreground'> professional Experience </h1>
+            <div className='flex flex-row flex-wrap justify-evenly items-stretch gap-4'>
+              {
+                pros.map(pro => (
+                  <div key={pro.id} className='flex flex-col justify-start items-start p-4 bg-secondary/60 rounded-lg w-[280px]'>
+                    <h1 className='w-full text-bold text-center text-lg text-step3-foreground mb-2'> {pro.name} </h1>
+                    <p className='w-full text-sm text-step4-foreground/50 text-right'> {pro.addr} </p>
+                    {
+                      pro.pos.map(position => (
+                        <div key={position.name} className='w-full'>
+                          <hr className='my-1'/>
+                          <p className='text-md font-semibold text-step2-foreground/90'> {position.name} </p>
+                          <p className='text-sm text-step4-foreground/50'> {position.from} - {position.to} </p>
+                        </div>
+                      ))
+                    }
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </Fade>
         <div className='flex flex-row justify-center items-center w-full'>
             <Button className='rounded-full' size={'lg'} variant={'secondary'}> <a href="https://bit.ly/moh-cv" target='_blank'>download resume</a> </Button>
         </div>

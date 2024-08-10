@@ -3,6 +3,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { FiX } from 'react-icons/fi'
+import { Fade, Slide } from "react-awesome-reveal";
+
 
 type Technology = 'typescript' | 'javascript' | 'react' | 'tailwind-css' | 'spring-boot' | 'java' | 'mongodb' | 'git/github' | 'python' | 'pytorch' | 'tensorflow' | 'html/css' | 'bootstrap' | 'php' | 'mysql' | 'c++' | 'arduino' | 'hugging-face' | 'vite' | 'nextjs';
 
@@ -111,45 +113,49 @@ const Portfolio = () => {
   return (
     <>
       <div className='flex flex-col justify-center items-center min-h-screen relative z-0 py-[10vh] space-y-8 section' id='portfolio'>
-        <div className='flex flex-col justify-center items-center'>
-          <p>
-          top projects & works
-          </p>
-          <h1 className='text-6xl font-bold'>
-          portfolio
-          </h1>
-        </div>
-        <div className='flex flex-row justify-evenly items-stretch content-start flex-wrap w-full'>
-          {
-            projects.map(project => (
-              <div key={project.id} className='flex flex-col justify-start items-center w-[280px] min-h-max bg-secondary/60 space-y-4 p-4 mb-4 rounded-lg'>
-                <h1 className='text-bold text-center text-xl text-step2-foreground'>{project.name}</h1>
-                <p className='w-4/5'>
-                  {project.tldr}
-                </p>
-                <div className='flex flex-row justify-evenly flex-wrap space-x-1 w-9/12'>
-                  {
-                    project.technologies.map(tech => (
-                      <div key={tech} className='flex flex-row justify-start items-center space-x-0.5'>
-                        <div className={`w-[12px] h-[12px] rounded-full ${color_dict[tech as Technology] !== undefined? color_dict[tech as Technology]: 'bg-teal-500' }`}>
+        <Slide direction='right' duration={1000}>
+          <div className='flex flex-col justify-center items-center'>
+            <p>
+            top projects & works
+            </p>
+            <h1 className='text-6xl font-bold'>
+            portfolio
+            </h1>
+          </div>
+        </Slide>
+        <Fade duration={1000} className='flex w-full'>
+          <div className='flex flex-row justify-evenly items-stretch content-start flex-wrap w-full'>
+            {
+              projects.map(project => (
+                <div key={project.id} className='flex flex-col justify-start items-center w-[280px] min-h-max bg-secondary/60 space-y-4 p-4 mb-4 rounded-lg'>
+                  <h1 className='text-bold text-center text-xl text-step2-foreground'>{project.name}</h1>
+                  <p className='w-4/5'>
+                    {project.tldr}
+                  </p>
+                  <div className='flex flex-row justify-evenly flex-wrap space-x-1 w-9/12'>
+                    {
+                      project.technologies.map(tech => (
+                        <div key={tech} className='flex flex-row justify-start items-center space-x-0.5'>
+                          <div className={`w-[12px] h-[12px] rounded-full ${color_dict[tech as Technology] !== undefined? color_dict[tech as Technology]: 'bg-teal-500' }`}>
+                          </div>
+                          <p className='text-step2-foreground text-sm'>{tech}</p>
                         </div>
-                        <p className='text-step2-foreground text-sm'>{tech}</p>
-                      </div>
-                    ))
-                  }
+                      ))
+                    }
+                  </div>
+                  <div className='flex flex-row justify-evenly items-center justify-self-end w-[90%]'>
+                    <Button disabled variant={'secondary'} className='rounded-full' onClick={() => setInforDialog(project.id)}>
+                      more info
+                    </Button>
+                    <Button disabled={project.url===""} variant={'secondary'} className='rounded-full'>
+                      <a href={project.url}> repository </a>
+                    </Button>
+                  </div>
                 </div>
-                <div className='flex flex-row justify-evenly items-center justify-self-end w-[90%]'>
-                  <Button disabled variant={'secondary'} className='rounded-full' onClick={() => setInforDialog(project.id)}>
-                    more info
-                  </Button>
-                  <Button disabled={project.url===""} variant={'secondary'} className='rounded-full'>
-                    <a href={project.url}> repository </a>
-                  </Button>
-                </div>
-              </div>
-            ))
-          }
-        </div>
+              ))
+            }
+          </div>
+        </Fade>
       </div>
       <div className='relative z-20'>
         <div className={`fixed top-0 left-0 flex flex-row justify-center items-center w-screen h-screen bg-step1/50 ${opacity} ${animation1}`}>

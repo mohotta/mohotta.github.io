@@ -1,5 +1,9 @@
+'use client'
+
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
+import { Fade, Slide } from "react-awesome-reveal";
+
 
 const articles = [
   {
@@ -26,37 +30,41 @@ const Articles = () => {
 
   return (
       <div className='flex flex-col justify-center items-center min-h-screen relative z-0 py-[10vh] space-y-8 section' id='articles'>
-        <div className='flex flex-col justify-center items-center'>
-          <p>
-          top blog posts
-          </p>
-          <h1 className='text-6xl font-bold'>
-          articles
-          </h1>
-        </div>
-        <div className='flex flex-row justify-evenly items-stretch content-start flex-wrap w-full'>
-          {
-            articles.map(article => (
-              <div key={article.id} className='flex flex-col justify-start items-center w-[280px] min-h-max bg-secondary/60 space-y-4 p-4 mb-4 rounded-lg'>
-                <h1 className='text-bold text-center text-xl text-step2-foreground'>{article.name}</h1>
-                <div className='relative w-[220px] h-[120px]'>
-                  <Image alt={article.name} src={article.image} layout='fill' objectFit='cover' loading='lazy' blurDataURL={article.blurImage} placeholder='blur' className='rounded-lg'/>
+        <Slide direction='right' duration={1000}>
+          <div className='flex flex-col justify-center items-center'>
+            <p>
+            top blog posts
+            </p>
+            <h1 className='text-6xl font-bold'>
+            articles
+            </h1>
+          </div>
+        </Slide>
+        <Fade duration={1000} className='flex w-full'>
+          <div className='flex flex-row justify-evenly items-stretch content-start flex-wrap w-full'>
+            {
+              articles.map(article => (
+                <div key={article.id} className='flex flex-col justify-start items-center w-[280px] min-h-max bg-secondary/60 space-y-4 p-4 mb-4 rounded-lg'>
+                  <h1 className='text-bold text-center text-xl text-step2-foreground'>{article.name}</h1>
+                  <div className='relative w-[220px] h-[120px]'>
+                    <Image alt={article.name} src={article.image} layout='fill' objectFit='cover' loading='lazy' blurDataURL={article.blurImage} placeholder='blur' className='rounded-lg'/>
+                  </div>
+                  <p className='w-4/5 line-clamp-6'>
+                    {article.description}
+                  </p>
+                  <div className='flex flex-row justify-evenly items-center justify-self-end w-[90%]'>
+                    <Button disabled variant={'secondary'} className='rounded-full'>
+                    <a href={article.url}> read here </a>
+                    </Button>
+                    <Button variant={'secondary'} className='rounded-full'>
+                      <a href={article.url}> external </a>
+                    </Button>
+                  </div>
                 </div>
-                <p className='w-4/5 line-clamp-6'>
-                  {article.description}
-                </p>
-                <div className='flex flex-row justify-evenly items-center justify-self-end w-[90%]'>
-                  <Button disabled variant={'secondary'} className='rounded-full'>
-                  <a href={article.url}> read here </a>
-                  </Button>
-                  <Button variant={'secondary'} className='rounded-full'>
-                    <a href={article.url}> external </a>
-                  </Button>
-                </div>
-              </div>
-            ))
-          }
-        </div>
+              ))
+            }
+          </div>
+        </Fade>
         <div className='flex flex-row justify-center items-center w-full'>
             <Button disabled className='rounded-full' size={'lg'} variant={'secondary'}> <a href="/blog">go to the blog</a> </Button>
         </div>

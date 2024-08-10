@@ -1,3 +1,5 @@
+'use client'
+
 import schoolLogo from './images/ganaknada-logo.png'
 import uniLogo from './images/University_of_Moratuwa_logo.png'
 import exam from './images/exam.png'
@@ -11,6 +13,7 @@ import tech from './images/lightbulb.png'
 import program from './images/programming.png'
 import photo from './images/photography.png'
 import Image from 'next/image'
+import { Fade, Slide, Zoom } from "react-awesome-reveal";
 
 
 const facts = [
@@ -106,37 +109,45 @@ const About = () => {
 
 	return (
 		<div className='flex flex-col justify-center items-center min-h-screen relative z-0 py-[10vh] space-y-4 section' id='about'>
-            <div className='flex flex-col justify-center items-center'>
-                <p>
-                get to know more
-                </p>
-                <h1 className='text-6xl font-bold'>
-                about me
-                </h1>
-            </div>
+            <Slide duration={1000} direction='right'>
+                <div className='flex flex-col justify-center items-center'>
+                    <p>
+                    get to know more
+                    </p>
+                    <h1 className='text-6xl font-bold'>
+                    about me
+                    </h1>
+                </div>
+            </Slide>
             <div className='flex flex-col justify-center items-center max-w-[90%] space-y-4'>
                 <div className='flex flex-col justify-center items-center md:flex-row w-full md:w-[80%] gap-4'>
-                    <div className='relative w-[200px] h-[200px] aspect-square opacity-90'>
-                        <Image alt='profile' src={'/profile.png'} layout='fill' placeholder='blur' blurDataURL='/profile-blur.png' className='rounded-full border-8 border-double border-step3-foreground/50'/>
-                    </div>
-                    <p className='font-medium italic text-step2-foreground text-center md:w-[60%] w-[90%]'>
-                        “A dedicated professional and technology enthusiast with strong teamwork
-                        and collaboration skills. I thrive in diverse environments and am
-                        committed to driving team success. Passionate about leveraging
-                        technology for growth, I aim to contribute significantly to a company’s
-                        success, always striving for excellence and continuous learning.”
-                    </p>
-                </div>
-                <div className='flex flex-row flex-wrap justify-evenly items-center content-start bg-secondary/60 p-8 rounded-lg gap-8'>
-                    {
-                    facts.map((fact) => (
-                        <div key={fact.id} className='flex flex-row justify-start items-center min-w-[250px] h-[70px] gap-2 pl-4 '>
-                        <Image src={fact.icon} width={50} height={50} loading='lazy' alt={fact.firstLine} className='w-[50px]'/>
-                        <p className=''>{fact.firstLine}<br/>{fact.secondLine}</p>
+                    <Zoom cascade duration={1000}>
+                        <div className='relative w-[200px] h-[200px] aspect-square opacity-90'>
+                            <Image alt='profile' src={'/profile.png'} layout='fill' placeholder='blur' blurDataURL='/profile-blur.png' className='rounded-full border-8 border-double border-step3-foreground/50'/>
                         </div>
-                    ))
-                    }
+                    </Zoom>
+                    <Fade duration={1000} className='w-full flex justify-center items-center'>
+                        <p className='font-medium text-md md:text-lg italic text-step2-foreground text-center w-[90%]'>
+                            “A dedicated professional and technology enthusiast with strong teamwork
+                            and collaboration skills. I thrive in diverse environments and am
+                            committed to driving team success. Passionate about leveraging
+                            technology for growth, I aim to contribute significantly to a company’s
+                            success, always striving for excellence and continuous learning.”
+                        </p>
+                    </Fade>
                 </div>
+                <Fade duration={1000}>
+                    <div className='flex flex-row flex-wrap justify-evenly items-center content-start bg-secondary/60 p-8 rounded-lg gap-8'>
+                        {
+                        facts.map((fact) => (
+                            <div key={fact.id} className='flex flex-row justify-start items-center min-w-[250px] h-[70px] gap-2 pl-4 '>
+                            <Image src={fact.icon} width={50} height={50} loading='lazy' alt={fact.firstLine} className='w-[50px]'/>
+                            <p className=''>{fact.firstLine}<br/>{fact.secondLine}</p>
+                            </div>
+                        ))
+                        }
+                    </div>
+                </Fade>
             </div>
 		</div>
 	)

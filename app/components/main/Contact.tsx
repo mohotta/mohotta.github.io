@@ -7,6 +7,8 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import { FiPhone } from 'react-icons/fi'
 import { IoMailOutline } from 'react-icons/io5'
 import { PiAddressBook } from 'react-icons/pi'
+import { Fade, Slide } from "react-awesome-reveal";
+
 
 const items = [
   {
@@ -48,40 +50,44 @@ const Contact = () => {
 
     return (
       <div id='contact' className='flex flex-col justify-center items-center min-h-screen relative z-0 py-[10vh] space-y-4 section'>
-        <div className='flex flex-col justify-center items-center'>
-          <p>
-            get in touch
-          </p>
-          <h1 className='text-6xl font-bold'>
-            contact
-          </h1>
-        </div>
-        <div className='flex flex-col lg:flex-row justify-center items-center gap-4 p-2 sm:p-4 rounded-lg bg-secondary/60'>
-          <div className='flex flex-col justify-center items-start p-4'>
-            {
-              items.map(item => (
-                <div key={item.type} className='flex flex-row justify-start items-center'>
-                  <Button variant={'ghost'} disabled size={'icon'} className='rounded-full'>{item.icon}</Button>
-                  <p>
-                    {item.value}
-                  </p>
-                  <Button variant={'ghost'} size={'icon'} onClick={() => {
-                    navigator.clipboard.writeText(item.value)
-                  }} className='rounded-full'><BiCopyAlt/></Button>
-                </div>
-              ))
-            }
+        <Slide direction='right' duration={1000}>
+          <div className='flex flex-col justify-center items-center'>
+            <p>
+              get in touch
+            </p>
+            <h1 className='text-6xl font-bold'>
+              contact
+            </h1>
           </div>
-          <div className='flex flex-row justify-evenly items-center border-t-4 lg:border-t-0 lg:border-l-4 border-step2-foreground border-dotted space-x-4 p-4'>
-            {
-              socials.map(item => (
-                <Button key={item.name} size="icon" variant={'ghost'} className='rounded-full'>
-                  <a href={item.link} target='_blank'>{item.icon}</a>
-                </Button>
-              ))
-            }
+        </Slide>
+        <Fade duration={1000}>
+          <div className='flex flex-col lg:flex-row justify-center items-center gap-4 p-2 sm:p-4 rounded-lg bg-secondary/60'>
+            <div className='flex flex-col justify-center items-start p-4'>
+              {
+                items.map(item => (
+                  <div key={item.type} className='flex flex-row justify-start items-center'>
+                    <Button variant={'ghost'} disabled size={'icon'} className='rounded-full'>{item.icon}</Button>
+                    <p>
+                      {item.value}
+                    </p>
+                    <Button variant={'ghost'} size={'icon'} onClick={() => {
+                      navigator.clipboard.writeText(item.value)
+                    }} className='rounded-full'><BiCopyAlt/></Button>
+                  </div>
+                ))
+              }
+            </div>
+            <div className='flex flex-row justify-evenly items-center border-t-4 lg:border-t-0 lg:border-l-4 border-step2-foreground border-dotted space-x-4 p-4'>
+              {
+                socials.map(item => (
+                  <Button key={item.name} size="icon" variant={'ghost'} className='rounded-full'>
+                    <a href={item.link} target='_blank'>{item.icon}</a>
+                  </Button>
+                ))
+              }
+            </div>
           </div>
-        </div>
+        </Fade>
       </div>
     )
 }
