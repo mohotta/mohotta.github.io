@@ -49,21 +49,21 @@ const facts = [
       id: 5,
       icon: ml,
       firstLine: 'Machine learning: ',
-      secondLine: '0.5 yr experience',
+      secondLine: '1+ yrs experience',
       attrLink: 'https://www.flaticon.com/free-icons/machine-learning'
   },
   {
       id: 6,
       icon: data,
       firstLine: 'Data Science: ',
-      secondLine: '0.5 yr experience',
+      secondLine: '1+ yrs experience',
       attrLink: 'https://www.flaticon.com/free-icons/epidemiology'
   },
   {
       id: 7,
       icon: webdev,
       firstLine: 'Web Development: ',
-      secondLine: '0.5 yr experience',
+      secondLine: '1+ yrs experience',
       attrLink: 'https://www.flaticon.com/free-icons/web-development'
   },
   {
@@ -76,7 +76,7 @@ const facts = [
   {
       id: 9,
       icon: tech,
-      firstLine: 'In love with: ',
+      firstLine: 'Love to explore: ',
       secondLine: 'New Techs',
       attrLink: 'https://www.flaticon.com/free-icons/innovation'
   },
@@ -90,7 +90,7 @@ const facts = [
   {
       id: 11,
       icon: photo,
-      firstLine: 'In love with: ',
+      firstLine: 'Favourite hobby: ',
       secondLine: 'Photography',
       attrLink: 'https://www.flaticon.com/free-icons/photography'
   },
@@ -109,24 +109,24 @@ const About = () => {
 
 	return (
 		<div className='flex flex-col justify-center items-center min-h-screen relative z-0 py-[10vh] space-y-4 section' id='about'>
-            <Slide duration={1000} direction='right'>
+            <Slide duration={1000} direction='right' fraction={0.2}>
                 <div className='flex flex-col justify-center items-center'>
                     <p>
-                    get to know more
+                        {'<get to know more>'}
                     </p>
                     <h1 className='text-6xl font-bold'>
-                    about me
+                        ~/about-me
                     </h1>
                 </div>
             </Slide>
             <div className='flex flex-col justify-center items-center max-w-[90%] space-y-4'>
                 <div className='flex flex-col justify-center items-center md:flex-row w-full md:w-[80%] gap-4'>
-                    <Zoom cascade duration={1000}>
+                    <Zoom cascade duration={1000} fraction={0.2}>
                         <div className='relative w-[200px] h-[200px] aspect-square opacity-90'>
                             <Image alt='profile' src={'/profile.png'} layout='fill' placeholder='blur' blurDataURL='/profile-blur.png' className='rounded-full border-8 border-double border-step3-foreground/50'/>
                         </div>
                     </Zoom>
-                    <Fade duration={1000} className='w-full flex justify-center items-center'>
+                    <Fade duration={1000} fraction={0.2} className='w-full flex justify-center items-center'>
                         <p className='font-medium text-md md:text-lg italic text-step2-foreground text-center w-[90%]'>
                             “A dedicated professional and technology enthusiast with strong teamwork
                             and collaboration skills. I thrive in diverse environments and am
@@ -136,7 +136,7 @@ const About = () => {
                         </p>
                     </Fade>
                 </div>
-                <Fade duration={1000}>
+                <Fade duration={1000} fraction={0.2}>
                     <div className='flex flex-row flex-wrap justify-evenly items-center content-start bg-secondary/60 p-8 rounded-lg gap-8'>
                         {
                         facts.map((fact) => (

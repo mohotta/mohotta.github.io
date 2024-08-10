@@ -30,17 +30,17 @@ const Articles = () => {
 
   return (
       <div className='flex flex-col justify-center items-center min-h-screen relative z-0 py-[10vh] space-y-8 section' id='articles'>
-        <Slide direction='right' duration={1000}>
+        <Slide direction='right' duration={1000} fraction={0.2}>
           <div className='flex flex-col justify-center items-center'>
             <p>
-            top blog posts
+              {'<top blog posts>'}
             </p>
             <h1 className='text-6xl font-bold'>
-            articles
+              ~/articles
             </h1>
           </div>
         </Slide>
-        <Fade duration={1000} className='flex w-full'>
+        <Fade duration={1000} className='flex w-full' fraction={0.2}>
           <div className='flex flex-row justify-evenly items-stretch content-start flex-wrap w-full'>
             {
               articles.map(article => (

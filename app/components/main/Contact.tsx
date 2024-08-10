@@ -14,12 +14,12 @@ const items = [
   {
     type: "email",
     icon: <IoMailOutline/>,
-    value: "kumudulaksitha@gmail.com"
+    value: "kumudumohottala@proton.me"
   },
   {
     type: "address",
     icon: <PiAddressBook/>,
-    value: "maragala, hiramadagama, kahawatta 70150"
+    value: "hostel village complex, university of moratuwa"
   },
   {
     type: "phone",
@@ -50,17 +50,17 @@ const Contact = () => {
 
     return (
       <div id='contact' className='flex flex-col justify-center items-center min-h-screen relative z-0 py-[10vh] space-y-4 section'>
-        <Slide direction='right' duration={1000}>
+        <Slide direction='right' duration={1000} fraction={0.2}>
           <div className='flex flex-col justify-center items-center'>
             <p>
-              get in touch
+              {'<get in touch>'}
             </p>
             <h1 className='text-6xl font-bold'>
-              contact
+              ~/contact
             </h1>
           </div>
         </Slide>
-        <Fade duration={1000}>
+        <Fade duration={1000} fraction={0.2}>
           <div className='flex flex-col lg:flex-row justify-center items-center gap-4 p-2 sm:p-4 rounded-lg bg-secondary/60'>
             <div className='flex flex-col justify-center items-start p-4'>
               {
