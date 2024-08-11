@@ -45,13 +45,13 @@ const HomePage = () => {
         <div className='w-full h-[70px] min-[445px]:h-max'>
           <TypeAnimation
             sequence={[
-              'I build things for web.',
+              'I build things for web 🌐.',
               3000,
-              'I do stuff with data.',
+              'I do stuff with data 📊.',
               3000,
-              'I train programs to do works.',
+              'I train programs to do works 🤖.',
               3000,
-              'I love to learn new things.',
+              'I love to learn new things 🖥️.',
               1000,
             ]}
             wrapper="span"
@@ -80,6 +80,6 @@ const HomePage = () => {
       </div>
     </div>
   )
-}
+}📊
 
 export default HomePage
