@@ -81,7 +81,7 @@ const Contact = () => {
               {
                 socials.map(item => (
                   <Button key={item.name} size="icon" variant={'ghost'} className='rounded-full'>
-                    <a href={item.link} target='_blank'>{item.icon}</a>
+                    <a href={item.link} target='_blank' aria-label='social-link'>{item.icon}</a>
                   </Button>
                 ))
               }
