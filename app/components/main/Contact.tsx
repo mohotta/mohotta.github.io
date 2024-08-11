@@ -50,7 +50,7 @@ const Contact = () => {
 
     return (
       <div id='contact' className='flex flex-col justify-center items-center min-h-screen relative z-0 py-[10vh] space-y-4 section'>
-        <Slide direction='right' duration={1000} fraction={0.2}>
+        <Slide direction='right' duration={1000}>
           <div className='flex flex-col justify-center items-center'>
             <p>
               {'<get in touch>'}
@@ -60,7 +60,7 @@ const Contact = () => {
             </h1>
           </div>
         </Slide>
-        <Fade duration={1000} fraction={0.2}>
+        <Fade duration={1000}>
           <div className='flex flex-col lg:flex-row justify-center items-center gap-4 p-2 sm:p-4 rounded-lg bg-secondary/60'>
             <div className='flex flex-col justify-center items-start p-4'>
               {

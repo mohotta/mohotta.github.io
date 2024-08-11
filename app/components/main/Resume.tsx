@@ -224,7 +224,7 @@ const Resume = () => {
 
   return (
       <div className='flex flex-col justify-center items-center min-h-screen relative z-0 py-[10vh] space-y-8 section' id='resume'>
-        <Slide duration={1000} direction='right' fraction={0.2}>
+        <Slide duration={1000} direction='right'>
           <div className='flex flex-col justify-center items-center'>
             <p>
               {'<skills & experience>'}
@@ -234,7 +234,7 @@ const Resume = () => {
             </h1>
           </div>
         </Slide>
-        <Fade className='flex w-full justify-center items-center' duration={1000} fraction={0.2}>
+        <Fade className='flex w-full justify-center items-center' duration={1000}>
           <div className='flex flex-row justify-evenly items-stretch content-start flex-wrap gap-4'>
             {
               items.map(item => (
@@ -259,7 +259,7 @@ const Resume = () => {
             }
           </div>
         </Fade>
-        <Fade className='flex w-full justify-center items-center' duration={1000} fraction={0.2}>
+        <Fade className='flex w-full justify-center items-center' duration={1000}>
           <div className='flex flex-col justify-center items-center space-y-4 p-4 rounded-lg '>
             <h1 className='text-bold text-center text-xl text-step2-foreground'> professional Experience </h1>
             <div className='flex flex-row flex-wrap justify-evenly items-stretch gap-4'>
