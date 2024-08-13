@@ -136,18 +136,18 @@ const About = () => {
                         </p>
                     </Fade>
                 </div>
-                <Fade duration={1000}>
-                    <div className='flex flex-row flex-wrap justify-evenly items-center content-start bg-secondary/60 p-8 rounded-lg gap-8'>
+                    <div className='flex flex-row flex-wrap justify-evenly items-stretch content-start w-full md:w-[90%] bg-secondary/60 p-8 rounded-lg gap-8'>
                         {
-                        facts.map((fact) => (
-                            <div key={fact.id} className='flex flex-row justify-start items-center min-w-[250px] h-[70px] gap-2 pl-4 '>
-                            <Image src={fact.icon} width={50} height={50} loading='lazy' alt={fact.firstLine} className='w-[50px]'/>
-                            <p className=''>{fact.firstLine}<br/>{fact.secondLine}</p>
-                            </div>
-                        ))
+                            facts.map((fact) => (
+                                <Fade key={fact.id} duration={1000}>
+                                    <div key={fact.id} className='flex flex-row justify-start items-center w-[280px] h-[70px] gap-2 pl-4 '>
+                                    <Image src={fact.icon} width={50} height={50} loading='lazy' alt={fact.firstLine} className='w-[50px]'/>
+                                    <p className=''>{fact.firstLine}<br/>{fact.secondLine}</p>
+                                    </div>
+                                </Fade>
+                            ))
                         }
                     </div>
-                </Fade>
             </div>
 		</div>
 	)
