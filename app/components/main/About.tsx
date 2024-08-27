@@ -12,6 +12,7 @@ import linux from './images/linux.png'
 import tech from './images/lightbulb.png'
 import program from './images/programming.png'
 import photo from './images/photography.png'
+import arch from './images/arch.png'
 import Image from 'next/image'
 import { Fade, Slide, Zoom } from "react-awesome-reveal";
 
@@ -40,38 +41,38 @@ const facts = [
   },
   {
       id: 4,
-      icon: gpa,
-      firstLine: 'Current GPA',
-      secondLine: '3.82 / 4.0',
-      attrLink: 'https://www.flaticon.com/free-icons/exam'
-  },
-  {
-      id: 5,
       icon: ml,
       firstLine: 'Machine learning: ',
       secondLine: '1+ yrs experience',
       attrLink: 'https://www.flaticon.com/free-icons/machine-learning'
   },
   {
-      id: 6,
+      id: 5,
       icon: data,
       firstLine: 'Data Science: ',
       secondLine: '1+ yrs experience',
       attrLink: 'https://www.flaticon.com/free-icons/epidemiology'
   },
   {
-      id: 7,
+      id: 6,
       icon: webdev,
       firstLine: 'Web Development: ',
       secondLine: '1+ yrs experience',
       attrLink: 'https://www.flaticon.com/free-icons/web-development'
   },
   {
-      id: 8,
+      id: 7,
       icon: linux,
       firstLine: 'In love with: ',
       secondLine: 'Linux & FOSS',
       attrLink: 'https://www.flaticon.com/free-icons/linux'
+  },
+  {
+    id: 8,
+    icon: arch,
+    firstLine: 'I use Arch btw',
+    secondLine: '🤪 😌 🧑🏽‍💻',
+    attrLink: 'https://www.iconfinder.com/icons/386451/arch_linux_archlinux_icon'
   },
   {
       id: 9,
