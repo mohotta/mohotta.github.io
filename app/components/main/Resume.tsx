@@ -161,19 +161,7 @@ const items = [
 
 const pros = [
   {
-    id: 1,
-    name: 'Department of CSE - UoM',
-    addr: 'Moratuwa, LK',
-    pos: [
-      {
-        name: 'Part-time Instructor (TA) - CS1033',
-        from: 'Jun 2024',
-        to: 'November 2024'
-      },
-    ]
-  },
-  {
-    id: 2,
+    id: 0,
     name: 'IESL Student Chapter - UoM',
     addr: 'Moratuwa, LK',
     pos: [
@@ -195,7 +183,19 @@ const pros = [
     ]
   },
   {
-    id: 3,
+    id: 1,
+    name: 'Department of CSE - UoM',
+    addr: 'Moratuwa, LK',
+    pos: [
+      {
+        name: 'Part-time Instructor (TA) - CS1033',
+        from: 'Jun 2024',
+        to: 'November 2024'
+      },
+    ]
+  },
+  {
+    id: 2,
     name: 'CML Insight Inc.',
     addr: 'Austin, TX, USA',
     pos: [
@@ -207,7 +207,7 @@ const pros = [
     ]
   },
   {
-    id: 4,
+    id: 3,
     name: 'ACM Student Chapter - UoM',
     addr: 'Moratuwa, LK',
     pos: [
@@ -262,7 +262,7 @@ const Resume = () => {
             }
           </div>
           <div className='flex flex-col justify-center items-center space-y-4 p-4 rounded-lg '>
-            <h1 className='text-bold text-center text-xl text-step2-foreground'> professional Experience </h1>
+            <h1 className='text-bold text-center text-3xl text-step2-foreground'> professional experience </h1>
             <div className='flex flex-row flex-wrap justify-evenly items-stretch gap-4'>
               {
                 pros.map(pro => (

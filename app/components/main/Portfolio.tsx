@@ -30,7 +30,7 @@ const projects = [
   {
     id: 2,
     name: 'Traffic Accident Anticipation and Drivable Area Prediction',
-    tldr: 'Final year project (ongoing) on anticipating upcoming accidents while predicting drivable area for 2-3 secondas in the future',
+    tldr: 'Final year project (ongoing) on anticipating upcoming accidents while predicting drivable area for 2-3 seconds in the future using dashcam video input.',
     description: '',
     category: 'ds',
     technologies: ['python', 'pytorch', 'git/github', 'computer-vision'],
@@ -56,8 +56,8 @@ const projects = [
   },
   {
       id: 5,
-      name: 'airline ticket reservation system',
-      tldr: 'airline ticket reservation system using php, mySQL & HTML.',
+      name: 'Airline ticket reservation system',
+      tldr: 'Airline ticket reservation system using php, mySQL & HTML.',
       description: 'airline reservation system created as a database management project in the university. We created a system with user management, ticket price discounts with user tier, seat booking system etc.',
       category: 'se',
       technologies: ['html/css', 'bootstrap', 'php', 'mysql', 'git/github'],
