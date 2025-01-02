@@ -6,20 +6,38 @@ import { FiX } from 'react-icons/fi'
 import { Fade, Slide } from "react-awesome-reveal";
 
 
-type Technology = 'typescript' | 'javascript' | 'react' | 'tailwind-css' | 'spring-boot' | 'java' | 'mongodb' | 'git/github' | 'python' | 'pytorch' | 'tensorflow' | 'html/css' | 'bootstrap' | 'php' | 'mysql' | 'c++' | 'arduino' | 'hugging-face' | 'vite' | 'nextjs';
+type Technology = 'typescript' | 'javascript' | 'react' | 'tailwind-css' | 'spring-boot' | 'java' | 'mongodb' | 'git/github' | 'python' | 'pytorch' | 'tensorflow' | 'html/css' | 'bootstrap' | 'php' | 'mysql' | 'c++' | 'arduino' | 'hugging-face' | 'vite' | 'nextjs' | 'nodejs' | 'computer-vision';
 
 const projects = [
   {
     id: 0,
     name: 'freebook social',
     tldr: 'Full stack instagram like social media application for a concept of open source social media platform.',
-    description: 'We worked on this as semester 5 project in third year. We tried to predict speaker age, gender, emotions, pitch etc from the recorded audio. User can upload pre-recorded audio or record live directly from the dashboard. We used multiple speech datasets and state of the art models for the task. If there are no good models, we tried to buiold our own models (for example: emotion detection).',
+    description: '',
     category: 'se',
     technologies: ['html/css', 'typescript', 'react', 'git/github', 'tailwind-css', 'spring-boot', 'java', 'mongodb'],
-    url: 'https://github.com/sp-vis'
+    url: 'https://github.com/mohotta/freebook-backend'
   },
   {
-      id: 1,
+    id: 1,
+    name: 'vidly movie rental serivce',
+    tldr: 'Backend service for a movie rental service called "Vidly" programmed using nodejs as my first project in nodejs.',
+    description: '',
+    category: 'se',
+    technologies: ['javascript', 'mongodb', 'git/github', 'nodejs'],
+    url: 'https://github.com/mohotta/vidly'
+  },
+  {
+    id: 2,
+    name: 'Traffic Accident Anticipation and Drivable Area Prediction',
+    tldr: 'Final year project (ongoing) on anticipating upcoming accidents while predicting drivable area for 2-3 secondas in the future',
+    description: '',
+    category: 'ds',
+    technologies: ['python', 'pytorch', 'git/github', 'computer-vision'],
+    url: 'https://github.com/mohotta/Graph-Graph'
+  },
+  {
+      id: 3,
       name: 'speech visualization',
       tldr: 'Dashboard showing the features of live recorded or uploaded audio files using machine learning models built using the wav2vec 2.0 model developed by Facebook.',
       description: 'We worked on this as semester 5 project in third year. We tried to predict speaker age, gender, emotions, pitch etc from the recorded audio. User can upload pre-recorded audio or record live directly from the dashboard. We used multiple speech datasets and state of the art models for the task. If there are no good models, we tried to buiold our own models (for example: emotion detection).',
@@ -28,7 +46,7 @@ const projects = [
       url: 'https://github.com/sp-vis'
   },
   {
-      id: 2,
+      id: 4,
       name: 'personal portfolio',
       tldr: 'Portfolio site create using chakra ui and vite for myself. Hosted on github pages.',
       description: 'Portfolio site create using chakra ui and vite for myself. I started working on frontend development with this project. Learned technologies needed parellelly woth the development. First version was purely created on chakra ui templates. second version (current version) is created using chakra ui but  without usin any templates and used my imagination for ui/ux.',
@@ -37,9 +55,9 @@ const projects = [
       url: 'https://github.com/mohotta/mohotta.github.io'
   },
   {
-      id: 3,
-      name: 'airline reservation system',
-      tldr: 'airline ticker reservation system using php, mySQL & HTML.',
+      id: 5,
+      name: 'airline ticket reservation system',
+      tldr: 'airline ticket reservation system using php, mySQL & HTML.',
       description: 'airline reservation system created as a database management project in the university. We created a system with user management, ticket price discounts with user tier, seat booking system etc.',
       category: 'se',
       technologies: ['html/css', 'bootstrap', 'php', 'mysql', 'git/github'],
@@ -67,7 +85,9 @@ const color_dict: Record<Technology, string> = {
   'arduino': 'bg-cyan-500',
   'hugging-face': 'bg-yellow-500',
   'vite': 'bg-pink-500',
-  'nextjs': 'bg-slate-500'
+  'nextjs': 'bg-slate-500',
+  'nodejs': 'bg-green-500',
+  'computer-vision': 'bg-red-500'
 }
 
 const Portfolio = () => {

@@ -20,7 +20,7 @@ export default function Home() {
         <About/>
         <Resume/>
         <Portfolio/>
-        <Articles/>
+        {/* <Articles/> */}
         <Contact/>
       </div>
       <BottomRightPanel/>

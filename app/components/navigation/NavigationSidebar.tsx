@@ -44,13 +44,13 @@ export default function NavigationSidebar() {
             icon: <FiSave/>,
             title: 'Portfolio'
         },
-        {
-            name: 'articles',
-            show: showLabelArticles,
-            setShow: setShowLabelArticles,
-            icon: <FiEdit/>,
-            title: 'Articles'
-        },
+        // {
+        //     name: 'articles',
+        //     show: showLabelArticles,
+        //     setShow: setShowLabelArticles,
+        //     icon: <FiEdit/>,
+        //     title: 'Articles'
+        // },
         {
             name: 'contact',
             show: showLabelContact,

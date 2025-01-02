@@ -100,7 +100,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-step1 text-foreground bg-abstractPattern dark:bg-abstractPatternDark bg-cover bg-fixed;
+    @apply text-foreground bg-gray-200 dark:bg-gray-900;
   }
 }
 

@@ -168,7 +168,7 @@ const pros = [
       {
         name: 'Part-time Instructor (TA) - CS1033',
         from: 'Jun 2024',
-        to: 'Present'
+        to: 'November 2024'
       },
     ]
   },
@@ -178,9 +178,14 @@ const pros = [
     addr: 'Moratuwa, LK',
     pos: [
       {
+        name: 'Senior Web Editor',
+        from: 'Sep 2024',
+        to: 'Present'
+      },
+      {
         name: 'Head of PR Pillar',
         from: 'Oct 2023',
-        to: 'Present'
+        to: 'Sep 2024'
       },
       {
         name: 'Member of PR Pillar',
@@ -191,18 +196,6 @@ const pros = [
   },
   {
     id: 3,
-    name: 'ACM Student Chapter - UoM',
-    addr: 'Moratuwa, LK',
-    pos: [
-      {
-        name: 'Graphics Designer',
-        from: 'Aug 2023',
-        to: 'Present'
-      },
-    ]
-  },
-  {
-    id: 4,
     name: 'CML Insight Inc.',
     addr: 'Austin, TX, USA',
     pos: [
@@ -213,9 +206,18 @@ const pros = [
       },
     ]
   },
-  
-  
-  
+  {
+    id: 4,
+    name: 'ACM Student Chapter - UoM',
+    addr: 'Moratuwa, LK',
+    pos: [
+      {
+        name: 'Graphics Designer',
+        from: 'Aug 2023',
+        to: 'Present'
+      },
+    ]
+  },
 ]
 
 const Resume = () => {

@@ -136,11 +136,11 @@ function NavMenu( { active, showing, setShowing, onClick }: navProps ) {
             icon: <FiSave/>,
             title: 'Portfolio'
         },
-        {
-            name: 'articles',
-            icon: <FiEdit/>,
-            title: 'Articles'
-        },
+        // {
+        //     name: 'articles',
+        //     icon: <FiEdit/>,
+        //     title: 'Articles'
+        // },
         {
             name: 'contact',
             icon: <FiMail/>,
