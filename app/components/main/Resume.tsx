@@ -286,7 +286,7 @@ const Resume = () => {
             </div>
           </div>
         <div className='flex flex-row justify-center items-center w-full'>
-            <Button className='rounded-full' size={'lg'} variant={'secondary'}> <a href="https://bit.ly/moh-cv" target='_blank'>download resume</a> </Button>
+            <Button className='rounded-full' size={'lg'} variant={'secondary'}> <a href="https://bit.ly/moh-cv" target='_blank'>curriculum vitae</a> </Button>
         </div>
       </div>
   )
