@@ -245,7 +245,7 @@ export default function Chat({ open, setOpen }: chatProps) {
                                                     <div className="p-3 rounded-lg border-2 border-slate-200 dark:border-border bg-slate-100 dark:bg-muted/50 hover:bg-slate-150 dark:hover:bg-muted/70 hover:border-slate-300 dark:hover:border-border/90 transition-all cursor-pointer shadow-sm">
                                                         <div className="text-left">
                                                             <h3 className="text-sm font-medium text-slate-800 dark:text-foreground mb-1">Start a conversation</h3>
-                                                            <p className="text-xs text-slate-600 dark:text-muted-foreground/90">Ask anything you'd like to know</p>
+                                                            <p className="text-xs text-slate-600 dark:text-muted-foreground/90">Ask anything you&apos;d like to know</p>
                                                         </div>
                                                     </div>
                                                 </div>

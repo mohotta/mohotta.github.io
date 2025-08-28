@@ -129,11 +129,11 @@ const About = () => {
                     </Zoom>
                     <Fade duration={1000} className='w-full flex justify-center items-center'>
                         <p className='font-medium text-sm sm:text-base md:text-lg text-muted-foreground text-center leading-relaxed max-w-2xl'>
-                            "A dedicated professional and technology enthusiast with strong teamwork
+                            &quot;A dedicated professional and technology enthusiast with strong teamwork
                             and collaboration skills. I thrive in diverse environments and am
                             committed to driving team success. Passionate about leveraging
-                            technology for growth, I aim to contribute significantly to a company's
-                            success, always striving for excellence and continuous learning."
+                            technology for growth, I aim to contribute significantly to a company&apos;s
+                            success, always striving for excellence and continuous learning.&quot;
                         </p>
                     </Fade>
                 </div>
