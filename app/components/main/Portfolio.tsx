@@ -132,43 +132,50 @@ const Portfolio = () => {
 
   return (
     <>
-      <div className='flex flex-col justify-center items-center min-h-screen relative z-0 py-[10vh] space-y-8 section' id='portfolio'>
+      <div className='flex flex-col justify-center items-center min-h-screen relative z-0 py-[10vh] space-y-6 section' id='portfolio'>
         <Slide direction='right' duration={1000}>
-          <div className='flex flex-col justify-center items-center'>
-            <p>
+          <div className='flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8'>
+            <p className='text-xs sm:text-sm md:text-base font-medium tracking-widest text-muted-foreground mb-1 sm:mb-2 uppercase'>
               {'<top projects & works>'}
             </p>
-            <h1 className='text-6xl font-bold'>
+            <h1 className='font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight'>
               ~/portfolio
             </h1>
           </div>
         </Slide>
-          <div className='flex flex-row justify-evenly items-stretch content-start flex-wrap w-full'>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full'>
             {
               projects.map(project => (
                 <Fade key={project.id} duration={1000} className='flex justify-center items-stretch'>
-                  <div key={project.id} className='flex flex-col justify-start items-center w-[280px] min-h-max bg-secondary/60 space-y-4 p-4 mb-4 rounded-lg'>
-                    <h1 className='text-bold text-center text-xl text-step2-foreground'>{project.name}</h1>
-                    <p className='w-4/5'>
-                      {project.tldr}
-                    </p>
-                    <div className='flex flex-row justify-evenly flex-wrap space-x-1 w-9/12'>
-                      {
-                        project.technologies.map(tech => (
-                          <div key={tech} className='flex flex-row justify-start items-center space-x-0.5'>
-                            <div className={`w-[12px] h-[12px] rounded-full ${color_dict[tech as Technology] !== undefined? color_dict[tech as Technology]: 'bg-teal-500' }`}>
+                  <div key={project.id} className='flex flex-col justify-between items-start w-full bg-card/50 backdrop-blur-sm border border-border/50 space-y-4 p-6 rounded-xl hover:bg-card/70 transition-all duration-300 hover:scale-105 hover:shadow-lg'>
+                    <div className='space-y-3 w-full'>
+                      <h1 className='font-bold text-lg sm:text-xl text-foreground text-center'>{project.name}</h1>
+                      <p className='text-sm sm:text-base text-muted-foreground leading-relaxed text-center'>
+                        {project.tldr}
+                      </p>
+                      <div className='flex flex-wrap gap-2 justify-center'>
+                        {
+                          project.technologies.slice(0, 4).map(tech => (
+                            <div key={tech} className='flex items-center gap-1 bg-muted/20 px-2 py-1 rounded-full'>
+                              <div className={`w-2 h-2 rounded-full ${color_dict[tech as Technology] !== undefined? color_dict[tech as Technology]: 'bg-primary' }`}>
+                              </div>
+                              <p className='text-xs text-muted-foreground'>{tech}</p>
                             </div>
-                            <p className='text-step2-foreground text-sm'>{tech}</p>
+                          ))
+                        }
+                        {project.technologies.length > 4 && (
+                          <div className='flex items-center bg-muted/20 px-2 py-1 rounded-full'>
+                            <p className='text-xs text-muted-foreground'>+{project.technologies.length - 4}</p>
                           </div>
-                        ))
-                      }
+                        )}
+                      </div>
                     </div>
-                    <div className='flex flex-row justify-evenly items-center justify-self-end w-[90%]'>
-                      <Button disabled variant={'secondary'} className='rounded-full' onClick={() => setInforDialog(project.id)}>
-                        more info
+                    <div className='flex flex-col sm:flex-row gap-2 w-full mt-auto'>
+                      <Button disabled variant={'outline'} className='flex-1 rounded-lg text-xs sm:text-sm transition-all duration-300 hover:scale-105' onClick={() => setInforDialog(project.id)}>
+                        More Info
                       </Button>
-                      <Button disabled={project.url===""} variant={'secondary'} className='rounded-full'>
-                        <a href={project.url}> repository </a>
+                      <Button disabled={project.url===""} variant={'outline'} className='flex-1 rounded-lg text-xs sm:text-sm transition-all duration-300 hover:scale-105 hover:bg-primary/10'>
+                        <a href={project.url} target='_blank' rel='noopener noreferrer'> Repository </a>
                       </Button>
                     </div>
                   </div>

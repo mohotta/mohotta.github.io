@@ -25,18 +25,18 @@ const BottomRightPanel = () => {
                 <Tooltip>
                     <TooltipTrigger asChild>
                         <Button
-                            disabled
-                            variant={'secondary'}
-                            aria-label='scroll-up'
+                            variant={'outline'}
+                            aria-label='chat-with-ai'
                             size={'icon'}
+                            disabled={true}
                             onClick={() => setOpenChat(true)}
-                            className='rounded-full'
+                            className='w-12 h-12 rounded-full border-2 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 hover:scale-110 opacity-50'
                         >
-                            <IoChatbubblesOutline/>
+                            <IoChatbubblesOutline className="w-5 h-5"/>
                         </Button>
                     </TooltipTrigger>
                     <TooltipContent>
-                        Chat with SOLA
+                        Chat with ATLAS
                     </TooltipContent>
                 </Tooltip>
             </TooltipProvider>

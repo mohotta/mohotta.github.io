@@ -36,13 +36,13 @@ export default function ScrlBtn() {
             {
                 showBtn?
                 <Button
-                    variant={'secondary'}
+                    variant={'outline'}
                     aria-label='scroll-up'
                     size={'icon'}
                     onClick={handleClick}
-                    className='rounded-full'
+                    className='w-12 h-12 rounded-full border-2 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 hover:scale-110'
                 >
-                    <FiArrowUp/>
+                    <FiArrowUp className="w-5 h-5"/>
                 </Button>
                 :
                 <></>

@@ -12,7 +12,7 @@ import linux from './images/linux.png'
 import tech from './images/lightbulb.png'
 import program from './images/programming.png'
 import photo from './images/photography.png'
-import arch from './images/arch.png'
+import debian from './images/debian.png'
 import Image from 'next/image'
 import { Fade, Slide, Zoom } from "react-awesome-reveal";
 
@@ -35,7 +35,7 @@ const facts = [
   {
       id: 3,
       icon: uniLogo,
-      firstLine: 'BSc. in Engineering UG',
+      firstLine: 'BSc. in Engineering',
       secondLine: 'CSE (Data Science) UoM',
       attrLink: 'https://upload.wikimedia.org/wikipedia/en/6/60/University_of_Moratuwa_logo.png'
   },
@@ -56,7 +56,7 @@ const facts = [
   {
       id: 6,
       icon: webdev,
-      firstLine: 'Web Development: ',
+      firstLine: 'Software Engineering: ',
       secondLine: '1+ yrs experience',
       attrLink: 'https://www.flaticon.com/free-icons/web-development'
   },
@@ -69,10 +69,10 @@ const facts = [
   },
   {
     id: 8,
-    icon: arch,
-    firstLine: 'I use Arch btw',
+    icon: debian,
+    firstLine: 'I use Debian btw',
     secondLine: '🤪 😌 🧑🏽‍💻',
-    attrLink: 'https://www.iconfinder.com/icons/386451/arch_linux_archlinux_icon'
+    attrLink: 'https://cdn1.iconfinder.com/data/icons/Vista-Inspirate_1.0/128x128/apps/debian.png'
   },
   {
       id: 9,
@@ -109,41 +109,41 @@ const facts = [
 const About = () => {
 
 	return (
-		<div className='flex flex-col justify-center items-center min-h-screen relative z-0 py-[10vh] space-y-4 section' id='about'>
+		<div className='flex flex-col justify-center items-center min-h-screen relative z-0 py-[10vh] space-y-6 section' id='about'>
             <Slide duration={1000} direction='right'>
-                <div className='flex flex-col justify-center items-center'>
-                    <p>
+                <div className='flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8'>
+                    <p className='text-xs sm:text-sm md:text-base font-medium tracking-widest text-muted-foreground mb-1 sm:mb-2 uppercase'>
                         {'<get to know more>'}
                     </p>
-                    <h1 className='text-6xl font-bold'>
+                    <h1 className='font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight'>
                         ~/about-me
                     </h1>
                 </div>
             </Slide>
-            <div className='flex flex-col justify-center items-center max-w-[90%] space-y-4'>
-                <div className='flex flex-col justify-center items-center md:flex-row w-full md:w-[80%] gap-4'>
+            <div className='flex flex-col justify-center items-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8'>
+                <div className='flex flex-col justify-center items-center md:flex-row w-full gap-6 sm:gap-8'>
                     <Zoom cascade duration={1000}>
-                        <div className='relative w-[200px] h-[200px] aspect-square opacity-90'>
-                            <Image alt='profile' src={'/profile.png'} layout='fill' placeholder='blur' blurDataURL='/profile-blur.png' className='rounded-full border-8 border-double border-step3-foreground/50'/>
+                        <div className='relative w-[160px] h-[160px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] aspect-square'>
+                            <Image alt='profile' src={'/profile.png'} layout='fill' placeholder='blur' blurDataURL='/profile-blur.png' className='rounded-full border-4 sm:border-6 border-primary/20 hover:border-primary/40 transition-all duration-300'/>
                         </div>
                     </Zoom>
                     <Fade duration={1000} className='w-full flex justify-center items-center'>
-                        <p className='font-medium text-md md:text-lg italic text-step2-foreground text-center w-[90%]'>
-                            “A dedicated professional and technology enthusiast with strong teamwork
+                        <p className='font-medium text-sm sm:text-base md:text-lg text-muted-foreground text-center leading-relaxed max-w-2xl'>
+                            "A dedicated professional and technology enthusiast with strong teamwork
                             and collaboration skills. I thrive in diverse environments and am
                             committed to driving team success. Passionate about leveraging
-                            technology for growth, I aim to contribute significantly to a company’s
-                            success, always striving for excellence and continuous learning.”
+                            technology for growth, I aim to contribute significantly to a company's
+                            success, always striving for excellence and continuous learning."
                         </p>
                     </Fade>
                 </div>
-                    <div className='flex flex-row flex-wrap justify-evenly items-stretch content-start w-full md:w-[90%] bg-secondary/60 p-8 rounded-lg gap-8'>
+                    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full bg-card/50 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-border/50'>
                         {
                             facts.map((fact) => (
                                 <Fade key={fact.id} duration={1000}>
-                                    <div key={fact.id} className='flex flex-row justify-start items-center w-[280px] h-[70px] gap-2 pl-4 '>
-                                    <Image src={fact.icon} width={50} height={50} loading='lazy' alt={fact.firstLine} className='w-[50px]'/>
-                                    <p className=''>{fact.firstLine}<br/>{fact.secondLine}</p>
+                                    <div key={fact.id} className='flex flex-row justify-start items-center gap-3 p-3 sm:p-4 rounded-lg hover:bg-muted/20 transition-all duration-300 hover:scale-105'>
+                                    <Image src={fact.icon} width={40} height={40} loading='lazy' alt={fact.firstLine} className='w-8 h-8 sm:w-10 sm:h-10'/>
+                                    <p className='text-xs sm:text-sm text-muted-foreground leading-relaxed'>{fact.firstLine}<br/>{fact.secondLine}</p>
                                     </div>
                                 </Fade>
                             ))

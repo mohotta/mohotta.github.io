@@ -35,7 +35,7 @@ export default function NavigationSidebar() {
             show: showLabelResume,
             setShow: setShowLabelResume,
             icon: <FiFileText/>,
-            title: 'Resume'
+            title: 'Experience'
         },
         {
             name: 'portfolio',
@@ -105,25 +105,38 @@ export default function NavigationSidebar() {
                             onMouseOver={() => item.setShow(true)} 
                             onMouseLeave={() => item.setShow(false)}
                         >
-                            {
-                                item.show?
-                                <Button
-                                    aria-label="label"
-                                    variant={'secondary'}
-                                    className={`rounded-full font-bold text-lg flex flex-row justify-start gap-3 items-center ${active===item.name && 'text-step7-foreground border border-step7-foreground'}`}
-                                >
-                                    {item.icon}{item.title}
-                                </Button>
-                                :
+                            <div className="relative">
                                 <Button
                                     size={'icon'}
-                                    variant={'secondary'}
+                                    variant={active === item.name ? 'default' : 'outline'}
                                     aria-label="icon"
-                                    className={`rounded-full h-10 ${active===item.name && 'text-step7-foreground border border-step7-foreground'}`}
+                                    className={`h-12 transition-all duration-500 ease-in-out hover:scale-110 border-2 flex items-center ${
+                                        active === item.name 
+                                            ? 'bg-primary text-primary-foreground border-primary' 
+                                            : 'hover:bg-primary/10 hover:border-primary/50'
+                                    }`}
+                                    style={{
+                                        borderRadius: (active === item.name || item.show) ? '0.5rem' : '50%',
+                                        width: item.show ? 'auto' : '3rem',
+                                        paddingLeft: '0.75rem',
+                                        paddingRight: item.show ? '1rem' : '0.75rem',
+                                        minWidth: '3rem',
+                                        justifyContent: 'flex-start'
+                                    }}
                                 >
-                                    {item.icon}
+                                    <span className="flex-shrink-0 w-5 h-5 flex items-center justify-center">{item.icon}</span>
+                                    <span 
+                                        className="font-medium text-sm whitespace-nowrap transition-all duration-500 ease-in-out overflow-hidden"
+                                        style={{
+                                            opacity: item.show ? 1 : 0,
+                                            width: item.show ? 'auto' : 0,
+                                            marginLeft: item.show ? '0.75rem' : 0
+                                        }}
+                                    >
+                                        {item.title}
+                                    </span>
                                 </Button>
-                            }
+                            </div>
                         </div>
                     )
                 }

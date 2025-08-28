@@ -21,7 +21,7 @@ const socials = [
   {
     name: "twitter",
     icon: <FaTwitter/>,
-    link: "https://bit.ly/klm-x"
+    link: "https://twitter.com/mohotta_"
   },
 ]
 
@@ -37,47 +37,78 @@ const HomePage = () => {
 
   return (
     <div id='home' className='min-h-screen w-full flex flex-col justify-center items-center section relative z-0'>
-      <div className='flex flex-col justify-center items-start gap-4 max-w-[90%]'>
-        <Fade duration={1000}>
-          <p className='text-xl font-bold tracking-widest text-step2-foreground/60'> Hi, I am </p>
-          <h1 className='font-bold text-6xl text-step6-foreground dark:text-step3-foreground'> Kumudu Mohottala. </h1>
-        </Fade>
-        <div className='w-full h-[70px] min-[445px]:h-max'>
-          <TypeAnimation
-            sequence={[
-              'I build things for web 🌐.',
-              3000,
-              'I do stuff with data 📊.',
-              3000,
-              'I train programs to do works 🤖.',
-              3000,
-              'I love to learn new things 🖥️.',
-              1000,
-            ]}
-            wrapper="span"
-            cursor={true}
-            repeat={Infinity}
-            className={`text-3xl text-left font-medium w-full text-step2-foreground/75 h-full`}
-          />
-        </div>
-        <Fade duration={1000}>
-          <p className='font-semibold text-justify max-w-[400px] text-step2-foreground/60 min-[604px]:max-w-[500px]'>
-            I am a Computer Science & Engineering (Data Science) undergraduate of University of Moratuwa, Sri Lanka who searches for professional and learning opportunities to widen my horizons in software development & data science.
-          </p>
-        </Fade>
-        <Fade duration={1000} className='flex flex-row w-full justify-center items-center'>
-          <div className='flex flex-row justify-center items-center w-full my-8 gap-2 sm:gap-4'>
-              <Button className='rounded-full flex gap-2' size={'lg'} variant={'secondary'} onClick={onClick}> learn more <RxDoubleArrowDown className='animate-bounce'/> </Button>
-              {
-                socials.map(item => (
-                  <Button key={item.name} size="icon" variant={'secondary'} className='rounded-full'>
-                    <a href={item.link} target='_blank' aria-label='social-link'>{item.icon}</a>
-                  </Button>
-                ))
-              }
+      
+      <div className='flex flex-col justify-center items-center text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+        
+        <Fade duration={1000} direction="up" triggerOnce>
+          <div className='mb-2 sm:mb-3'>
+            <p className='text-xs sm:text-sm md:text-base font-medium tracking-widest text-muted-foreground mb-0 sm:mb-1 uppercase'>
+              Welcome to my world
+            </p>
+            <h1 className='font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-foreground mb-0 sm:mb-1 leading-tight'>
+              Kumudu <span className='text-primary/80'>Mohottala</span>
+            </h1>
           </div>
         </Fade>
+        
+        <div className='w-full h-[35px] sm:h-[40px] md:h-[50px] mb-2 sm:mb-3'>
+          <TypeAnimation
+            sequence={[
+              'Full-Stack Developer',
+              3000,
+              'Data Science Enthusiast',
+              3000,
+              'Machine Learning Explorer',
+              3000,
+              'Continuous Learner',
+              3000,
+            ]}
+            wrapper="div"
+            cursor={true}
+            repeat={Infinity}
+            className='text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-muted-foreground/80 h-full flex items-center justify-center'
+          />
+        </div>
+        
+        <Fade duration={1000} direction="up" triggerOnce delay={200}>
+          <p className='text-xs sm:text-sm md:text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-3 sm:mb-4'>
+            Software Engineer at Codegen International and Computer Science & Engineering graduate at University of Moratuwa, passionate about creating innovative solutions through code and data.
+          </p>
+        </Fade>
+        
+        <Fade duration={1000} direction="up" triggerOnce delay={400}>
+          <div className='flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full'>
+            <Button 
+              className='w-full sm:w-auto px-6 py-4 text-sm font-medium bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105' 
+              onClick={onClick}
+            >
+              Explore My Work
+              <RxDoubleArrowDown className='ml-2 animate-bounce'/>
+            </Button>
+            
+            <div className='flex items-center gap-2 sm:gap-3'>
+              {socials.map(item => (
+                <a 
+                  key={item.name} 
+                  href={item.link} 
+                  target='_blank' 
+                  aria-label={`Visit ${item.name}`}
+                >
+                  <Button 
+                    size="icon" 
+                    variant='outline' 
+                    className='w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 hover:scale-110 text-base sm:text-lg'
+                  >
+                    {item.icon}
+                  </Button>
+                </a>
+              ))}
+            </div>
+          </div>
+        </Fade>
+        
       </div>
+      
     </div>
   )
 }

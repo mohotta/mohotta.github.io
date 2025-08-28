@@ -59,19 +59,19 @@ export default function NavigationHeader() {
             <div className="flex flex-col justify-center items-start lg:hidden">
                 <Button
                     size={'icon'}
-                    variant={'secondary'}
+                    variant={'outline'}
                     aria-label="menu-icon"
-                    className="fixed left-4 top-4 rounded-full z-30"
+                    className="fixed left-4 top-4 w-12 h-12 rounded-full z-30 border-2 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 hover:scale-110"
                     onClick={() => setShowMenu(!showMenu)}
                 >
-                    {showMenu? <FiX /> : <FiMenu/>}
+                    {showMenu? <FiX className="w-5 h-5" /> : <FiMenu className="w-5 h-5"/>}
                 </Button>
             </div>
-            <div className="relative z-20">
+            {/* <div className="relative z-20">
                 <div className="fixed right-4 top-4">
                     <ModeToggle/>
                 </div>
-            </div>
+            </div> */}
             <NavMenu active={active} showing={showMenu} setShowing={setShowMenu} onClick={onClick}/>
         </div>
     )
@@ -129,7 +129,7 @@ function NavMenu( { active, showing, setShowing, onClick }: navProps ) {
         {
             name: 'resume',
             icon: <FiFileText/>,
-            title: 'Resume'
+            title: 'Experience'
         },
         {
             name: 'portfolio',
@@ -149,15 +149,15 @@ function NavMenu( { active, showing, setShowing, onClick }: navProps ) {
     ]
 
     return (
-        <div className={`fixed flex flex-col justify-start items-start h-screen w-screen top-0 left-0 ${animation1} ${opacity} lg:hidden bg-step1/50`}>
-            <div ref={menuRef} className={`fixed flex flex-col justify-center items-center w-[15rem] top-[68px] ${left} ${animation2} h-3/5 p-6 ml-2 gap-2 rounded-3xl z-[4] bg-step3`}>
+        <div className={`fixed flex flex-col justify-start items-start h-screen w-screen top-0 left-0 ${animation1} ${opacity} lg:hidden bg-background/80 backdrop-blur-sm`}>
+            <div ref={menuRef} className={`fixed flex flex-col justify-center items-center w-[15rem] top-[68px] ${left} ${animation2} h-3/5 p-6 ml-2 gap-3 rounded-xl z-[4] bg-card/95 backdrop-blur-md border border-border/50 shadow-lg`}>
                 {
                     items.map((item) => 
                         <Button 
                             onClick={() => onClick(item.name)}
-                            variant={'secondary'}
+                            variant={active === item.name ? 'default' : 'outline'}
                             key={item.name}
-                            className={`rounded-3xl w-4/5 font-bold text-lg flex flex-row justify-start gap-4 items-center p-4 ${active===item.name && 'text-step7-foreground border border-step7-foreground'}`}
+                            className={`rounded-lg w-full font-medium text-sm flex flex-row justify-start gap-3 items-center px-4 py-3 transition-all duration-300 hover:scale-105 ${active === item.name ? 'bg-primary text-primary-foreground' : 'hover:bg-primary/10 hover:border-primary/50'}`}
                         >
                             {item.icon}{item.title}
                         </Button>

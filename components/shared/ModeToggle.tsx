@@ -13,15 +13,15 @@ export function ModeToggle() {
       onClick={() => {
         setTheme(theme==='light'? 'dark': 'light')
       }}
-      variant={'secondary'}
+      variant={'outline'}
       size={'icon'}
-      className="rounded-full"
+      className="w-12 h-12 rounded-full border-2 hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 hover:scale-110 flex items-center justify-center"
     >
       {
         theme==='light'? 
-          <GoSun/>
+          <GoSun className="w-5 h-5"/>
         :  
-          <GoMoon/>
+          <GoMoon className="w-5 h-5"/>
          
       }
     </Button>

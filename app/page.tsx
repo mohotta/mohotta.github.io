@@ -7,12 +7,15 @@ import Resume from "./components/main/Resume";
 import Portfolio from "./components/main/Portfolio";
 import Articles from "./components/main/Articles";
 import Contact from "./components/main/Contact";
+import Footer from "./components/Footer";
+import AnimatedBackground from "./components/AnimatedBackground";
 
 
 export default function Home() {
   
   return (
     <main className="p-4">
+      <AnimatedBackground/>
       <NavigationHeader/>
       <NavigationSidebar/>
       <div className="lg:mx-[4.25rem]">
@@ -23,6 +26,7 @@ export default function Home() {
         {/* <Articles/> */}
         <Contact/>
       </div>
+      <Footer/>
       <BottomRightPanel/>
     </main>
   );
