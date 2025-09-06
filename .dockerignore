@@ -1,0 +1,5 @@
+# Only exclude what's absolutely necessary for build performance
+node_modules/
+.next/
+.git/
+*.log

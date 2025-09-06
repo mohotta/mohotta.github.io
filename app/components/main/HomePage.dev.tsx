@@ -14,7 +14,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { IoMail } from 'react-icons/io5';
 import Image from 'next/image';
 import Link from 'next/link';
-import heroConfig from '@/data/hero.json';
+import heroConfig from '@/data/hero.dev.json'; // Use dev config for localhost
 import { getBlogUrl } from '@/lib/env';
 
 

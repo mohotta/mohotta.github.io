@@ -1,18 +1,24 @@
 import NavigationHeader from "./components/navigation/NavigationHeader";
 import NavigationSidebar from "./components/navigation/NavigationSidebar";
 import HomePage from "./components/main/HomePage";
-import About from "./components/main/About";
 import BottomRightPanel from "./components/BottomRightPanel";
 import Resume from "./components/main/Resume";
 import Portfolio from "./components/main/Portfolio";
 import Articles from "./components/main/Articles";
-import Contact from "./components/main/Contact";
 import Footer from "./components/Footer";
 import AnimatedBackground from "./components/AnimatedBackground";
-
+import Blog from "./blog/page";
 
 export default function Home() {
+  // Detect which app instance is running based on environment variable
+  const appMode = process.env.APP_MODE || 'portfolio';
   
+  // If this is the blog instance, render the blog page
+  if (appMode === 'blog') {
+    return <Blog />;
+  }
+  
+  // Default to portfolio
   return (
     <main className="p-4">
       <AnimatedBackground/>
@@ -20,11 +26,9 @@ export default function Home() {
       <NavigationSidebar/>
       <div className="lg:mx-[4.25rem]">
         <HomePage/>
-        <About/>
-        <Resume/>
         <Portfolio/>
+        <Resume/>
         {/* <Articles/> */}
-        <Contact/>
       </div>
       <Footer/>
       <BottomRightPanel/>

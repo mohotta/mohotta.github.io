@@ -1,0 +1,102 @@
+{
+  "settings": {
+    "title": "~/portfolio",
+    "subtitle": "<top projects & works>",
+    "initialProjectsCount": 6
+  },
+  "technologies": {
+    "typescript": { "color": "bg-sky-500" },
+    "javascript": { "color": "bg-amber-500" },
+    "react": { "color": "bg-blue-500" },
+    "tailwind-css": { "color": "bg-cyan-500" },
+    "spring-boot": { "color": "bg-lime-500" },
+    "java": { "color": "bg-red-500" },
+    "mongodb": { "color": "bg-emerald-500" },
+    "git/github": { "color": "bg-red-500" },
+    "python": { "color": "bg-cyan-500" },
+    "pytorch": { "color": "bg-red-500" },
+    "tensorflow": { "color": "bg-sky-500" },
+    "html/css": { "color": "bg-orange-500" },
+    "bootstrap": { "color": "bg-violet-500" },
+    "php": { "color": "bg-purple-500" },
+    "mysql": { "color": "bg-rose-500" },
+    "c++": { "color": "bg-sky-400" },
+    "arduino": { "color": "bg-cyan-500" },
+    "hugging-face": { "color": "bg-yellow-500" },
+    "vite": { "color": "bg-pink-500" },
+    "nextjs": { "color": "bg-slate-500" },
+    "nodejs": { "color": "bg-green-500" },
+    "computer-vision": { "color": "bg-red-500" },
+    "flutter": { "color": "bg-blue-400" },
+    "docker": { "color": "bg-blue-600" },
+    "aws": { "color": "bg-orange-600" },
+    "firebase": { "color": "bg-yellow-600" },
+    "graphql": { "color": "bg-pink-600" },
+    "redux": { "color": "bg-purple-600" }
+  },
+  "projects": [
+    {
+      "id": 0,
+      "name": "freebook social",
+      "description": "Full stack instagram like social media application for a concept of open source social media platform.",
+      "category": "se",
+      "technologies": ["html/css", "typescript", "react", "git/github", "tailwind-css", "spring-boot", "java", "mongodb"],
+      "repositoryUrl": "https://github.com/mohotta/freebook-backend",
+      "featured": true,
+      "status": "completed"
+    },
+    {
+      "id": 1,
+      "name": "vidly movie rental service",
+      "description": "Backend service for a movie rental service called \"Vidly\" programmed using nodejs as my first project in nodejs.",
+      "category": "se",
+      "technologies": ["javascript", "mongodb", "git/github", "nodejs"],
+      "repositoryUrl": "https://github.com/mohotta/vidly",
+      "featured": true,
+      "status": "completed"
+    },
+    {
+      "id": 2,
+      "name": "Traffic Accident Anticipation and Drivable Area Prediction",
+      "description": "Final year project (ongoing) on anticipating upcoming accidents while predicting drivable area for 2-3 seconds in the future using dashcam video input.",
+      "category": "ds",
+      "technologies": ["python", "pytorch", "git/github", "computer-vision"],
+      "repositoryUrl": "https://github.com/mohotta/Graph-Graph",
+      "featured": true,
+      "status": "completed"
+    },
+    {
+      "id": 3,
+      "name": "speech visualization",
+      "description": "Dashboard showing the features of live recorded or uploaded audio files using machine learning models built using the wav2vec 2.0 model developed by Facebook.",
+      "longDescription": "We worked on this as semester 5 project in third year. We tried to predict speaker age, gender, emotions, pitch etc from the recorded audio. User can upload pre-recorded audio or record live directly from the dashboard. We used multiple speech datasets and state of the art models for the task. If there are no good models, we tried to build our own models (for example: emotion detection).",
+      "category": "ds",
+      "technologies": ["python", "git/github", "hugging-face", "pytorch", "tensorflow"],
+      "repositoryUrl": "https://github.com/sp-vis",
+      "featured": true,
+      "status": "completed"
+    },
+    {
+      "id": 4,
+      "name": "personal portfolio",
+      "description": "Portfolio site created using modern web technologies. Hosted on github pages.",
+      "longDescription": "Portfolio site created using React and Next.js. I started working on frontend development with this project. Learned technologies needed in parallel with the development. First version was purely created using templates. Second version (current version) is created from scratch using modern design principles and responsive design.",
+      "category": "se",
+      "technologies": ["typescript", "nextjs", "react", "tailwind-css", "git/github"],
+      "repositoryUrl": "https://github.com/mohotta/mohotta.github.io",
+      "featured": true,
+      "status": "completed"
+    },
+    {
+      "id": 5,
+      "name": "Airline ticket reservation system",
+      "description": "Airline ticket reservation system using php, mySQL & HTML.",
+      "longDescription": "Airline reservation system created as a database management project in the university. We created a system with user management, ticket price discounts with user tier, seat booking system etc.",
+      "category": "se",
+      "technologies": ["html/css", "bootstrap", "php", "mysql", "git/github"],
+      "repositoryUrl": "https://github.com/mohotta/DBMS-MiniProject.git",
+      "featured": false,
+      "status": "completed"
+    }
+  ]
+}

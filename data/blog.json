@@ -1,0 +1,49 @@
+{
+  "settings": {
+    "title": "~/blog",
+    "subtitle": "<thoughts & experiences>",
+    "description": "Exploring technology, sharing insights, and documenting my journey as a developer and researcher."
+  },
+  "comingSoon": [
+    {
+      "id": "university-to-industry",
+      "title": "Transitioning from University to Industry: Lessons Learned",
+      "excerpt": "Reflections on moving from academic computer science to real-world software development and the key differences I discovered.",
+      "readTime": "6 min read",
+      "tags": ["Career", "University", "Software Engineering", "Personal Growth"],
+      "category": "Career",
+      "featured": true,
+      "published": true,
+      "author": "Kumudu Mohottala",
+      "slug": "university-to-industry"
+    }
+  ],
+  "articles": [
+    {
+      "id": "getting-started-with-nextjs",
+      "title": "Getting Started with Next.js: A Developer's Journey",
+      "excerpt": "My experience learning Next.js and why it became my go-to React framework for building modern web applications.",
+      "date": "2024-12-15",
+      "readTime": "8 min read",
+      "tags": ["Next.js", "React", "Web Development", "Frontend"],
+      "category": "Tutorial",
+      "featured": true,
+      "published": true,
+      "author": "Kumudu Mohottala",
+      "slug": "getting-started-with-nextjs"
+    },
+    {
+      "id": "machine-learning-in-web-apps",
+      "title": "Integrating Machine Learning Models into Web Applications",
+      "excerpt": "Practical approaches to deploying ML models in production web applications, from API design to performance optimization.",
+      "date": "2024-11-28",
+      "readTime": "12 min read",
+      "tags": ["Machine Learning", "Web Development", "Python", "API Design"],
+      "category": "Technical",
+      "featured": true,
+      "published": true,
+      "author": "Kumudu Mohottala",
+      "slug": "machine-learning-in-web-apps"
+    }
+  ]
+}

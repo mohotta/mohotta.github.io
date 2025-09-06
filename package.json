@@ -4,8 +4,16 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:portfolio": "next dev -p 3000",
+    "dev:blog": "NEXT_CONFIG_FILE=next.config.blog.js APP_MODE=blog next dev -p 3001",
+    "dev:both": "concurrently \"npm run dev:portfolio\" \"npm run dev:blog\"",
     "build": "next build",
+    "build:portfolio": "next build && next export",
+    "build:blog": "NEXT_CONFIG_FILE=next.config.blog.js APP_MODE=blog next build",
     "start": "next start",
+    "start:portfolio": "next start -p 3000",
+    "start:blog": "NEXT_CONFIG_FILE=next.config.blog.js APP_MODE=blog next start -p 3001",
+    "start:both": "concurrently \"npm run start:portfolio\" \"npm run start:blog\"",
     "lint": "next lint"
   },
   "dependencies": {
@@ -21,6 +29,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.1.8",
+    "gray-matter": "^4.0.3",
     "lucide-react": "^0.419.0",
     "next": "14.2.5",
     "next-themes": "^0.3.0",
@@ -42,6 +51,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "concurrently": "^8.2.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
     "postcss": "^8",

@@ -1,0 +1,47 @@
+{
+  "greeting": "Welcome to my world",
+  "name": {
+    "first": "Kumudu",
+    "last": "Mohottala"
+  },
+  "roles": [
+    "Full-Stack Developer",
+    "Data Science Enthusiast", 
+    "Machine Learning Explorer",
+    "Continuous Learner"
+  ],
+  "bio": "Software Engineer at Codegen International and Computer Science & Engineering graduate at University of Moratuwa, passionate about creating innovative solutions through code and data.",
+  "cta": {
+    "text": "Explore My Work",
+    "targetSection": "portfolio"
+  },
+  "blog": {
+    "text": "Read My Blog",
+    "url": "http://localhost:3001"
+  },
+  "profileImage": {
+    "src": "/profile.png",
+    "blurSrc": "/profile-blur.png",
+    "alt": "Kumudu Mohottala Profile"
+  },
+  "contact": {
+    "email": "kumudumohottala@proton.me"
+  },
+  "socialLinks": [
+    {
+      "name": "github",
+      "url": "https://bit.ly/klm-gh",
+      "icon": "FaGithub"
+    },
+    {
+      "name": "linkedin", 
+      "url": "https://bit.ly/klm-in",
+      "icon": "FaLinkedin"
+    },
+    {
+      "name": "twitter",
+      "url": "https://twitter.com/mohotta_",
+      "icon": "FaTwitter"
+    }
+  ]
+}

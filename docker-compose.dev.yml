@@ -1,0 +1,54 @@
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: portfolio-runner
+    container_name: mohotta-portfolio-dev
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - APP_MODE=portfolio
+      - NEXT_PUBLIC_PORTFOLIO_URL=http://localhost:3000
+      - NEXT_PUBLIC_BLOG_URL=http://localhost:3001
+      - NEXT_PUBLIC_DOMAIN=localhost
+      - NEXT_PUBLIC_PORTFOLIO_DOMAIN=localhost
+      - NEXT_PUBLIC_BLOG_DOMAIN=localhost
+      - NEXT_PUBLIC_API_URL=http://localhost:3000/api
+      - PORT=3000
+      - HOSTNAME=0.0.0.0
+    volumes:
+      - ./data:/app/data:ro
+    restart: unless-stopped
+    networks:
+      - web
+
+  blog:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: blog-runner
+    container_name: mohotta-blog-dev
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=development
+      - APP_MODE=blog
+      - NEXT_PUBLIC_PORTFOLIO_URL=http://localhost:3000
+      - NEXT_PUBLIC_BLOG_URL=http://localhost:3001
+      - NEXT_PUBLIC_DOMAIN=localhost
+      - NEXT_PUBLIC_PORTFOLIO_DOMAIN=localhost
+      - NEXT_PUBLIC_BLOG_DOMAIN=localhost
+      - NEXT_PUBLIC_API_URL=http://localhost:3000/api
+      - PORT=3001
+      - HOSTNAME=0.0.0.0
+    volumes:
+      - ./data:/app/data:ro
+    restart: unless-stopped
+    networks:
+      - web
+
+networks:
+  web:
+    driver: bridge

@@ -7,11 +7,9 @@ import { FiEdit, FiFileText, FiHome, FiMail, FiSave, FiUser } from "react-icons/
 export default function NavigationSidebar() {
 
     const [showLabelHome, setShowLabelHome] = useState(false)
-    const [showLabelAbout, setShowLabelAbout] = useState(false)
     const [showLabelResume, setShowLabelResume] = useState(false)
     const [showLabelPortfolio, setShowLabelPortfolio] = useState(false)
     const [showLabelArticles, setShowLabelArticles] = useState(false)
-    const [showLabelContact, setShowLabelContact] = useState(false)
 
     // FIXME: highlighting current location
 
@@ -24,11 +22,11 @@ export default function NavigationSidebar() {
             title: 'Home'
         },
         {
-            name: 'about',
-            show: showLabelAbout,
-            setShow: setShowLabelAbout,
-            icon: <FiUser/>,
-            title: 'About'
+            name: 'portfolio',
+            show: showLabelPortfolio,
+            setShow: setShowLabelPortfolio,
+            icon: <FiSave/>,
+            title: 'Portfolio'
         },
         {
             name: 'resume',
@@ -37,13 +35,6 @@ export default function NavigationSidebar() {
             icon: <FiFileText/>,
             title: 'Experience'
         },
-        {
-            name: 'portfolio',
-            show: showLabelPortfolio,
-            setShow: setShowLabelPortfolio,
-            icon: <FiSave/>,
-            title: 'Portfolio'
-        },
         // {
         //     name: 'articles',
         //     show: showLabelArticles,
@@ -51,13 +42,6 @@ export default function NavigationSidebar() {
         //     icon: <FiEdit/>,
         //     title: 'Articles'
         // },
-        {
-            name: 'contact',
-            show: showLabelContact,
-            setShow: setShowLabelContact,
-            icon: <FiMail/>,
-            title: 'Contact'
-        },
     ]
 
     const [active, setActive] = useState('home')

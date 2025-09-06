@@ -67,11 +67,11 @@ export default function NavigationHeader() {
                     {showMenu? <FiX className="w-5 h-5" /> : <FiMenu className="w-5 h-5"/>}
                 </Button>
             </div>
-            {/* <div className="relative z-20">
+            <div className="relative z-20">
                 <div className="fixed right-4 top-4">
                     <ModeToggle/>
                 </div>
-            </div> */}
+            </div>
             <NavMenu active={active} showing={showMenu} setShowing={setShowMenu} onClick={onClick}/>
         </div>
     )
@@ -122,30 +122,20 @@ function NavMenu( { active, showing, setShowing, onClick }: navProps ) {
             title: 'Home'
         },
         {
-            name: 'about',
-            icon: <FiUser/>,
-            title: 'About'
+            name: 'portfolio',
+            icon: <FiSave/>,
+            title: 'Portfolio'
         },
         {
             name: 'resume',
             icon: <FiFileText/>,
             title: 'Experience'
         },
-        {
-            name: 'portfolio',
-            icon: <FiSave/>,
-            title: 'Portfolio'
-        },
         // {
         //     name: 'articles',
         //     icon: <FiEdit/>,
         //     title: 'Articles'
         // },
-        {
-            name: 'contact',
-            icon: <FiMail/>,
-            title: 'Contact'
-        },
     ]
 
     return (

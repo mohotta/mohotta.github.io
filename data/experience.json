@@ -1,0 +1,298 @@
+{
+  "settings": {
+    "title": "~/experience",
+    "subtitle": "<journey & milestones>"
+  },
+  "skillCategories": [
+    {
+      "id": 0,
+      "name": "frontend development",
+      "skills": [
+        {
+          "name": "HTML/CSS",
+          "level": "advanced",
+          "experience": "3+ years"
+        },
+        {
+          "name": "JavaScript",
+          "level": "intermediate",
+          "experience": "2+ years"
+        },
+        {
+          "name": "TypeScript",
+          "level": "intermediate",
+          "experience": "2+ years"
+        },
+        {
+          "name": "React",
+          "level": "advanced",
+          "experience": "2+ years"
+        },
+        {
+          "name": "Next.js",
+          "level": "intermediate",
+          "experience": "1+ years"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "backend development",
+      "skills": [
+        {
+          "name": "Spring Boot",
+          "level": "intermediate",
+          "experience": "1+ years"
+        },
+        {
+          "name": "Flask",
+          "level": "intermediate",
+          "experience": "1+ years"
+        },
+        {
+          "name": "Node.js",
+          "level": "intermediate",
+          "experience": "2+ years"
+        },
+        {
+          "name": "MongoDB",
+          "level": "basic",
+          "experience": "1+ years"
+        },
+        {
+          "name": "PostgreSQL",
+          "level": "intermediate",
+          "experience": "1+ years"
+        },
+        {
+          "name": "MySQL",
+          "level": "intermediate",
+          "experience": "2+ years"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "data science & machine learning",
+      "skills": [
+        {
+          "name": "Python",
+          "level": "advanced",
+          "experience": "3+ years"
+        },
+        {
+          "name": "PyTorch",
+          "level": "intermediate",
+          "experience": "2+ years"
+        },
+        {
+          "name": "NumPy",
+          "level": "advanced",
+          "experience": "2+ years"
+        },
+        {
+          "name": "Pandas",
+          "level": "advanced",
+          "experience": "2+ years"
+        },
+        {
+          "name": "Scikit-learn",
+          "level": "advanced",
+          "experience": "2+ years"
+        },
+        {
+          "name": "Computer Vision",
+          "level": "intermediate",
+          "experience": "1+ years"
+        },
+        {
+          "name": "Natural Language Processing",
+          "level": "basic",
+          "experience": "1+ years"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "tools & others",
+      "skills": [
+        {
+          "name": "Linux",
+          "level": "advanced",
+          "experience": "4+ years"
+        },
+        {
+          "name": "Git/GitHub",
+          "level": "advanced",
+          "experience": "3+ years"
+        },
+        {
+          "name": "Docker",
+          "level": "intermediate",
+          "experience": "1+ years"
+        },
+        {
+          "name": "AWS",
+          "level": "basic",
+          "experience": "1+ years"
+        }
+      ]
+    }
+  ],
+  "workExperience": [
+    {
+      "id": 0,
+      "company": "Codegen International Pvt Ltd",
+      "location": "Colombo, LK",
+      "website": "https://www.codegen.net",
+      "positions": [
+        {
+          "title": "Software Engineer - R&D Team",
+          "startDate": "July 2025",
+          "endDate": "Present",
+          "type": "Full-time",
+          "description": "Working on research and development of cutting-edge software solutions.",
+          "responsibilities": [
+            "Developing innovative software solutions for enterprise clients",
+            "Collaborating with cross-functional teams on R&D projects",
+            "Implementing machine learning solutions for business applications"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "company": "IESL Student Chapter - UoM",
+      "location": "Moratuwa, LK",
+      "website": "https://iesl.uom.lk",
+      "positions": [
+        {
+          "title": "Senior Web Editor",
+          "startDate": "Sep 2024",
+          "endDate": "July 2025",
+          "type": "Volunteer",
+          "description": "Led web development initiatives and content management for the student chapter.",
+          "responsibilities": [
+            "Managed website development and maintenance",
+            "Led a team of web developers and content creators",
+            "Implemented modern web technologies and best practices"
+          ]
+        },
+        {
+          "title": "Head of PR Pillar",
+          "startDate": "Oct 2023",
+          "endDate": "Sep 2024",
+          "type": "Volunteer",
+          "description": "Managed public relations and communications for engineering events.",
+          "responsibilities": [
+            "Coordinated public relations strategies for major events",
+            "Managed social media presence and content creation",
+            "Liaised with external organizations and sponsors"
+          ]
+        },
+        {
+          "title": "Member of PR Pillar",
+          "startDate": "Jun 2022",
+          "endDate": "Oct 2023",
+          "type": "Volunteer",
+          "description": "Contributed to public relations activities and event promotion.",
+          "responsibilities": [
+            "Assisted in event promotion and publicity campaigns",
+            "Created promotional materials and content",
+            "Supported team coordination and communication efforts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "company": "Department of CSE - UoM",
+      "location": "Moratuwa, LK",
+      "website": "https://cse.mrt.ac.lk",
+      "positions": [
+        {
+          "title": "Part-time Instructor (TA) - CS1033",
+          "startDate": "Jun 2024",
+          "endDate": "November 2024",
+          "type": "Part-time",
+          "description": "Teaching assistant for Computer Programming fundamentals course.",
+          "responsibilities": [
+            "Conducted lab sessions and tutorials for first-year students",
+            "Assisted in grading assignments and examinations",
+            "Provided one-on-one support for struggling students"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "company": "CML Insight Inc.",
+      "location": "Austin, TX, USA",
+      "website": "https://cmlinsight.com",
+      "positions": [
+        {
+          "title": "Machine Learning Engineering Intern",
+          "startDate": "Nov 2023",
+          "endDate": "May 2024",
+          "type": "Internship",
+          "description": "Worked on machine learning solutions for data analysis and prediction models.",
+          "responsibilities": [
+            "Developed and deployed machine learning models for client projects",
+            "Implemented data preprocessing and feature engineering pipelines",
+            "Collaborated with senior engineers on model optimization and deployment"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "company": "ACM Student Chapter - UoM",
+      "location": "Moratuwa, LK",
+      "website": "https://acm.uom.lk",
+      "positions": [
+        {
+          "title": "Graphics Designer",
+          "startDate": "Aug 2023",
+          "endDate": "July 2025",
+          "type": "Volunteer",
+          "description": "Created visual designs and promotional materials for ACM events and activities.",
+          "responsibilities": [
+            "Designed posters, banners, and digital content for events",
+            "Maintained brand consistency across all visual materials",
+            "Collaborated with event organizing teams on creative concepts"
+          ]
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Moratuwa",
+      "degree": "BSc. in Engineering (Computer Science & Engineering)",
+      "specialization": "Data Science Track",
+      "startDate": "2021",
+      "endDate": "2025",
+      "gpa": "3.8/4.0",
+      "location": "Moratuwa, Sri Lanka",
+      "achievements": [
+        "Dean's List for academic excellence",
+        "Final year project on Traffic Accident Anticipation",
+        "Active member of multiple student organizations"
+      ]
+    },
+    {
+      "institution": "Gankanda Central College",
+      "degree": "GCE Advanced Level",
+      "subjects": "Physical Science Stream",
+      "startDate": "2018",
+      "endDate": "2020",
+      "results": "3 A's in Mathematics, Physics, Chemistry",
+      "location": "Pelmadulla, Sri Lanka",
+      "achievements": [
+        "Island rank 21 in Physical Science stream",
+        "School prefect and academic monitor",
+        "Winner of multiple science competitions"
+      ]
+    }
+  ]
+}

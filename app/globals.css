@@ -2,6 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'highlight.js/styles/atom-one-dark.css';
+
+/* Ensure code blocks use proper dark theme styling */
+.dark pre code,
+.dark .hljs {
+  background: rgb(17 24 39) !important; /* gray-900 */
+  color: rgb(243 244 246) !important; /* gray-100 */
+}
+
+.light pre code,
+.light .hljs {
+  background: rgb(248 250 252) !important; /* gray-50 */
+  color: rgb(15 23 42) !important; /* slate-900 */
+}
+
+/* Make sure nested code elements inherit from parent */
+pre code.hljs {
+  background: transparent !important;
+}
+
+/* Override specific highlight.js classes for consistency */
+.dark .hljs-comment,
+.dark .hljs-quote {
+  color: rgb(156 163 175) !important; /* gray-400 */
+}
+
+.dark .hljs-keyword,
+.dark .hljs-selector-tag,
+.dark .hljs-literal {
+  color: rgb(96 165 250) !important; /* blue-400 */
+}
+
+.dark .hljs-string,
+.dark .hljs-title {
+  color: rgb(34 197 94) !important; /* green-500 */
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -101,6 +138,16 @@
   }
   body {
     @apply text-foreground bg-gray-200 dark:bg-gray-900;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
   }
 }
 

@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Git
+.git
+
+# Docker files (to prevent copying them into build context)
+Dockerfile*
+docker-compose*
+.dockerignore
+
+# Only exclude large unnecessary files
+*.log
